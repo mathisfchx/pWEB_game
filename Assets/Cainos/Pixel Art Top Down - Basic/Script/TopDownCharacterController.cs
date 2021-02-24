@@ -30,7 +30,7 @@ namespace Cainos.PixelArtTopDown_Basic
                 animator.SetInteger("Direction", 2);
             }
 
-            if (Input.GetKey(KeyCode.Z))
+            if (Input.GetKey(KeyCode.W))
             {
                 dir.y = 1;
                 animator.SetInteger("Direction", 1);
