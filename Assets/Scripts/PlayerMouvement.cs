@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class PlayerMouvement : MonoBehaviour
+public class PlayerMouvement : NetworkBehaviour
 {
     public float speed;
     private Rigidbody2D myRigidbody;
@@ -18,10 +19,13 @@ public class PlayerMouvement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        change = Vector3.zero;
-        change.x = Input.GetAxisRaw("Horizontal");
-        change.y = Input.GetAxisRaw("Vertical");
-        UpdateAnimationAndMove();
+        if(this.isLocalPlayer)
+        {
+            change = Vector3.zero;
+            change.x = Input.GetAxisRaw("Horizontal");
+            change.y = Input.GetAxisRaw("Vertical");
+            UpdateAnimationAndMove();
+        }
     }
 
     void UpdateAnimationAndMove(){
