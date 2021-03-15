@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  speed: 20
+  speed: 30
 --- !u!95 &1142718177877917903
 Animator:
   serializedVersion: 3
