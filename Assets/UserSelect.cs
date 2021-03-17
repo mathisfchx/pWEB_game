@@ -27,9 +27,9 @@ public class UserSelect : MonoBehaviour
     int counter = 0 ;
 
     // Start is called before the first frame update
-    string URL_Login = "http://localhost/Users/userSelect.php";
-    string URL_Register = "http://localhost/Users/userinsert.php";
-    string URL_Save = "http://localhost/Users/Save.php";
+    string URL_Login = "https://13.36.61.82/userSelect.php";
+    string URL_Register = "https://13.36.61.82/userinsert.php";
+    string URL_Save = "https://13.36.61.82/Save.php";
     public string[] usersData;
 
     void Start()
