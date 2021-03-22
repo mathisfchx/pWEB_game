@@ -79,23 +79,36 @@ namespace Mirror
             if (!NetworkClient.active)
             {
                 // Server + Client
-                if (Application.platform != RuntimePlatform.WebGLPlayer)
+                /*if (Application.platform != RuntimePlatform.WebGLPlayer)
                 {
                     if (GUILayout.Button("Host (Server + Client)"))
                     {
                         manager.StartHost();
                     }
-                }
+                }*/
 
                 // Client + IP
-                GUILayout.BeginHorizontal();
-                if (GUILayout.Button("Client"))
+                //GUILayout.BeginHorizontal();
+                /*
+                GUI.BeginGroup (new Rect (300, 300, 200, 200));
+                if (GUI.Button(new Rect(0,0,100,100),"Jouer"))
                 {
                     manager.StartClient();
                 }
-                manager.networkAddress = GUILayout.TextField(manager.networkAddress);
-                GUILayout.EndHorizontal();
+                manager.networkAddress = "13.36.61.82";//GUILayout.TextField("13.36.61.82"); //Test
+                GUI.EndGroup();
+                */
 
+                //Voici la nouvelle interface pour se connecter au serveur (je n'ai pas encore réussi à modifier l'emplacement du bouton)
+                if (GUILayout.Button("Jouer"))
+                {
+                    manager.StartClient();
+                }
+                manager.networkAddress = "13.36.61.82";
+
+                //GUILayout.EndHorizontal();
+
+                /*
                 // Server Only
                 if (Application.platform == RuntimePlatform.WebGLPlayer)
                 {
@@ -105,7 +118,7 @@ namespace Mirror
                 else
                 {
                     if (GUILayout.Button("Server Only")) manager.StartServer();
-                }
+                }*/
             }
             else
             {
