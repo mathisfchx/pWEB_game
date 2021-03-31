@@ -335,7 +335,7 @@ PrefabInstance:
     - target: {fileID: -2664659116260134507, guid: bf41d95a48da66a419840f409ae24f29,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1899.4779
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2664659116260134507, guid: bf41d95a48da66a419840f409ae24f29,
         type: 3}
@@ -1945,7 +1945,7 @@ PrefabInstance:
     - target: {fileID: -16118740823829824, guid: e19b368761db6914e8c92b530528b846,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1899.4779
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -16118740823829824, guid: e19b368761db6914e8c92b530528b846,
         type: 3}
@@ -2182,7 +2182,7 @@ PrefabInstance:
     - target: {fileID: 9222420636569306669, guid: d7da88263d42f424eba4222670ff6672,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9222420636569306669, guid: d7da88263d42f424eba4222670ff6672,
         type: 3}
@@ -2454,7 +2454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374306015}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 259.06, y: 76.792, z: -30554}
+  m_LocalPosition: {x: 259.06, y: 76.792, z: 0}
   m_LocalScale: {x: 1.7520368, y: 1.9534204, z: 16.110683}
   m_Children:
   - {fileID: 918996789}
@@ -3355,7 +3355,7 @@ RectTransform:
   m_GameObject: {fileID: 2139976398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 786270580}
   - {fileID: 1029786865}
@@ -3367,9 +3367,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 422.5, y: 317}
-  m_SizeDelta: {x: 845, y: 634}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!223 &2139976402
 Canvas:
   m_ObjectHideFlags: 0
@@ -3379,7 +3379,7 @@ Canvas:
   m_GameObject: {fileID: 2139976398}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
