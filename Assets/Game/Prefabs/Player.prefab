@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: -3798848705810893432}
   - component: {fileID: -8894673139801687656}
   - component: {fileID: 897184729387425977}
-  - component: {fileID: -7026400522208259541}
+  - component: {fileID: 6560694326859775905}
   - component: {fileID: 4719725132689996659}
   - component: {fileID: 7294346751271000345}
-  - component: {fileID: 6560694326859775905}
+  - component: {fileID: -7026400522208259541}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -153,25 +153,24 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 
   hasSpawned: 0
---- !u!95 &-7026400522208259541
-Animator:
-  serializedVersion: 3
+--- !u!114 &6560694326859775905
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897184729387425976}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 07350443d4ea0cf4db18fcec32a00036, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
 --- !u!114 &4719725132689996659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,21 +207,22 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   speed: 300
---- !u!114 &6560694326859775905
-MonoBehaviour:
+--- !u!95 &-7026400522208259541
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897184729387425976}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  localPositionSensitivity: 0.01
-  localRotationSensitivity: 0.01
-  localScaleSensitivity: 0.01
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07350443d4ea0cf4db18fcec32a00036, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
