@@ -1,6 +1,7 @@
 using UnityEngine;
+using Mirror;
 
-namespace Mirror.Examples.Basic
+namespace Game
 {
     public class Player : NetworkBehaviour
     {

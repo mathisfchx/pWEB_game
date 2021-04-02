@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 /*
 	Documentation: https://mirror-networking.com/docs/Articles/Components/NetworkManager.html
 	API Reference: https://mirror-networking.com/docs/api/Mirror.NetworkManager.html
 */
-
-namespace Mirror.Examples.Basic
+namespace Game
 {
     [AddComponentMenu("")]
     public class BasicNetManager : NetworkManager
