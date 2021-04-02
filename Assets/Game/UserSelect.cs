@@ -17,6 +17,7 @@ public class UserSelect : MonoBehaviour
     [SerializeField] GameObject PF_Player;
     [SerializeField] GameObject Authentification_menu ; 
     [SerializeField] GameObject game ; 
+    [SerializeField] GameObject Network_manager ;
     [Space]
     //[SerializeField] GameObject LoginScene ;
     //[SerializeField] GameObject GameScene ;
@@ -43,6 +44,7 @@ public class UserSelect : MonoBehaviour
         SCENE.SetActive(false);
         PF_Player.SetActive(false);
         game.SetActive(false); 
+        Network_manager.SetActive(false);
         Authentification_menu.SetActive(true);
 
 
@@ -104,6 +106,7 @@ public class UserSelect : MonoBehaviour
                 SCENE.SetActive(true);
                 PF_Player.SetActive(true);
                 game.SetActive(true); 
+                Network_manager.SetActive(true);
                 Authentification_menu.SetActive(false); 
             }
         }

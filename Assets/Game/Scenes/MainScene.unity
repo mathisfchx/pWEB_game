@@ -1646,6 +1646,7 @@ MonoBehaviour:
     type: 3}
   Authentification_menu: {fileID: 1029786862}
   game: {fileID: 1339578176}
+  Network_manager: {fileID: 786270577}
   errorMessages: {fileID: 1327783393}
   usersData: []
 --- !u!1 &993342360
