@@ -1316,8 +1316,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 786270580}
-  - component: {fileID: 786270579}
   - component: {fileID: 786270581}
+  - component: {fileID: 786270579}
   - component: {fileID: 786270578}
   m_Layer: 0
   m_Name: NetworkManager
@@ -1389,7 +1389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1210e5845a22f524cb8e406dccd74f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
+  dontDestroyOnLoad: 1
   runInBackground: 1
   autoStartServerBuild: 1
   showDebugMessages: 0
