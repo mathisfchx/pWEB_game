@@ -1,6 +1,13 @@
 # pWEB_game
 Unity 2D mutliplayer game made for a Web school project
 
+
+## Mise à jour 27/04
+
+1_Milestone Multi Final accomplie
+Il est possible de jouer sur le serveur AWS ou en LocalHost (plus de bug de sync)
+Sur le dernier front (il reste plein de bug --> issues à lever)
+
 ## Mise à jour au 21/04 audit des avancées
 
 1_ Milestone front_ini accomplie  
@@ -22,8 +29,3 @@ Il est nécessaire d'avoir un compte pour se connecter au jeu
  - Mise en place des règles du jeu, intéractions, et début/fin de partie  
 
 
-## Mise à jour 27/04
-
-1_Milestone Multi Final accomplie
-Il est possible de jouer sur le serveur AWS ou en LocalHost (plus de bug de sync)
-Sur le dernier front (il reste plein de bug --> issues à lever)
