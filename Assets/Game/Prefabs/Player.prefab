@@ -81,7 +81,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 97a3e4cddb8635c4eba1265f44d106bf, type: 2}
+  m_Material: {fileID: 6200000, guid: cef6249696e75114ba112553c02200ce, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -221,7 +221,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 07350443d4ea0cf4db18fcec32a00036, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
