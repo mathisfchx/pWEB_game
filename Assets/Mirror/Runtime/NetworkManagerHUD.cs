@@ -79,32 +79,42 @@ namespace Mirror
             if (!NetworkClient.active)
             {
                 // Server + Client
-                /*if (Application.platform != RuntimePlatform.WebGLPlayer)
+                if (Application.platform != RuntimePlatform.WebGLPlayer)
                 {
                     if (GUILayout.Button("Host (Server + Client)"))
                     {
+                        manager.networkAddress = "localhost";
                         manager.StartHost();
                     }
-                }*/
-
-                // Client + IP
-                //GUILayout.BeginHorizontal();
-                /*
-                GUI.BeginGroup (new Rect (300, 300, 200, 200));
-                if (GUI.Button(new Rect(0,0,100,100),"Jouer"))
-                {
-                    manager.StartClient();
                 }
-                manager.networkAddress = "13.36.61.82";//GUILayout.TextField("13.36.61.82"); //Test
-                GUI.EndGroup();
-                */
 
                 //Voici la nouvelle interface pour se connecter au serveur (je n'ai pas encore réussi à modifier l'emplacement du bouton)
-                if (GUILayout.Button("Jouer"))
+                if (GUILayout.Button("Jouer sur le serveur AWS"))
                 {
+                    manager.networkAddress = "13.36.61.82";
+                    manager.StartClient();
+                } 
+
+                if (GUILayout.Button("Jouer en localhost"))
+                {
+                    manager.networkAddress = "localhost";
                     manager.StartClient();
                 }
-                manager.networkAddress = "13.36.61.82";
+
+                /*
+                // Client + IP
+                GUILayout.BeginHorizontal();
+                
+                GUI.BeginGroup (new Rect (300, 300, 200, 200));
+                if (GUI.Button(new Rect(0,0,100,100),"Jouer en localhost"))
+                {
+                    manager.networkAddress = "localhost";
+                    manager.StartClient();
+                }
+                //GUILayout.TextField("13.36.61.82"); //Test
+                GUI.EndGroup();
+                
+                
 
                 //GUILayout.EndHorizontal();
 
