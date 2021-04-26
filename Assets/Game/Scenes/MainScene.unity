@@ -1642,8 +1642,6 @@ MonoBehaviour:
   RegisterButton: {fileID: 1875537793}
   SaveButton: {fileID: 1996693608}
   SCENE: {fileID: 1374306015}
-  PF_Player: {fileID: 897184729387425976, guid: fcd75ce4d75d2a048a2b2e4fa1e66ad3,
-    type: 3}
   Authentification_menu: {fileID: 1029786862}
   game: {fileID: 1339578176}
   Network_manager: {fileID: 786270577}
@@ -2939,7 +2937,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730842972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 55.7}
   m_LocalScale: {x: 0.14226343, y: 0.095141895, z: 0.16456977}
   m_Children: []
   m_Father: {fileID: 2052493999}
