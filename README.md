@@ -20,3 +20,10 @@ Il est nécessaire d'avoir un compte pour se connecter au jeu
 
 => Suite du projet à la rentrée : partir sur phase 2 du projet après la fin de la milestone Multi_final  
  - Mise en place des règles du jeu, intéractions, et début/fin de partie  
+
+
+## Mise à jour 27/04
+
+1_Milestone Multi Final accomplie
+Il est possible de jouer sur le serveur AWS ou en LocalHost (plus de bug de sync)
+Sur le dernier front (il reste plein de bug --> issues à lever)
