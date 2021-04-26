@@ -1,0 +1,3284 @@
+fileFormatVersion: 2
+guid: 00c6561c84259994aaf71a862bf5fa02
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5483045893167512913
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_0
+  - first:
+      213: 1350984987235712075
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_1
+  - first:
+      213: -6390673653156485479
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_2
+  - first:
+      213: -8405296357287653553
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_3
+  - first:
+      213: 4957283668840496909
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_4
+  - first:
+      213: 5047053370114829976
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_5
+  - first:
+      213: -5001010236814265294
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_6
+  - first:
+      213: -777660833332488908
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_7
+  - first:
+      213: 1684969469813064957
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_8
+  - first:
+      213: 5521835337412018796
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_9
+  - first:
+      213: -5411399044880629356
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_10
+  - first:
+      213: 477115676966977162
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_11
+  - first:
+      213: 8780242979256781922
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_12
+  - first:
+      213: 4758960418006409549
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_13
+  - first:
+      213: -2668241878365541414
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_14
+  - first:
+      213: -5260280399523453998
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_15
+  - first:
+      213: 6711771141601882735
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_16
+  - first:
+      213: -672583836204665804
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_17
+  - first:
+      213: -2738992410706305258
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_18
+  - first:
+      213: 8779734616819926337
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_19
+  - first:
+      213: -7003718839845770540
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_20
+  - first:
+      213: 3763572075542210945
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_21
+  - first:
+      213: -324074170441911007
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_22
+  - first:
+      213: 2785409767334602391
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_23
+  - first:
+      213: 9029823545434799715
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_24
+  - first:
+      213: -971729962241158947
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_25
+  - first:
+      213: -230937441291748794
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_26
+  - first:
+      213: 5803467579542640954
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_27
+  - first:
+      213: 1545327297745979909
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_28
+  - first:
+      213: -1095604755586427145
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_29
+  - first:
+      213: 6292344601467732562
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_30
+  - first:
+      213: 2068540131443678891
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_31
+  - first:
+      213: -1636702513859894527
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_32
+  - first:
+      213: 2770774615261787191
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_33
+  - first:
+      213: -8467222601391228384
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_34
+  - first:
+      213: 6261584285569682171
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_35
+  - first:
+      213: 5539484134277030940
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_36
+  - first:
+      213: 5439291342849078549
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_37
+  - first:
+      213: -7865038175029322743
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_38
+  - first:
+      213: 935177425582650065
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_39
+  - first:
+      213: -7751652114901640530
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_40
+  - first:
+      213: 3602403456926363543
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_41
+  - first:
+      213: -4292313919909117389
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_42
+  - first:
+      213: 5211313414973902351
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_43
+  - first:
+      213: 5691733890385197538
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_44
+  - first:
+      213: -987717989398625212
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_45
+  - first:
+      213: 6475255236181950245
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_46
+  - first:
+      213: -4353062976626155259
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_47
+  - first:
+      213: -5050000077747771135
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_48
+  - first:
+      213: 6815686886334791119
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_49
+  - first:
+      213: -8968201334080486039
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_50
+  - first:
+      213: -1401320786187816340
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_51
+  - first:
+      213: 8144408229397094657
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_52
+  - first:
+      213: -221334316592020450
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_53
+  - first:
+      213: -8229079530883547630
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_54
+  - first:
+      213: -6674156971060100228
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_55
+  - first:
+      213: 7598911221554782687
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_56
+  - first:
+      213: -3320150460676148134
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_57
+  - first:
+      213: 5610558159715294583
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_58
+  - first:
+      213: 4175908763035868880
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_59
+  - first:
+      213: 6848792859175669990
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_60
+  - first:
+      213: 5856565494900858163
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_61
+  - first:
+      213: -9135325188959946542
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_62
+  - first:
+      213: -680472293798394421
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_63
+  - first:
+      213: -3005951317320371197
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_64
+  - first:
+      213: 3893934058952769109
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_65
+  - first:
+      213: 3626065247358083106
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_66
+  - first:
+      213: 5983967937952900128
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_67
+  - first:
+      213: -8994509923090755291
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_68
+  - first:
+      213: -8189797828176230028
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_69
+  - first:
+      213: 9191695101835632718
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_70
+  - first:
+      213: 2226643784451335230
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_71
+  - first:
+      213: 3976455885273153157
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_72
+  - first:
+      213: 1900231632276851672
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_73
+  - first:
+      213: 3920861048518598555
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_74
+  - first:
+      213: -3458695923815750871
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_75
+  - first:
+      213: 8616863293978073818
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_76
+  - first:
+      213: -8162664422018650332
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_77
+  - first:
+      213: -2219553994603546914
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_78
+  - first:
+      213: 8977931584921267489
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_79
+  - first:
+      213: 5195183391692853197
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_80
+  - first:
+      213: -7752515848598786145
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_81
+  - first:
+      213: 6831399001460852961
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_82
+  - first:
+      213: -8823721989696476682
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_83
+  - first:
+      213: 5186316440849085234
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_84
+  - first:
+      213: -7713050878129140980
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_85
+  - first:
+      213: 2564331288748749534
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_86
+  - first:
+      213: 3820924668812460296
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_87
+  - first:
+      213: -7726572560641803971
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_88
+  - first:
+      213: 8901017543827703065
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_89
+  - first:
+      213: 7195791387891318214
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_90
+  - first:
+      213: -1145533973142867341
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_91
+  - first:
+      213: -7098680737954611522
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_92
+  - first:
+      213: -2346277950277858446
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_93
+  - first:
+      213: 980715585998146125
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_94
+  - first:
+      213: -5369417514420297597
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_95
+  - first:
+      213: -9181491743227524884
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_96
+  - first:
+      213: -8997740438937723021
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_97
+  - first:
+      213: 4161992497926349220
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_98
+  - first:
+      213: -6005240860339023207
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_99
+  - first:
+      213: 1729556274395205616
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_100
+  - first:
+      213: 6259933162952734830
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_101
+  - first:
+      213: 319759050398409506
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_102
+  - first:
+      213: -2304470320611039979
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_103
+  - first:
+      213: 1590376064122882100
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_104
+  - first:
+      213: 1422490676645419761
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_105
+  - first:
+      213: 2548487500016692913
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_106
+  - first:
+      213: 686388598538942375
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_107
+  - first:
+      213: -4018713540128790273
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_108
+  - first:
+      213: 3563776227739624006
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_109
+  - first:
+      213: -6835410965045812916
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_110
+  - first:
+      213: -8339662293676350193
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_111
+  - first:
+      213: -6485832340001089576
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_112
+  - first:
+      213: -5462719048517547509
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_113
+  - first:
+      213: 2035088480680952214
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_114
+  - first:
+      213: 967190764452905977
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_115
+  - first:
+      213: 479912291890151111
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_116
+  - first:
+      213: -2041728438703038416
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_117
+  - first:
+      213: 773159064537363105
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_118
+  - first:
+      213: -2602830964066191280
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_119
+  - first:
+      213: -8224967730725672556
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_120
+  - first:
+      213: -1309440672902719105
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_121
+  - first:
+      213: 4837079426721412565
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_122
+  - first:
+      213: -4852645374576473130
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_123
+  - first:
+      213: -4671101237433025756
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_124
+  - first:
+      213: -2144324990489592434
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_125
+  - first:
+      213: 9098565535102527282
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_126
+  - first:
+      213: 8916733362411396533
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_127
+  - first:
+      213: 7116022611274270892
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_128
+  - first:
+      213: -1427368881980431987
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_129
+  - first:
+      213: 5604477215643342932
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_130
+  - first:
+      213: 1447973495797203789
+    second: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_131
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa206928fce48e3b0800000000000000
+      internalID: -5483045893167512913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cf11520b9afb210800000000000000
+      internalID: 1350984987235712075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996e824fb24cf47a0800000000000000
+      internalID: -6390673653156485479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f0cf70f736a5b80800000000000000
+      internalID: -8405296357287653553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f35146b3fcbc440800000000000000
+      internalID: 4957283668840496909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_5
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ee128bc4cba0640800000000000000
+      internalID: 5047053370114829976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234f794afa7d89ab0800000000000000
+      internalID: -5001010236814265294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4359b71a7913535f0800000000000000
+      internalID: -777660833332488908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df406913ec6326710800000000000000
+      internalID: 1684969469813064957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6284a2cbff71ac40800000000000000
+      internalID: 5521835337412018796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49180005d39d6e4b0800000000000000
+      internalID: -5411399044880629356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ef26a2e2e0f9600800000000000000
+      internalID: 477115676966977162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26cc73c4870b9d970800000000000000
+      internalID: 8780242979256781922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41aa6f39493b0240800000000000000
+      internalID: 4758960418006409549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb6339062088fad0800000000000000
+      internalID: -2668241878365541414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d36477c8dabff6b0800000000000000
+      internalID: -5260280399523453998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_16
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62f5e4fa40052d50800000000000000
+      internalID: 6711771141601882735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434f95180908aa6f0800000000000000
+      internalID: -672583836204665804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_18
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f1c5d0ae42df9d0800000000000000
+      internalID: -2738992410706305258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14580c1fd12e7d970800000000000000
+      internalID: 8779734616819926337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_20
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da284c82dacdce90800000000000000
+      internalID: -7003718839845770540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189e549ccd4ea3430800000000000000
+      internalID: 3763572075542210945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_22
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1253eed4248a08bf0800000000000000
+      internalID: -324074170441911007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796e1e7fc63c7a620800000000000000
+      internalID: 2785409767334602391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e791a2ca0605d70800000000000000
+      internalID: 9029823545434799715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0130f6fb8b382f0800000000000000
+      internalID: -971729962241158947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ab776ee9b8bccf0800000000000000
+      internalID: -230937441291748794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a399228f30f0a8050800000000000000
+      internalID: 5803467579542640954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a0dd36dfa127510800000000000000
+      internalID: 1545327297745979909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6da019741abc0f0800000000000000
+      internalID: -1095604755586427145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252c4d6a316e25750800000000000000
+      internalID: 6292344601467732562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_31
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae175a3a4ee4bc10800000000000000
+      internalID: 2068540131443678891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103646a3cb34949e0800000000000000
+      internalID: -1636702513859894527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_33
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734395715d4c37620800000000000000
+      internalID: 2770774615261787191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_34
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02abae1c7e16e7a80800000000000000
+      internalID: -8467222601391228384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_35
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa8c808bbd95e650800000000000000
+      internalID: 6261584285569682171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14ae7e787330ec40800000000000000
+      internalID: 5539484134277030940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_37
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515706068ae3c7b40800000000000000
+      internalID: 5439291342849078549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_38
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c9d785375c9d290800000000000000
+      internalID: -7865038175029322743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d271dde9ea6afc00800000000000000
+      internalID: 935177425582650065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_40
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaad1e4b8799c6490800000000000000
+      internalID: -7751652114901640530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f2cb39bde4ef130800000000000000
+      internalID: 3602403456926363543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_42
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3324a534b33ae64c0800000000000000
+      internalID: -4292313919909117389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_43
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e4fb0b0fd425840800000000000000
+      internalID: 5211313414973902351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9367431d91dfe40800000000000000
+      internalID: 5691733890385197538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444c1a7c8bbea42f0800000000000000
+      internalID: -987717989398625212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_46
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ffc96745abcd950800000000000000
+      internalID: 6475255236181950245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_47
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5012b494940d693c0800000000000000
+      internalID: -4353062976626155259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_48
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10926227fabcae9b0800000000000000
+      internalID: -5050000077747771135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdf540bc1f269e50800000000000000
+      internalID: 6815686886334791119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_50
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965c2f7f66c8a8380800000000000000
+      internalID: -8968201334080486039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6277e26b228d8ce0800000000000000
+      internalID: -1401320786187816340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_52
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1016bfa3220c60170800000000000000
+      internalID: 8144408229397094657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14cdea9c99adecf0800000000000000
+      internalID: -221334316592020450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e7f3524cf6ccd80800000000000000
+      internalID: -8229079530883547630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_55
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7304c49891a063a0800000000000000
+      internalID: -6674156971060100228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_56
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1a088ce71c47960800000000000000
+      internalID: 7598911221554782687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a547c863fb47ce1d0800000000000000
+      internalID: -3320150460676148134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_58
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ddf759be4bcdd40800000000000000
+      internalID: 5610558159715294583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_59
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de913325eec3f930800000000000000
+      internalID: 4175908763035868880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_60
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0d567a1dccb0f50800000000000000
+      internalID: 6848792859175669990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_61
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d1067c943b64150800000000000000
+      internalID: 5856565494900858163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_62
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d83d54442ec83180800000000000000
+      internalID: -9135325188959946542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_63
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5c6a8dd0a7e86f0800000000000000
+      internalID: -680472293798394421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_64
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304700ff337b846d0800000000000000
+      internalID: -3005951317320371197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_65
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ebcaa45680a0630800000000000000
+      internalID: 3893934058952769109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_66
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220ea29712f525230800000000000000
+      internalID: 3626065247358083106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_67
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024620992235b0350800000000000000
+      internalID: 5983967937952900128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_68
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521137141e41d2380800000000000000
+      internalID: -8994509923090755291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_69
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4794a45444ef75e80800000000000000
+      internalID: -8189797828176230028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e406c94def57f8f70800000000000000
+      internalID: 9191695101835632718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_71
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34ad8589b0a6ee10800000000000000
+      internalID: 2226643784451335230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_72
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58eb7ba3f853f2730800000000000000
+      internalID: 3976455885273153157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_73
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db82d80a9afe5a10800000000000000
+      internalID: 1900231632276851672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_74
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fdd9a9952b96630800000000000000
+      internalID: 3920861048518598555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_75
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923eedad16e3000d0800000000000000
+      internalID: -3458695923815750871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_76
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada5aa3038f359770800000000000000
+      internalID: 8616863293978073818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_77
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42febd0b4f368be80800000000000000
+      internalID: -8162664422018650332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed63bdfc66f8231e0800000000000000
+      internalID: -2219553994603546914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_79
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dedf89535089c70800000000000000
+      internalID: 8977931584921267489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_80
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf8cdcf4cff81840800000000000000
+      internalID: 5195183391692853197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_81
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9feea809e7896490800000000000000
+      internalID: -7752515848598786145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_82
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8480192310ece50800000000000000
+      internalID: 6831399001460852961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_83
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9a657b997db8580800000000000000
+      internalID: -8823721989696476682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_84
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233f39d135f79f740800000000000000
+      internalID: 5186316440849085234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_85
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b0992871db5f490800000000000000
+      internalID: -7713050878129140980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_86
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2f94088b5569320800000000000000
+      internalID: 2564331288748749534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_87
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801081efdb6a60530800000000000000
+      internalID: 3820924668812460296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_88
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d393aa77133b5c490800000000000000
+      internalID: -7726572560641803971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_89
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915ce57eb44c68b70800000000000000
+      internalID: 8901017543827703065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_90
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdb31174269cd360800000000000000
+      internalID: 7195791387891318214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_91
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3727da4bbee3a10f0800000000000000
+      internalID: -1145533973142867341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_92
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebebe40ba7b6c7d90800000000000000
+      internalID: -7098680737954611522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b4b55a2a8507fd0800000000000000
+      internalID: -2346277950277858446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_94
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4acb1121a33c9d00800000000000000
+      internalID: 980715585998146125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_95
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380a732183ffb75b0800000000000000
+      internalID: -5369417514420297597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_96
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8cdb8b7e9c49080800000000000000
+      internalID: -9181491743227524884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_97
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f13fb2eba912380800000000000000
+      internalID: -8997740438937723021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_98
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1adbc202e52c930800000000000000
+      internalID: 4161992497926349220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_99
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992d4d0314919aca0800000000000000
+      internalID: -6005240860339023207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_100
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ffcf5a944e900810800000000000000
+      internalID: 1729556274395205616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_101
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e683c7f8b00cfd650800000000000000
+      internalID: 6259933162952734830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_102
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223a6b48923007400800000000000000
+      internalID: 319759050398409506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_103
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5156c88f370e400e0800000000000000
+      internalID: -2304470320611039979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_104
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4380459aa96221610800000000000000
+      internalID: 1590376064122882100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_105
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa51c5dbb3bdb310800000000000000
+      internalID: 1422490676645419761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_106
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bea409f0eb0e5320800000000000000
+      internalID: 2548487500016692913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_107
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7bac13bca868900800000000000000
+      internalID: 686388598538942375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8229ac359aa38c0800000000000000
+      internalID: -4018713540128790273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_109
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642e661f893157130800000000000000
+      internalID: 3563776227739624006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_110
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4162ae51fdb321a0800000000000000
+      internalID: -6835410965045812916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_111
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05a3be4451934c80800000000000000
+      internalID: -8339662293676350193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_112
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d79e75a9d1bdf5a0800000000000000
+      internalID: -6485832340001089576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_113
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a0a55d7f58034b0800000000000000
+      internalID: -5462719048517547509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_114
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6914a79d0361e3c10800000000000000
+      internalID: 2035088480680952214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_115
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3014930e62c6d00800000000000000
+      internalID: 967190764452905977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_116
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ceb471dfadf8a600800000000000000
+      internalID: 479912291890151111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_117
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030ea437dc25aa3e0800000000000000
+      internalID: -2041728438703038416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_118
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a27f94a210daba00800000000000000
+      internalID: 773159064537363105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_119
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05872705703e0ebd0800000000000000
+      internalID: -2602830964066191280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_120
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499ab093d6b0bdd80800000000000000
+      internalID: -8224967730725672556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_121
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f795f2d45aee3dde0800000000000000
+      internalID: -1309440672902719105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_122
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d574145c12c02340800000000000000
+      internalID: 4837079426721412565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_123
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db4d630eb0f7acb0800000000000000
+      internalID: -4852645374576473130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42bbae05c2aec2fb0800000000000000
+      internalID: -4671101237433025756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_125
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8dffd248c3dd32e0800000000000000
+      internalID: -2144324990489592434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_126
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237e56dd529944e70800000000000000
+      internalID: 9098565535102527282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_127
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdd76f00c99ebb70800000000000000
+      internalID: 8916733362411396533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_128
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca886a6dcd031c260800000000000000
+      internalID: 7116022611274270892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_129
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d812c1a7097f03ce0800000000000000
+      internalID: -1427368881980431987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_130
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4581136755a17cd40800000000000000
+      internalID: 5604477215643342932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dasmo7i-e51b33b7-5eaf-4ec7-abcc-c1dc71434ee9_131
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d434c25093c381410800000000000000
+      internalID: 1447973495797203789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
