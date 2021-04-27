@@ -30,7 +30,7 @@ Il est nécessaire d'avoir un compte pour se connecter au jeu
 
 ## Données de layer
 
-Joueur : 10
-Sol : 1
-Background : 0
-Objets inamovibles : 2 
+Joueur : 10  
+Sol : 1  
+Background : 0  
+Objets inamovibles : 2  
