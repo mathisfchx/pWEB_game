@@ -28,4 +28,9 @@ Il est nécessaire d'avoir un compte pour se connecter au jeu
 => Suite du projet à la rentrée : partir sur phase 2 du projet après la fin de la milestone Multi_final  
  - Mise en place des règles du jeu, intéractions, et début/fin de partie  
 
+## Données de layer
 
+Joueur : 10
+Sol : 1
+Background : 0
+Objets inamovibles : 2 
