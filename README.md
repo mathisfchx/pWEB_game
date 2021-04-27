@@ -20,7 +20,7 @@ Archi client serveur avec serveur distant AWS
 Connections de joueurs "quasi illimité" et synchro des positions  
 --> Multi_final nécessite encore des résolutions de bug liés à la synchro et affichages  
 
-3_ Milestone bd_final accomplie  
+3_ Milestone bd_ini accomplie  
 Base de donnée pour stockage des comptes utilisateurs : possible de s'inscrire et de se connecter  
 La base est sur le serveur distant  
 Il est nécessaire d'avoir un compte pour se connecter au jeu  
