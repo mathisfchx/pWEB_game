@@ -1,6 +1,12 @@
 # pWEB_game
 Unity 2D mutliplayer game made for a Web school project
 
+## Mise à jour 04/05
+Plusieurs issues A reglées (encore quelques A à régler et le projet serait "rendable")
+ROADMAP A DEFENIR POUR LES PROCHAINES ETAPES :
+1 - Tous les A et B
+2 - Equipes
+3 - 
 
 ## Mise à jour 27/04
 
