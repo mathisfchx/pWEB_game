@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 897184729387425976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -208,6 +208,9 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   speed: 10
+  inv: {fileID: 8306171046861423881, guid: f43acc18452078b47853396288e783a6, type: 3}
+  hud: {fileID: 3078163412791112601, guid: afd52f90458591c4881abe0e0cb24181, type: 3}
+  inventory: {fileID: 0}
 --- !u!95 &-7026400522208259541
 Animator:
   serializedVersion: 3
