@@ -15,18 +15,12 @@ public class Inventory : MonoBehaviour
         
         if (mItems.Count < SLOTS){
 
-            Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
-            if (collider.enabled){
+            mItems.Add(item);
 
-                collider.enabled = false;
+            item.OnPickup();
 
-                mItems.Add(item);
-
-                item.OnPickup();
-
-                if (ItemAdded != null) {
-                    ItemAdded(this, new InventoryEventArgs(item));
-                }
+            if (ItemAdded != null) {
+                ItemAdded(this, new InventoryEventArgs(item));
             }
         }
     }
