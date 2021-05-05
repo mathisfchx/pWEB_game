@@ -9,7 +9,7 @@ public class PlayerMouvement : NetworkBehaviour
 	
 	[SyncVar]
     public float speed;
-    //[SyncVar]
+    [SyncVar]
     public Interactable focus;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
