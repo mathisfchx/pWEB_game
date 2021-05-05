@@ -207,7 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  speed: 10
+  speed: 8
   inv: {fileID: 8306171046861423881, guid: f43acc18452078b47853396288e783a6, type: 3}
   hud: {fileID: 3078163412791112601, guid: afd52f90458591c4881abe0e0cb24181, type: 3}
   inventory: {fileID: 0}
