@@ -9,8 +9,11 @@ public class PlayerMouvement : NetworkBehaviour
 	
 	[SyncVar]
     public float speed;
-    //[SyncVar]
-    //public Interactable focus;
+
+    public GameObject inv;
+    public GameObject hud;
+    public Inventory inventory;
+
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
@@ -20,6 +23,11 @@ public class PlayerMouvement : NetworkBehaviour
     {
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        inv = Instantiate(inv);
+        inventory = inv.GetComponent<Inventory>();
+        hud = Instantiate(hud);
+        HUD HUDscript = hud.GetComponent<HUD>();
+        HUDscript.inventory = inventory;
     }
 
     // Update is called once per frame
@@ -73,4 +81,21 @@ public class PlayerMouvement : NetworkBehaviour
             transform.position + change.normalized * speed * Time.deltaTime
         );
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("collisionnnnn");
+        IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
+        if (item != null){
+            inventory.AddItem(item);
+        }
+    }
+/*
+    private void OnControllerColliderHit(ControllerColliderHit hit){
+        IInventoryItem item = hit.collider.GetComponent<IInventoryItem>();
+        if (item != null){
+            inventory.AddItem(item);
+        }
+    }
+*/
 }

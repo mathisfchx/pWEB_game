@@ -14,7 +14,7 @@ public class UserSelect : MonoBehaviour
     [SerializeField] Button RegisterButton ;
     [SerializeField] Button SaveButton ; 
     [SerializeField] GameObject SCENE ; 
-    [SerializeField] GameObject Inventory ;
+    //[SerializeField] GameObject Inventory ;
     //[SerializeField] GameObject PF_Player;
     [SerializeField] GameObject Authentification_menu ; 
     [SerializeField] GameObject game ; 
@@ -45,7 +45,7 @@ public class UserSelect : MonoBehaviour
         SCENE.SetActive(false);
         //PF_Player.SetActive(false);
         game.SetActive(false); 
-        Inventory.SetActive(false);
+        //Inventory.SetActive(false);
         Network_manager.SetActive(false);
         Authentification_menu.SetActive(true);
 
@@ -106,7 +106,7 @@ public class UserSelect : MonoBehaviour
                 inventory.speed = int.Parse(values[2]);
                 inventory.username = username.text ;*/
                 SCENE.SetActive(true);
-                Inventory.SetActive(true);
+                //Inventory.SetActive(true);
                 //PF_Player.SetActive(true);
                 game.SetActive(true); 
                 Network_manager.SetActive(true);
