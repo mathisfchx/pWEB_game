@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-public class HUD : MonoBehaviour
+public class HUD : NetworkBehaviour
 {
     public Inventory inventory;
 

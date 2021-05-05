@@ -1,14 +1,13 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class Inventory : MonoBehaviour
+public class Inventory : NetworkBehaviour
 {
     private const int SLOTS = 11;
-
-    private List<IInventoryItem> mItems = new List<IInventoryItem>();
-
+    readonly SyncList<IInventoryItem> mItems = new SyncList<IInventoryItem>();
     public event EventHandler<InventoryEventArgs> ItemAdded;
 
     public void AddItem(IInventoryItem item){
