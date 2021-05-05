@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
@@ -9,12 +9,12 @@ public class PlayerMouvement : NetworkBehaviour
 	
 	[SyncVar]
     public float speed;
-    [SyncVar]
-    public Interactable focus;
+    //[SyncVar]
+    //public Interactable focus;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
-    private RaycastHit hit;
+    //private RaycastHit hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,28 +32,27 @@ public class PlayerMouvement : NetworkBehaviour
 
         //test pour une interaction avec la touche E
         if(Input.GetKey(KeyCode.E)){
-        	
-        	
 
            	//if(Physics.Raycast(change, hit, 100)){
 
-        		Interactable interactable = hit.collider.GetComponent<Interactable>();
+        		Interactable interactable = GetComponent<Interactable>();
 
            		if (interactable != null){
 
-           			SetFocus(interactable);
+                    Debug.Log("Vous avez trouvé un objet");
+           			//SetFocus(interactable);
 
             	}
             }
         //}
     }
-
+/*
     void SetFocus(Interactable newFocus){
 
     	focus = newFocus;	
 
     }
-
+*/
     void UpdateAnimationAndMove(){
 
         if(this.isLocalPlayer){
