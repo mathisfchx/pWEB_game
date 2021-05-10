@@ -15,8 +15,19 @@ public class CameraMovement : MonoBehaviour
     }
 
     // Update is called once per frame
+    void Update()
+    {
+        if (!target.GetComponent<PlayerMouvement>().isLocalPlayer)
+        {
+            gameObject.GetComponent<Camera>().enabled = false;
+            gameObject.GetComponent<AudioListener>().enabled = false;
+        }
+    }
+
+    // Update is called once per frame
     void LateUpdate()
     {
+        
         if(transform.position != target.position){
             Vector3 targetPosition = new Vector3(target.position.x,target.position.y,transform.position.z);
             targetPosition.x=Mathf.Clamp(targetPosition.x,minPosition.x,maxPosition.x);
