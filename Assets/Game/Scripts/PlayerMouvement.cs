@@ -11,11 +11,8 @@ public class PlayerMouvement : NetworkBehaviour
 	[SyncVar]
     public float speed;
 
-    [SyncVar]
     public GameObject inv;
-    [SyncVar]
     public GameObject hud;
-    [SyncVar]
     public Inventory inventory;
     public GameObject cam;
 

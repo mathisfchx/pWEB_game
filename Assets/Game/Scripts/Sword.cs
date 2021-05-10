@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
+//using Mirror;
 
-public class Sword : NetworkBehaviour, IInventoryItem
+public class Sword : MonoBehaviour, IInventoryItem
 {
     public string Name
     {
