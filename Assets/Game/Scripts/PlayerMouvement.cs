@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-//using static Interactable;
+using static CameraMovement;
+
 
 public class PlayerMouvement : NetworkBehaviour
 {
@@ -16,6 +17,8 @@ public class PlayerMouvement : NetworkBehaviour
     public GameObject hud;
     [SyncVar]
     public Inventory inventory;
+    public GameObject cam;
+
 
     private Rigidbody2D myRigidbody;
     private Vector3 change;
@@ -31,7 +34,12 @@ public class PlayerMouvement : NetworkBehaviour
         hud = Instantiate(hud);
         HUD HUDscript = hud.GetComponent<HUD>();
         HUDscript.inventory = inventory;
+        cam=Instantiate(cam);
+        //cam=cam.GetComponent<CameraMovement>();
+        cam.GetComponent<CameraMovement>().target=gameObject.GetComponent<Transform>();
     }
+
+
 
     // Update is called once per frame
     void Update()

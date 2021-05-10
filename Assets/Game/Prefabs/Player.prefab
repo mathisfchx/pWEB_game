@@ -211,6 +211,7 @@ MonoBehaviour:
   inv: {fileID: 8306171046861423881, guid: f43acc18452078b47853396288e783a6, type: 3}
   hud: {fileID: 3078163412791112601, guid: afd52f90458591c4881abe0e0cb24181, type: 3}
   inventory: {fileID: 0}
+  cam: {fileID: 1016634523077923433, guid: 8e6e337cb2eaccc46947635185e0216e, type: 3}
 --- !u!95 &-7026400522208259541
 Animator:
   serializedVersion: 3

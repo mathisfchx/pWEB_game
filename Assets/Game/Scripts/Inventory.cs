@@ -14,12 +14,18 @@ public class Inventory : NetworkBehaviour
         
         if (mItems.Count < SLOTS){
 
-            mItems.Add(item);
+            Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
+            if (collider.enabled){
 
-            item.OnPickup();
+                collider.enabled = false;
 
-            if (ItemAdded != null) {
-                ItemAdded(this, new InventoryEventArgs(item));
+                mItems.Add(item);
+
+                item.OnPickup();
+
+                if (ItemAdded != null) {
+                    ItemAdded(this, new InventoryEventArgs(item));
+                }
             }
         }
     }

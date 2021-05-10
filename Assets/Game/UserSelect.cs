@@ -12,12 +12,12 @@ public class UserSelect : MonoBehaviour
     [SerializeField] InputField password ;
     [SerializeField] Button LoginButton ;
     [SerializeField] Button RegisterButton ;
-    [SerializeField] Button SaveButton ; 
-    [SerializeField] GameObject SCENE ; 
+    [SerializeField] Button SaveButton ;
+    [SerializeField] GameObject SCENE ;
     //[SerializeField] GameObject Inventory ;
     //[SerializeField] GameObject PF_Player;
-    [SerializeField] GameObject Authentification_menu ; 
-    [SerializeField] GameObject game ; 
+    [SerializeField] GameObject Authentification_menu ;
+    [SerializeField] GameObject game ;
     [SerializeField] GameObject Network_manager ;
     [Space]
     //[SerializeField] GameObject LoginScene ;
@@ -44,7 +44,7 @@ public class UserSelect : MonoBehaviour
         SaveButton.onClick.AddListener(CoroutineButtonSave);
         SCENE.SetActive(false);
         //PF_Player.SetActive(false);
-        game.SetActive(false); 
+        game.SetActive(false);
         //Inventory.SetActive(false);
         Network_manager.SetActive(false);
         Authentification_menu.SetActive(true);
@@ -71,7 +71,7 @@ public class UserSelect : MonoBehaviour
     void CoroutineButtonSave()
     {
 
-        SaveButton.interactable = false ; 
+        SaveButton.interactable = false ;
         StartCoroutine(Save());
 
     }
@@ -108,9 +108,9 @@ public class UserSelect : MonoBehaviour
                 SCENE.SetActive(true);
                 //Inventory.SetActive(true);
                 //PF_Player.SetActive(true);
-                game.SetActive(true); 
+                game.SetActive(true);
                 Network_manager.SetActive(true);
-                Authentification_menu.SetActive(false); 
+                Authentification_menu.SetActive(false);
             }
         }
 
@@ -126,6 +126,8 @@ public class UserSelect : MonoBehaviour
 
         form.AddField("addUsername",username.text);
         form.AddField("addPassword",password.text);
+				form.AddField("addLevel", 1);
+				form.AddField("addExperience", 0);
 
 
 
@@ -134,6 +136,7 @@ public class UserSelect : MonoBehaviour
             yield return users.SendWebRequest();
             if (users.error !=null) {
                 errorMessages.text = "404 not found";
+								print(users.error);
             }else{
                 string usersDataString = users.downloadHandler.text;
                 print(usersDataString);
@@ -185,10 +188,10 @@ public class UserSelect : MonoBehaviour
         if(SCENE.activeSelf)
         {
             if (counter < 1000) {
-                counter++ ; 
+                counter++ ;
             }
             else{
-                counter = 0 ; 
+                counter = 0 ;
                 StartCoroutine(Save());
             }
         }
