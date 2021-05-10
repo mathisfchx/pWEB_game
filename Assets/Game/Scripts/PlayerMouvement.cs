@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-using static Interactable;
 using static CameraMovement;
 
 
@@ -12,8 +11,11 @@ public class PlayerMouvement : NetworkBehaviour
 	[SyncVar]
     public float speed;
 
+    [SyncVar]
     public GameObject inv;
+    [SyncVar]
     public GameObject hud;
+    [SyncVar]
     public Inventory inventory;
     public GameObject cam;
 
@@ -46,7 +48,7 @@ public class PlayerMouvement : NetworkBehaviour
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
         UpdateAnimationAndMove();
-
+        /*
         //test pour une interaction avec la touche E
         if(Input.GetKey(KeyCode.E)){
 
@@ -62,6 +64,7 @@ public class PlayerMouvement : NetworkBehaviour
             	}
             }
         //}
+        */
     }
 /*
     void SetFocus(Interactable newFocus){
