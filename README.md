@@ -1,6 +1,10 @@
 # pWEB_game
 Unity 2D mutliplayer game made for a Web school project
 
+## SPECIFICATIONS REQUISES
+- Ecran 16/9
+
+
 ## Mise à jour 04/05
 Plusieurs issues A reglées (encore quelques A à régler et le projet serait "rendable")
 ROADMAP A DEFENIR POUR LES PROCHAINES ETAPES :
