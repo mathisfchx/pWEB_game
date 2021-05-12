@@ -45,6 +45,9 @@ public class PlayerMouvement : NetworkBehaviour
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
         UpdateAnimationAndMove();
+
+        //gameObject.transform.rotation = new Quaternion(0,0,0,0);
+        
         /*
         //test pour une interaction avec la touche E
         if(Input.GetKey(KeyCode.E)){
