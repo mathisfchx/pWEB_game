@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using Mirror;
 
 public class UserSelect : MonoBehaviour
 {
@@ -13,12 +14,14 @@ public class UserSelect : MonoBehaviour
     [SerializeField] Button LoginButton ;
     [SerializeField] Button RegisterButton ;
     [SerializeField] Button SaveButton ;
+    [SerializeField] Button LogoutButton ;
     [SerializeField] GameObject SCENE ;
     //[SerializeField] GameObject Inventory ;
     //[SerializeField] GameObject PF_Player;
     [SerializeField] GameObject Authentification_menu ;
     [SerializeField] GameObject game ;
     [SerializeField] GameObject Network_manager ;
+    Mirror.NetworkManager manager;
     [Space]
     //[SerializeField] GameObject LoginScene ;
     //[SerializeField] GameObject GameScene ;
@@ -39,6 +42,8 @@ public class UserSelect : MonoBehaviour
         //GameScene.setActive(false);
         //LoginScene.setActive(false);
 
+        manager = Network_manager.GetComponent<Mirror.NetworkManager>();
+
         LoginButton.onClick.AddListener(CoroutineButtonLogin);
         RegisterButton.onClick.AddListener(CoroutineButtonRegister);
         SaveButton.onClick.AddListener(CoroutineButtonSave);
@@ -49,6 +54,9 @@ public class UserSelect : MonoBehaviour
         Network_manager.SetActive(false);
         Authentification_menu.SetActive(true);
 
+        LogoutButton.onClick.AddListener(CoroutineButtonLogout);
+		LogoutButton.interactable = false ;
+
 
     }
 
@@ -58,6 +66,7 @@ public class UserSelect : MonoBehaviour
         //progressCircle.setActive(true);
         StartCoroutine(Login());
         password.text = "";
+        LogoutButton.interactable = true ;
     }
 
     void CoroutineButtonRegister()
@@ -74,6 +83,26 @@ public class UserSelect : MonoBehaviour
         SaveButton.interactable = false ;
         StartCoroutine(Save());
 
+    }
+
+    void CoroutineButtonLogout()
+    {
+        SCENE.SetActive(false);
+        game.SetActive(false);
+        Network_manager.SetActive(false);
+        Authentification_menu.SetActive(true);
+
+        LogoutButton.interactable = false ;
+        LoginButton.interactable = true ;
+
+        Destroy(GameObject.Find("Player(Clone)"));
+        Destroy(GameObject.Find("Inventory(Clone)"));
+        Destroy(GameObject.Find("Camera(Clone)"));
+        Destroy(GameObject.Find("HUDInventory(Clone)"));
+
+        manager.StopHost();
+
+        Application.Quit();
     }
 
 
