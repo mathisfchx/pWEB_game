@@ -7,20 +7,22 @@ using Mirror;
 public class HUD : NetworkBehaviour
 {
     public Inventory inventory;
+    public Sprite cle;
+
+    public Dictionary<string, Sprite> dico = new Dictionary<string, Sprite>();
+
 
     void Start()
     {
+        dico.Add("_Cle(Clone)",cle);
         inventory.ItemAdded += InventoryScript_ItemAdded;
     }
     
     private void InventoryScript_ItemAdded(object sender, InventoryEventArgs e)
     {
-        //Soit des objets dejà visibles et on update le nombre
-        //Soit dictionnaire string-sprite
 
         Debug.Log("Event d'add objet :"+e.Item);
 
-        /*
         Transform inventoryPanel = transform.Find("InventoryPanel");
         foreach(Transform slot in inventoryPanel)
         {
@@ -29,12 +31,11 @@ public class HUD : NetworkBehaviour
             if (!image.enabled)
             {
                 image.enabled = true;
-                image.sprite = dico(e.item)
+                image.sprite = dico[e.Item];
 
                 break;
             }
         }
-        */
     }
 }
 

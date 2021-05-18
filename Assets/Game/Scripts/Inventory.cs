@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using Mirror;
+using Mirror;
 
-public class Inventory : MonoBehaviour
+public class Inventory : NetworkBehaviour
 {
     private const int SLOTS = 11;
     private List<string> mItems = new List<string>();

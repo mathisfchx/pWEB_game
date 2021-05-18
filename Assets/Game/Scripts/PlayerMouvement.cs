@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using static CameraMovement;
+using System;
+using System.Text;
 
 
 public class PlayerMouvement : NetworkBehaviour
