@@ -96,12 +96,15 @@ public class PlayerMouvement : NetworkBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("collisionnnnn");
-        IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
-        if (collision.collider.enabled){
-            //collision.collider.enabled = false;
-            if (item != null){
-                inventory.AddItem(item);
+        Debug.Log("collisionnnnn");
+        string item = collision.gameObject.name;
+        if (item[0] == '_' ){
+            if (collision.collider.enabled){
+                //collision.collider.enabled = false;
+                if (item != null){
+                    inventory.AddItem(item);
+                }
+                collision.gameObject.SetActive(false);
             }
         }
     }

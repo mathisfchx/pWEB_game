@@ -15,6 +15,12 @@ public class HUD : NetworkBehaviour
     
     private void InventoryScript_ItemAdded(object sender, InventoryEventArgs e)
     {
+        //Soit des objets dejà visibles et on update le nombre
+        //Soit dictionnaire string-sprite
+
+        Debug.Log("Event d'add objet :"+e.Item);
+
+        /*
         Transform inventoryPanel = transform.Find("InventoryPanel");
         foreach(Transform slot in inventoryPanel)
         {
@@ -23,11 +29,12 @@ public class HUD : NetworkBehaviour
             if (!image.enabled)
             {
                 image.enabled = true;
-                image.sprite = e.Item.Image;
+                image.sprite = dico(e.item)
 
                 break;
             }
         }
+        */
     }
 }
 

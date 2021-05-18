@@ -22,6 +22,17 @@ namespace Game
         [Tooltip("Assign Players Panel for instantiating PlayerUI as child")]
         public RectTransform playersPanel;
 
+        public override void OnStartServer()
+        {
+            SpawnCle();
+        }
+
+        void SpawnCle()
+        {
+            var cleGo = Instantiate(spawnPrefabs[0], new Vector2(-11,-13), Quaternion.identity);
+            NetworkServer.Spawn(cleGo);
+        }
+
         /// <summary>
         /// Called on the server when a client adds a new player with ClientScene.AddPlayer.
         /// <para>The default implementation for this function creates a new player object from the playerPrefab.</para>
