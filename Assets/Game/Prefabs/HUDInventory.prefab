@@ -1077,6 +1077,7 @@ MonoBehaviour:
   inventory: {fileID: 1450916662006798724, guid: f43acc18452078b47853396288e783a6,
     type: 3}
   cle: {fileID: 5747610277329748102, guid: a3ebf609d64354b47bd06cdd94098ebc, type: 3}
+  hud: {fileID: 3078163412791112601}
 --- !u!114 &5822797725400764989
 MonoBehaviour:
   m_ObjectHideFlags: 0
