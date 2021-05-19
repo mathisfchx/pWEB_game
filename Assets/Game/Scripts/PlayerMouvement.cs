@@ -36,6 +36,9 @@ public class PlayerMouvement : NetworkBehaviour
         cam=Instantiate(cam);
         //cam=cam.GetComponent<CameraMovement>();
         cam.GetComponent<CameraMovement>().target=gameObject.GetComponent<Transform>();
+        if(!this.isLocalPlayer){
+            hud.SetActive(false);
+        }
     }
 
 

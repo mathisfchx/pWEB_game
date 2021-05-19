@@ -11,12 +11,13 @@ public class HUD : NetworkBehaviour
 
     public Dictionary<string, Sprite> dico = new Dictionary<string, Sprite>();
 
+    //public GameObject hud;
 
     void Start()
     {
-        if(!isLocalPlayer){
-            this.enabled=false;
-        }
+        /*if(!isLocalPlayer){
+            hud.SetActive(false);
+        }*/
         dico.Add("_Cle(Clone)",cle);
         inventory.ItemAdded += InventoryScript_ItemAdded;
     }
