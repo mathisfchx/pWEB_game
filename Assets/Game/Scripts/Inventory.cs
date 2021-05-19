@@ -7,7 +7,8 @@ using Mirror;
 public class Inventory : NetworkBehaviour
 {
     private const int SLOTS = 11;
-    private List<string> mItems = new List<string>();
+
+    private SyncList<string> mItems = new SyncList<string>();
     public event EventHandler<InventoryEventArgs> ItemAdded;
 
     public void AddItem(string item){

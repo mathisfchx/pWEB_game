@@ -14,6 +14,9 @@ public class HUD : NetworkBehaviour
 
     void Start()
     {
+        if(!isLocalPlayer){
+            this.enabled=false;
+        }
         dico.Add("_Cle(Clone)",cle);
         inventory.ItemAdded += InventoryScript_ItemAdded;
     }
