@@ -21,9 +21,6 @@ namespace Game
         [Tooltip("Assign Main Panel so it can be turned on from Player:OnStartClient")]
         public RectTransform mainPanel;
 
-        [Tooltip("Assign Players Panel for instantiating PlayerUI as child")]
-        public RectTransform playersPanel;
-
         public override void OnStartServer()
         {
             SpawnCle();
@@ -44,7 +41,6 @@ namespace Game
         {
             base.OnServerAddPlayer(conn);
             conn_tab.conn_id= conn.connectionId;
-            ResetPlayerNumbers();
         }
 
         /// <summary>
@@ -56,17 +52,6 @@ namespace Game
         {
             base.OnServerDisconnect(conn);
             userselect.CoroutineDisconnect(FindUsername(conn.connectionId));
-            ResetPlayerNumbers();
-        }
-
-        void ResetPlayerNumbers()
-        {
-            int playerNumber = 0;
-            foreach (Player player in playersList)
-            {
-                player.playerNumber = playerNumber;
-                playerNumber++;
-            }
         }
 
         string FindUsername(int id){
