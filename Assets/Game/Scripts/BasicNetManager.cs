@@ -13,6 +13,8 @@ namespace Game
     {
         // Players List to manage playerNumber
         internal readonly List<Player> playersList = new List<Player>();
+        [SerializeField] Connection_tab conn_tab ;
+        [SerializeField] UserSelect userselect ;
 
         [Header("Canvas UI")]
 
@@ -41,6 +43,7 @@ namespace Game
         public override void OnServerAddPlayer(NetworkConnection conn)
         {
             base.OnServerAddPlayer(conn);
+            conn_tab.conn_id= conn.connectionId;
             ResetPlayerNumbers();
         }
 
@@ -52,6 +55,7 @@ namespace Game
         public override void OnServerDisconnect(NetworkConnection conn)
         {
             base.OnServerDisconnect(conn);
+            userselect.CoroutineDisconnect(FindUsername(conn.connectionId));
             ResetPlayerNumbers();
         }
 
@@ -63,6 +67,16 @@ namespace Game
                 player.playerNumber = playerNumber;
                 playerNumber++;
             }
+        }
+
+        string FindUsername(int id){
+            foreach(string key in conn_tab.conn_tab.Keys){
+                if(conn_tab.conn_tab[key]==id){
+                    return key;                
+                }
+            }
+
+            return " ";
         }
     }
 }

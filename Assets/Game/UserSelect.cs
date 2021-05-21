@@ -21,6 +21,7 @@ public class UserSelect : MonoBehaviour
     [SerializeField] GameObject Authentification_menu ;
     [SerializeField] GameObject game ;
     [SerializeField] GameObject Network_manager ;
+    [SerializeField] Connection_tab conn_tab;
     Mirror.NetworkManager manager;
     [Space]
     //[SerializeField] GameObject LoginScene ;
@@ -35,7 +36,9 @@ public class UserSelect : MonoBehaviour
     string URL_Login = "http://13.36.61.82/userSelect.php";
     string URL_Register = "http://13.36.61.82/userinsert.php";
     string URL_Save = "http://13.36.61.82/Save.php";
+    string URL_Disconnect = "http://13.36.61.82/userDisconnect.php";
     public string[] usersData;
+    public string UsernameString ;
 
     void Start()
     {
@@ -130,6 +133,7 @@ public class UserSelect : MonoBehaviour
                 print("Welcome");
                 print(usersDataString);
                 string[] values = usersDataString.Split(';');
+                UsernameString = username.text;
                 /*inventory.health = int.Parse(values[0]);
                 inventory.defense = int.Parse(values[1]);
                 inventory.speed = int.Parse(values[2]);
@@ -225,5 +229,36 @@ public class UserSelect : MonoBehaviour
             }
         }
         */
+    }
+
+    public void CoroutineDisconnect(string username){
+        //StartCoroutine(Disconnect(username));
+    }
+
+    public IEnumerator Disconnect(string username)
+    {
+
+        form = new WWWForm();
+        form.AddField("Username",username);
+
+        using(UnityWebRequest save = UnityWebRequest.Post(URL_Disconnect,form))
+        {
+            yield return save.SendWebRequest();
+            if(save.error !=null){
+                print("Nous n'avons pas pu sauvegarder");
+            }else{
+                string SaveString = save.downloadHandler.text;
+                print(SaveString);
+            }
+
+
+
+
+
+        }
+
+        //SaveButton.interactable = true;
+
+
     }
 }
