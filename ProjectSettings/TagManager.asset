@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collider
+  - Conn_tag
+  - ServerScript
   layers:
   - Default
   - TransparentFX

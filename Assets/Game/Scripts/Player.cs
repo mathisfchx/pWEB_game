@@ -9,6 +9,9 @@ namespace Game
         public event System.Action<int> OnPlayerNumberChanged;
         public event System.Action<Color32> OnPlayerColorChanged;
         public event System.Action<int> OnPlayerDataChanged;
+        public Connection_tab conn_tab; 
+        public UserSelect userselect;
+        public string Username;
 
         [Header("Player UI")]
         public GameObject playerUIPrefab;
@@ -57,9 +60,19 @@ namespace Game
         /// <para>This could be triggered by NetworkServer.Listen() for objects in the scene, or by NetworkServer.Spawn() for objects that are dynamically created.</para>
         /// <para>This will be called for objects on a "host" as well as for object on a dedicated server.</para>
         /// </summary>
+        public void Awake()
+        {
+            conn_tab = GameObject.FindGameObjectsWithTag("Conn_tag")[0].GetComponent(typeof(Connection_tab)) as Connection_tab;
+            userselect= GameObject.FindGameObjectsWithTag("ServerScript")[0].GetComponent(typeof(UserSelect)) as UserSelect;
+
+
+        }
+
         public override void OnStartServer()
         {
             base.OnStartServer();
+
+            Username = userselect.UsernameString;
 
             // Add this to the static Players List
             ((BasicNetManager)NetworkManager.singleton).playersList.Add(this);
@@ -96,6 +109,26 @@ namespace Game
         {
             // Activate the main panel
             ((BasicNetManager)NetworkManager.singleton).mainPanel.gameObject.SetActive(true);
+            if (hasAuthority)
+            {
+                if (isServer)
+                {   
+
+                    conn_tab.Username = userselect.UsernameString;
+                    conn_tab.conn_tab[conn_tab.Username] = conn_tab.conn_id;
+                    //CmdSetDico(conn_tab.Username, this.netIdentity.connectionToClient.connectionId);
+
+                }
+                else
+                {
+                    if (isLocalPlayer)
+                    {
+                        print("player");
+                        CmdSetUsername(userselect.UsernameString);
+                        CmdSetDico();
+                    }
+                }
+            }
 
             // Instantiate the player UI as child of the Players Panel
             playerUI = Instantiate(playerUIPrefab, ((BasicNetManager)NetworkManager.singleton).playersPanel);
@@ -121,6 +154,23 @@ namespace Game
             // Disable the main panel for local player
             if (isLocalPlayer)
                 ((BasicNetManager)NetworkManager.singleton).mainPanel.gameObject.SetActive(false);
+        }
+
+        [Command]
+        public void CmdSetDico()
+        {
+            print(hasAuthority);
+            //if(hasAuthority)
+            //{
+                conn_tab.conn_tab[conn_tab.Username] = conn_tab.conn_id;
+                //RpcModifDico(username, conn_id);
+            //}
+
+        }
+        [Command]
+        public void CmdSetUsername(string username)
+        {
+            conn_tab.Username = username;
         }
     }
 }
