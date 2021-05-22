@@ -9,10 +9,11 @@ namespace Game
     {
 
         public Connection_tab conn_tab; 
-        public UserSelect userselect;
         public TextMeshPro pseudo;
+        public UserSelect userselect;
+        [SyncVar]
         public string Username;
-
+    
 
 
         /// <summary>
@@ -24,17 +25,11 @@ namespace Game
         {
             conn_tab = GameObject.FindGameObjectsWithTag("Conn_tag")[0].GetComponent(typeof(Connection_tab)) as Connection_tab;
             userselect= GameObject.FindGameObjectsWithTag("ServerScript")[0].GetComponent(typeof(UserSelect)) as UserSelect;
-
-
         }
 
         public override void OnStartServer()
         {
             base.OnStartServer();
-
-            Username = userselect.UsernameString;
-            Debug.Log("OnStartServ");
-
             // Add this to the static Players List
             ((BasicNetManager)NetworkManager.singleton).playersList.Add(this);
         }
@@ -55,12 +50,14 @@ namespace Game
         /// </summary>
         public override void OnStartClient()
         {
-            Username = userselect.UsernameString;
+            if(isLocalPlayer){
+                Username = userselect.UsernameString;
+            }
+            pseudo = GetComponentInChildren<TextMeshPro>();
+            pseudo.text = Username;
             Debug.Log("OnStartClient");
             // Activate the main panel
             ((BasicNetManager)NetworkManager.singleton).mainPanel.gameObject.SetActive(true);
-            pseudo = GetComponentInChildren<TextMeshPro>();
-            pseudo.text = Username;
             if (hasAuthority)
             {
                 if (isServer)
@@ -74,10 +71,8 @@ namespace Game
                 {
                     if (isLocalPlayer)
                     {
-                        
-                        
                         print("player");
-                        CmdSetUsername(userselect.UsernameString);
+//                        CmdSetUsername(userselect.UsernameString);
                         CmdSetDico();
                     }
                 }

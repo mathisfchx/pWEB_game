@@ -363,9 +363,9 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   conn_tab: {fileID: 0}
+  pseudo: {fileID: 0}
   userselect: {fileID: 0}
   Username: 
-  pseudo: {fileID: 0}
 --- !u!114 &7294346751271000345
 MonoBehaviour:
   m_ObjectHideFlags: 0
