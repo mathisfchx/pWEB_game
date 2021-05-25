@@ -27,6 +27,14 @@ namespace Game
             userselect= GameObject.FindGameObjectsWithTag("ServerScript")[0].GetComponent(typeof(UserSelect)) as UserSelect;
         }
 
+        public void Update()
+        {
+            if (isLocalPlayer){
+                Username = userselect.UsernameString;
+                CmdChangeName(Username);
+            }
+        }
+
         public override void OnStartServer()
         {
             base.OnStartServer();
@@ -50,11 +58,6 @@ namespace Game
         /// </summary>
         public override void OnStartClient()
         {
-            if(isLocalPlayer){
-                Username = userselect.UsernameString;
-            }
-            pseudo = GetComponentInChildren<TextMeshPro>();
-            pseudo.text = Username;
             Debug.Log("OnStartClient");
             // Activate the main panel
             ((BasicNetManager)NetworkManager.singleton).mainPanel.gameObject.SetActive(true);
@@ -65,18 +68,39 @@ namespace Game
                     conn_tab.Username = userselect.UsernameString;
                     conn_tab.conn_tab[conn_tab.Username] = conn_tab.conn_id;
                     //CmdSetDico(conn_tab.Username, this.netIdentity.connectionToClient.connectionId);
-
+                    
                 }
                 else
                 {
                     if (isLocalPlayer)
                     {
                         print("player");
-//                        CmdSetUsername(userselect.UsernameString);
+                        CmdSetUsername(userselect.UsernameString);
                         CmdSetDico();
                     }
                 }
             }
+            
+            /* else {
+            pseudo = GetComponentInChildren<TextMeshPro>();
+            pseudo.text = Username;
+            }
+            */
+        }
+
+        [Command(requiresAuthority = false)]
+        public void CmdChangeName(string newName)
+        {
+            pseudo = GetComponentInChildren<TextMeshPro>();
+            pseudo.text = newName;
+            RpcChangeName(newName);
+        }
+
+        [ClientRpc]
+        public void RpcChangeName(string newName)
+        {
+            pseudo = GetComponentInChildren<TextMeshPro>();
+            pseudo.text = newName;
         }
 
         /// <summary>
