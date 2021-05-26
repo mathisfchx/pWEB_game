@@ -191,6 +191,7 @@ MonoBehaviour:
   pseudo: {fileID: 0}
   userselect: {fileID: 0}
   Username: 
+  team: 0
 --- !u!114 &7294346751271000345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +253,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 897184729387425978}
     m_Modifications:
+    - target: {fileID: 4457636020532412445, guid: b401e0513dd54a24589db112602ffc39,
+        type: 3}
+      propertyPath: m_text
+      value: yesss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457636020532412445, guid: b401e0513dd54a24589db112602ffc39,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.03818085
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457636020532412445, guid: b401e0513dd54a24589db112602ffc39,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.27352402
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457636020532412445, guid: b401e0513dd54a24589db112602ffc39,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457636020532412445, guid: b401e0513dd54a24589db112602ffc39,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278863548
+      objectReference: {fileID: 0}
     - target: {fileID: 5521767162435865619, guid: b401e0513dd54a24589db112602ffc39,
         type: 3}
       propertyPath: m_Pivot.x
