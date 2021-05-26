@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 using static CameraMovement;
 using System;
@@ -17,7 +18,8 @@ public class PlayerMouvement : NetworkBehaviour
     public GameObject hud;
     public Inventory inventory;
     public GameObject cam;
-
+    public GameObject BoutonFinJeu;
+    public Button BoutonFin;
 
     private Rigidbody2D myRigidbody;
     private Vector3 change;
@@ -39,6 +41,9 @@ public class PlayerMouvement : NetworkBehaviour
         if(!this.isLocalPlayer){
             hud.SetActive(false);
         }
+        BoutonFinJeu = Instantiate(BoutonFinJeu);
+        BoutonFin = BoutonFinJeu.GetComponent<Button>();
+        BoutonFin.gameObject.SetActive(false);
     }
 
 
@@ -110,11 +115,33 @@ public class PlayerMouvement : NetworkBehaviour
                         if(this.isLocalPlayer){
                             Debug.Log("item ajoutééés");
                             inventory.AddItem(item);
+                            if(item == "_Cle(Clone)"){
+                                EndGameCom();
+                            }
                         }
                     }
                     collision.gameObject.SetActive(false);
                 }
             }
+    }
+
+    void CoroutineBoutonFin(){
+        Application.Quit();
+    }
+
+    [Command]
+    private void EndGameCom(){
+        EndGameClient();
+        Debug.Log("Fin");
+                            
+        //Application.Quit();
+    }
+
+    [ClientRpc]
+    private void EndGameClient(){
+        Debug.Log("Fin Client");
+        BoutonFin.gameObject.SetActive(true);
+        BoutonFin.onClick.AddListener(CoroutineBoutonFin);
     }
 /*
     private void OnControllerColliderHit(ControllerColliderHit hit){

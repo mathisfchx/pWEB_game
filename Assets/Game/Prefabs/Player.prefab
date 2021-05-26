@@ -167,9 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
+  syncMode: 1
   syncInterval: 0.1
-  clientAuthority: 1
+  clientAuthority: 0
   localPositionSensitivity: 0.01
   localRotationSensitivity: 0.01
   localScaleSensitivity: 0.01
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34169c9bebf4a440937781d8e28c85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
+  syncMode: 1
   syncInterval: 0.1
   conn_tab: {fileID: 0}
   pseudo: {fileID: 0}
@@ -203,13 +203,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38274d5d486a5e546b7c29f50e8051da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
+  syncMode: 1
   syncInterval: 0.1
   speed: 8
   inv: {fileID: 8306171046861423881, guid: f43acc18452078b47853396288e783a6, type: 3}
   hud: {fileID: 3078163412791112601, guid: afd52f90458591c4881abe0e0cb24181, type: 3}
   inventory: {fileID: 0}
   cam: {fileID: 1016634523077923433, guid: 8e6e337cb2eaccc46947635185e0216e, type: 3}
+  BoutonFinJeu: {fileID: 4217528699984986756, guid: 932043145df19dcf69424e4981319151,
+    type: 3}
+  BoutonFin: {fileID: 0}
 --- !u!95 &-7026400522208259541
 Animator:
   serializedVersion: 3
@@ -241,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
+  syncMode: 1
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: -7026400522208259541}
