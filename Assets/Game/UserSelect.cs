@@ -15,6 +15,8 @@ public class UserSelect : MonoBehaviour
     [SerializeField] Button RegisterButton ;
     [SerializeField] Button SaveButton ;
     [SerializeField] Button LogoutButton ;
+    [SerializeField] Button TeamA ;
+    [SerializeField] Button TeamB ;
     [SerializeField] GameObject SCENE ;
     //[SerializeField] GameObject Inventory ;
     //[SerializeField] GameObject PF_Player;
@@ -28,6 +30,8 @@ public class UserSelect : MonoBehaviour
     //[SerializeField] GameObject GameScene ;
 
     [SerializeField] Text errorMessages ;
+
+    public int team;
 
     WWWForm form ;
     int counter = 0 ;
@@ -60,7 +64,31 @@ public class UserSelect : MonoBehaviour
         LogoutButton.onClick.AddListener(CoroutineButtonLogout);
 		LogoutButton.interactable = false ;
 
+        TeamA.onClick.AddListener(CoroutineTeamA);
+		TeamA.gameObject.SetActive(false);
 
+        TeamB.onClick.AddListener(CoroutineTeamB);
+		TeamB.gameObject.SetActive(false);
+
+        team = 2;
+    }
+
+    void CoroutineTeamA()
+    {
+        team = 0;
+        conn_tab.nTeamA += 1;
+        Destroy(GameObject.Find("TeamA"));
+        Destroy(GameObject.Find("TeamB"));
+        
+    }
+
+    void CoroutineTeamB()
+    {
+        team = 1;
+        conn_tab.nTeamB += 1;
+        Destroy(GameObject.Find("TeamA"));
+        Destroy(GameObject.Find("TeamB"));
+        
     }
 
     void CoroutineButtonLogin()
@@ -138,9 +166,10 @@ public class UserSelect : MonoBehaviour
                 inventory.defense = int.Parse(values[1]);
                 inventory.speed = int.Parse(values[2]);
                 inventory.username = username.text ;*/
-                SCENE.SetActive(true);
+
                 //Inventory.SetActive(true);
                 //PF_Player.SetActive(true);
+                SCENE.SetActive(true);
                 game.SetActive(true);
                 Network_manager.SetActive(true);
                 Authentification_menu.SetActive(false);

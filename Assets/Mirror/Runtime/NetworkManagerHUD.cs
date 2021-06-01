@@ -34,6 +34,9 @@ namespace Mirror
         /// </summary>
         public int offsetY;
 
+        public GameObject teamA;
+        public GameObject teamB;
+
         void Awake()
         {
             manager = GetComponent<NetworkManager>();
@@ -85,6 +88,13 @@ namespace Mirror
                     {
                         manager.networkAddress = "localhost";
                         manager.StartHost();
+
+                        //GameObject teamA = GameObject.Find("TeamA");
+                        teamA.SetActive(true);
+                        //GameObject teamB = GameObject.Find("TeamB");
+                        teamB.SetActive(true);
+
+                        //GameObject.Find("Player(Clone)").<anyComponent>().enabled = false;
                     }
                 }
 
@@ -93,12 +103,24 @@ namespace Mirror
                 {
                     manager.networkAddress = "13.36.61.82";
                     manager.StartClient();
+                    //GameObject teamA = GameObject.Find("TeamA");
+                    teamA.SetActive(true);
+                    //GameObject teamB = GameObject.Find("TeamB");
+                    teamB.SetActive(true);
+
+                    //GameObject.Find("Player(Clone)").GetComponent<PlayerMouvement>().enabled = false;
                 } 
 
                 if (GUILayout.Button("Jouer en localhost"))
                 {
                     manager.networkAddress = "localhost";
                     manager.StartClient();
+                    //GameObject teamA = GameObject.Find("TeamA");
+                    teamA.SetActive(true);
+                    //GameObject teamB = GameObject.Find("TeamB");
+                    teamB.SetActive(true);
+
+                    //GameObject.Find("Player(Clone)").GetComponent<PlayerMouvement>().enabled = false;
                 }
 
                 /*

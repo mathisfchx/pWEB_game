@@ -13,6 +13,8 @@ namespace Game
         public UserSelect userselect;
         [SyncVar]
         public string Username;
+        [SyncVar]
+        public int team;
     
 
 
@@ -32,6 +34,7 @@ namespace Game
             if (isLocalPlayer){
                 Username = userselect.UsernameString;
                 CmdChangeName(Username);
+                CmdSetTeam(userselect.team);
             }
         }
 
@@ -93,6 +96,14 @@ namespace Game
         {
             pseudo = GetComponentInChildren<TextMeshPro>();
             pseudo.text = newName;
+            if (team == 0){
+                pseudo.color = Color.blue;
+            } else if (team == 1) {
+                pseudo.color = Color.red;
+            } else {
+                pseudo.color = Color.white;
+            }
+            
             RpcChangeName(newName);
         }
 
@@ -101,6 +112,12 @@ namespace Game
         {
             pseudo = GetComponentInChildren<TextMeshPro>();
             pseudo.text = newName;
+            if (team == 0){
+                pseudo.color = Color.blue;
+            } else if (team == 1) {
+                pseudo.color = Color.red;
+            }
+
         }
 
         /// <summary>
@@ -132,6 +149,12 @@ namespace Game
         public void CmdSetUsername(string username)
         {
             conn_tab.Username = username;
+        }
+
+        [Command]
+        public void CmdSetTeam(int T)
+        {
+            team = T;
         }
     }
 }
