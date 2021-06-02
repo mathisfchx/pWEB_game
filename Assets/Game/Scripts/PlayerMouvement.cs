@@ -108,22 +108,25 @@ public class PlayerMouvement : NetworkBehaviour
     {
         Debug.Log("collisionnnnn");
         string item = collision.gameObject.name;
-            if (item[0] == '_' ){
-                if (collision.collider.enabled){
+
+        if (item[0] == '_' ){
+            if (collision.collider.enabled){
                     //collision.collider.enabled = false;
-                    if (item != null){
-                        if(this.isLocalPlayer){
-                            Debug.Log("item ajoutééés");
-                            inventory.AddItem(item);
-                            if(item == "_Cle(Clone)"){
-                                EndGameCom();
-                            }
+                if (item != null){
+                    if(this.isLocalPlayer){
+                        Debug.Log("item ajoutééés");
+                        inventory.AddItem(item);
+                        if(item == "_Cle(Clone)"){
+                            EndGameCom();
                         }
                     }
-                    collision.gameObject.SetActive(false);
                 }
+                collision.gameObject.SetActive(false);
             }
+        }
     }
+
+
 
     void CoroutineBoutonFin(){
         Application.Quit();
