@@ -24,7 +24,7 @@ namespace Game{
 
         public void OnTriggerEnter2D(Collider2D other)
         {   
-                other.gameObject.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition += cameraChange;
+                other.gameObject.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition += cameraChange; //il y a une erreur ici, peut etre due à l'utilisation du getcomponent sans typeof
                 other.gameObject.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition += cameraChange;
                 other.transform.position += playerChange;
         }
