@@ -15,8 +15,27 @@ namespace Game
         public string Username;
         [SyncVar]
         public int team;
-        [SyncVar]
+        [SyncVar(hook = nameof(OnCheckIfAlive))]
         public int HealthPoint;
+
+        void OnCheckIfAlive(int oldHealthPoint , int newHealthPoint)
+        {
+            if (newHealthPoint == 0)
+            {
+                if (hasAuthority)
+                {
+                    if (isServer)
+                    {
+                        this.HealthPoint = 1;
+                        this.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
+                    }
+                    if (isClient)
+                    {
+                        CmdDead();
+                    }
+                }
+            }
+        }
 
 
 
@@ -158,6 +177,20 @@ namespace Game
         public void CmdSetTeam(int T)
         {
             team = T;
+        }
+
+        [Command]
+        public void CmdDead()
+        {
+            this.HealthPoint = 1;
+            this.transform.SetPositionAndRotation(new Vector3(5, -5),new Quaternion(0,0,0,0));
+            RpcDead();
+        }
+        [ClientRpc]
+        public void RpcDead()
+        {
+            this.HealthPoint = 1;
+            this.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
         }
     }
 }
