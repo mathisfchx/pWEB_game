@@ -213,7 +213,7 @@ MonoBehaviour:
   hud: {fileID: 3078163412791112601, guid: afd52f90458591c4881abe0e0cb24181, type: 3}
   inventory: {fileID: 0}
   cam: {fileID: 1016634523077923433, guid: 8e6e337cb2eaccc46947635185e0216e, type: 3}
-  BoutonFinJeu: {fileID: 4217528699984986756, guid: 932043145df19dcf69424e4981319151,
+  BoutonFinJeu: {fileID: 3520545282133728883, guid: 66d319ddd1d8cae678a218cc413e49fa,
     type: 3}
   BoutonFin: {fileID: 0}
 --- !u!95 &-7026400522208259541
@@ -291,7 +291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8410679325516813398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11568722, y: -0.15240633, z: -0.007261389}
+  m_LocalPosition: {x: -0, y: 0.31, z: -0.007261389}
   m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1}
   m_Children: []
   m_Father: {fileID: 897184729387425978}
@@ -317,7 +317,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &4133773373696141682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.083583176, y: -0.35522795}
+  m_Offset: {x: 0, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -342,7 +342,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8567277, y: 1.8567259}
+  m_Size: {x: 1, y: 1.1}
   m_EdgeRadius: 0
 --- !u!1001 &8232104302064521888
 PrefabInstance:
