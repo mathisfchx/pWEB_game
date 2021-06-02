@@ -1077,7 +1077,8 @@ MonoBehaviour:
   inventory: {fileID: 1450916662006798724, guid: f43acc18452078b47853396288e783a6,
     type: 3}
   cle: {fileID: 5747610277329748102, guid: a3ebf609d64354b47bd06cdd94098ebc, type: 3}
-  hud: {fileID: 3078163412791112601}
+  blueFlag: {fileID: 21300000, guid: 3dd14af1a11e9a51283f3fe22358703e, type: 3}
+  redFlag: {fileID: 21300000, guid: 406527cd1add986819345573c9e74a8e, type: 3}
 --- !u!114 &5822797725400764989
 MonoBehaviour:
   m_ObjectHideFlags: 0

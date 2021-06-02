@@ -8,6 +8,8 @@ public class HUD : NetworkBehaviour
 {
     public Inventory inventory;
     public Sprite cle;
+    public Sprite blueFlag;
+    public Sprite redFlag;
 
     public Dictionary<string, Sprite> dico = new Dictionary<string, Sprite>();
 
@@ -19,7 +21,11 @@ public class HUD : NetworkBehaviour
             hud.SetActive(false);
         }*/
         dico.Add("_Cle(Clone)",cle);
+        dico.Add("_BlueFlag(Clone)", blueFlag);
+        dico.Add("_RedFlag(Clone)", redFlag);
+
         inventory.ItemAdded += InventoryScript_ItemAdded;
+
     }
     
     private void InventoryScript_ItemAdded(object sender, InventoryEventArgs e)

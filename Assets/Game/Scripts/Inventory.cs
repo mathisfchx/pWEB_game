@@ -8,7 +8,7 @@ public class Inventory : NetworkBehaviour
 {
     private const int SLOTS = 11;
 
-    private SyncList<string> mItems = new SyncList<string>();
+    public SyncList<string> mItems = new SyncList<string>();
     public event EventHandler<InventoryEventArgs> ItemAdded;
 
     public void AddItem(string item){

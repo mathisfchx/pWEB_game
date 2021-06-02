@@ -30,6 +30,14 @@ namespace Game
         {
             var cleGo = Instantiate(spawnPrefabs[0], new Vector2(-11,-13), Quaternion.identity);
             NetworkServer.Spawn(cleGo);
+            var blueFlag = Instantiate(spawnPrefabs[1], new Vector2(-43,-46), Quaternion.identity);
+            NetworkServer.Spawn(blueFlag);
+            var redFlag = Instantiate(spawnPrefabs[2], new Vector2(6,14), Quaternion.identity);
+            NetworkServer.Spawn(redFlag);
+            var blueQG = Instantiate(spawnPrefabs[3], new Vector2(-38,-47), Quaternion.identity);
+            NetworkServer.Spawn(blueQG);
+            var redQG = Instantiate(spawnPrefabs[4], new Vector2(1,11), Quaternion.identity);
+            NetworkServer.Spawn(redQG);
         }
 
         /// <summary>

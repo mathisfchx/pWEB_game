@@ -140,13 +140,35 @@ namespace Game{
                     if (item != null){
                         if(this.isLocalPlayer){
                             Debug.Log("item ajoutééés");
-                            inventory.AddItem(item);
-                            if(item == "_Cle(Clone)"){
+                            //inventory.AddItem(item);
+                            /*if(item == "_Cle(Clone)"){
                                 EndGameCom();
+                            }*/
+                            if(team == 0){
+                                if(item == "_RedFlag(Clone)"){
+                                    inventory.AddItem(item);
+                                    collision.gameObject.SetActive(false);
+                                }
+                                if(item == "_BlueQG(Clone)"){
+                                    if(inventory.mItems.Contains("_RedFlag(Clone)") == true){
+                                        EndGameCom();
+                                    }   
+                                }
+                            }else if(team == 1){
+                                if(item == "_BlueFlag(Clone)"){
+                                    inventory.AddItem(item);
+                                    collision.gameObject.SetActive(false);
+                                }
+                                if(item == "_RedQG(Clone)"){
+                                    if(inventory.mItems.Contains("_BlueFlag(Clone)") == true){
+                                        EndGameCom();
+                                    }
+                                
+                                }
+
                             }
                         }
                     }
-                    collision.gameObject.SetActive(false);
                 }
             }
         }
