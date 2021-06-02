@@ -127,7 +127,7 @@ namespace Game
         public override void OnStopClient()
         {
 
-            Destroy(gameObject.GetComponent<PlayerMouvement>().cam);
+            Destroy(gameObject.GetComponent<PlayerMouvement>().cam); // les erreurs dans le serv viennent sans doute d'ici
 
             // Disable the main panel for local player
             if (isLocalPlayer)
