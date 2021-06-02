@@ -15,7 +15,9 @@ namespace Game
         public string Username;
         [SyncVar]
         public int team;
-    
+        [SyncVar]
+        public int HealthPoint;
+
 
 
         /// <summary>
@@ -27,6 +29,7 @@ namespace Game
         {
             conn_tab = GameObject.FindGameObjectsWithTag("Conn_tag")[0].GetComponent(typeof(Connection_tab)) as Connection_tab;
             userselect= GameObject.FindGameObjectsWithTag("ServerScript")[0].GetComponent(typeof(UserSelect)) as UserSelect;
+            HealthPoint = 1; 
         }
 
         public void Update()

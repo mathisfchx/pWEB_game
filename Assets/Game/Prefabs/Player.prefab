@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: -7026400522208259541}
   - component: {fileID: -9135557782085500391}
   - component: {fileID: 571085423272324240}
+  - component: {fileID: -2185373481571464610}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -194,6 +195,7 @@ MonoBehaviour:
   userselect: {fileID: 0}
   Username: 
   team: 0
+  HealthPoint: 1
 --- !u!114 &7294346751271000345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +211,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   speed: 8
+  forward: {x: 0, y: 0}
   inv: {fileID: 8306171046861423881, guid: f43acc18452078b47853396288e783a6, type: 3}
   hud: {fileID: 3078163412791112601, guid: afd52f90458591c4881abe0e0cb24181, type: 3}
   inventory: {fileID: 0}
@@ -216,6 +219,8 @@ MonoBehaviour:
   BoutonFinJeu: {fileID: 3520545282133728883, guid: 66d319ddd1d8cae678a218cc413e49fa,
     type: 3}
   BoutonFin: {fileID: 0}
+  player: {fileID: 0}
+  team: 2
 --- !u!95 &-7026400522208259541
 Animator:
   serializedVersion: 3
@@ -265,6 +270,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterCollider: {fileID: 3112899878309000018}
   characterBlockerCollider: {fileID: 4133773373696141682}
+--- !u!114 &-2185373481571464610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897184729387425976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26cb298b12bfbb47bde8793aef92875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  Player_mv: {fileID: 0}
 --- !u!1 &8410679325516813398
 GameObject:
   m_ObjectHideFlags: 0

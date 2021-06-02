@@ -14,6 +14,7 @@ namespace Game{
         
         [SyncVar]
         public float speed;
+        public Vector2 forward;
 
         public GameObject inv;
         public GameObject hud;
@@ -58,6 +59,22 @@ namespace Game{
             change = Vector3.zero;
             change.x = Input.GetAxisRaw("Horizontal");
             change.y = Input.GetAxisRaw("Vertical");
+            if (change.x == 0 && change.y == 1)
+            {
+                forward = Vector2.up;
+            }
+            else if (change.x == 0 && change.y == -1)
+            {
+                forward = Vector2.down;
+            }
+            else if (change.x == 1 && change.y == 0)
+            {
+                forward = Vector2.right;
+            }
+            else if (change.x == -1 && change.y == 0)
+            {
+                forward = Vector2.left;
+            }
             UpdateAnimationAndMove();
             if(this.isLocalPlayer){
                 player = gameObject;
