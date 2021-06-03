@@ -24,6 +24,7 @@ namespace Game{
         public Button BoutonFin;
         public GameObject player;
         public int team = 2;
+        public int HP;
 
         private Rigidbody2D myRigidbody;
         private Vector3 change;
@@ -76,9 +77,13 @@ namespace Game{
                 forward = Vector2.left;
             }
             UpdateAnimationAndMove();
+            this.team = (GetComponent(typeof(Player)) as Player).team;
             if(this.isLocalPlayer){
                 player = gameObject;
-                this.team = (GetComponent(typeof(Player)) as Player).team;
+                this.HP = (GetComponent(typeof(Player)) as Player).HealthPoint;
+                if(HP == 0){
+
+                }
             }
 
             //gameObject.transform.rotation = new Quaternion(0,0,0,0);
