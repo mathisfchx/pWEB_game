@@ -27,7 +27,7 @@ namespace Game
                     this.transform.GetChild(1).GetComponent<BoxCollider2D>().enabled = false; 
                     //print(Player_mv.forward);
                     //print(this.gameObject);
-                    RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Player_mv.forward),3f, player_mask) ;
+                    RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Player_mv.forward),1f, player_mask) ;
                     //Debug.DrawRay(transform.position, transform.TransformDirection(Player_mv.forward) * 3f, Color.red);
                     //print(hit.collider.gameObject);
                     if (hit && hit.collider != null)
@@ -65,7 +65,7 @@ namespace Game
         void CmdAttack(Player player)
         {
 
-            player.HealthPoint -= 1;
+            player.HealthPoint -= 2;
         }
     }
 }

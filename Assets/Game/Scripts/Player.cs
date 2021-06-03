@@ -24,16 +24,22 @@ namespace Game
             {
                 if (hasAuthority)
                 {
+                    this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = false; 
                     if (isServer)
                     {
-                        this.HealthPoint = 1;
+                        this.HealthPoint = 4;
                         this.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
                     }
                     if (isClient)
                     {
                         CmdDead();
                     }
+                    this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = true ;
+                    this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)6.5, (float)12) ;
+                    this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition = new Vector2((float)-12.8,(float)-8.2);
+                    this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().target = this.transform;
                 }
+
             }
         }
 
@@ -48,7 +54,7 @@ namespace Game
         {
             conn_tab = GameObject.FindGameObjectsWithTag("Conn_tag")[0].GetComponent(typeof(Connection_tab)) as Connection_tab;
             userselect= GameObject.FindGameObjectsWithTag("ServerScript")[0].GetComponent(typeof(UserSelect)) as UserSelect;
-            HealthPoint = 1; 
+            HealthPoint = 4; 
         }
 
         public void Update()
@@ -181,14 +187,14 @@ namespace Game
         [Command]
         public void CmdDead()
         {
-            this.HealthPoint = 1;
+            this.HealthPoint = 4;
             this.transform.SetPositionAndRotation(new Vector3(5, -5),new Quaternion(0,0,0,0));
             RpcDead();
         }
         [ClientRpc]
         public void RpcDead()
         {
-            this.HealthPoint = 1;
+            this.HealthPoint = 4;
             this.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
         }
     }
