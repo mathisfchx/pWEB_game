@@ -77,6 +77,7 @@ namespace Game{
                 forward = Vector2.left;
             }
             UpdateAnimationAndMove();
+            UpdateAnimationAttack();
             this.team = (GetComponent(typeof(Player)) as Player).team;
             if(this.isLocalPlayer){
                 player = gameObject;
@@ -123,6 +124,17 @@ namespace Game{
                     animator.SetBool("moving", true);
                 }else{
                     animator.SetBool("moving", false);
+                }
+            }
+        }
+
+        void UpdateAnimationAttack(){
+
+            if(this.isLocalPlayer){
+                if (Input.GetKeyDown("space")){
+                    animator.SetBool("attack", true);
+                }else{
+                    animator.SetBool("attack", false);
                 }
             }
         }
