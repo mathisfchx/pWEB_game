@@ -24,6 +24,7 @@ public class UserSelect : MonoBehaviour
     [SerializeField] GameObject game ;
     [SerializeField] GameObject Network_manager ;
     [SerializeField] Connection_tab conn_tab;
+    [SerializeField] GameObject Background ;
     Mirror.NetworkManager manager;
     [Space]
     //[SerializeField] GameObject LoginScene ;
@@ -173,6 +174,7 @@ public class UserSelect : MonoBehaviour
                 game.SetActive(true);
                 Network_manager.SetActive(true);
                 Authentification_menu.SetActive(false);
+                Background.SetActive(false);
             }
         }
 
