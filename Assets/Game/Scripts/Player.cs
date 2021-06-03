@@ -14,9 +14,10 @@ namespace Game
         [SyncVar]
         public string Username;
         [SyncVar]
-        public int team;
+        public int team = 2;
         [SyncVar(hook = nameof(OnCheckIfAlive))]
         public int HealthPoint;
+        
 
         void OnCheckIfAlive(int oldHealthPoint , int newHealthPoint)
         {
@@ -43,8 +44,6 @@ namespace Game
             }
         }
 
-
-
         /// <summary>
         /// This is invoked for NetworkBehaviour objects when they become active on the server.
         /// <para>This could be triggered by NetworkServer.Listen() for objects in the scene, or by NetworkServer.Spawn() for objects that are dynamically created.</para>
@@ -63,6 +62,9 @@ namespace Game
                 Username = userselect.UsernameString;
                 CmdChangeName(Username);
                 CmdSetTeam(userselect.team);
+
+
+                CmdTeam();
             }
         }
 
@@ -89,6 +91,7 @@ namespace Game
         /// </summary>
         public override void OnStartClient()
         {
+
             Debug.Log("OnStartClient");
             // Activate the main panel
             ((BasicNetManager)NetworkManager.singleton).mainPanel.gameObject.SetActive(true);
@@ -196,6 +199,25 @@ namespace Game
         {
             this.HealthPoint = 4;
             this.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
+        }
+
+        [Command(requiresAuthority = false)]
+        public void CmdTeam()
+        {
+            GameObject.Find("counterA").GetComponent<nteamA>().nA = conn_tab.nA;
+            GameObject.Find("counterB").GetComponent<nteamB>().nB = conn_tab.nB;
+            GameObject.Find("counterA").GetComponent<nteamA>().maxTeam = conn_tab.maxTeam;
+            GameObject.Find("counterB").GetComponent<nteamB>().maxTeam = conn_tab.maxTeam;
+            RpcTeam();
+        }
+
+        [ClientRpc]
+        public void RpcTeam()
+        {
+            GameObject.Find("counterA").GetComponent<nteamA>().nA = conn_tab.nA;
+            GameObject.Find("counterB").GetComponent<nteamB>().nB = conn_tab.nB;
+            GameObject.Find("counterA").GetComponent<nteamA>().maxTeam = conn_tab.maxTeam;
+            GameObject.Find("counterB").GetComponent<nteamB>().maxTeam = conn_tab.maxTeam;
         }
     }
 }

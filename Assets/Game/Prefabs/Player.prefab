@@ -196,6 +196,8 @@ MonoBehaviour:
   Username: 
   team: 0
   HealthPoint: 1
+  TeamA: {fileID: 0}
+  TeamB: {fileID: 0}
 --- !u!114 &7294346751271000345
 MonoBehaviour:
   m_ObjectHideFlags: 0
