@@ -131,7 +131,7 @@ namespace Game{
         void UpdateAnimationAttack(){
 
             if(this.isLocalPlayer){
-                if (Input.GetKeyDown("space")){
+                if (Input.GetKey("space")){
                     animator.SetBool("attack", true);
                 }else{
                     animator.SetBool("attack", false);
