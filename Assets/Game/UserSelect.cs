@@ -79,7 +79,7 @@ namespace Game
 
         void CoroutineTeamA()
         {
-            team = 0;
+            team = 3;
             //conn_tab.nA += 1;
             Destroy(GameObject.Find("TeamA"));
             Destroy(GameObject.Find("TeamB"));

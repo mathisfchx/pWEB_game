@@ -23,7 +23,7 @@ namespace Game{
         public GameObject BoutonFinJeu;
         public Button BoutonFin;
         public GameObject player;
-        public int team = 2;
+        public int team = 0;
         public int HP;
 
         private Rigidbody2D myRigidbody;
@@ -161,7 +161,7 @@ namespace Game{
                             /*if(item == "_Cle(Clone)"){
                                 EndGameCom();
                             }*/
-                            if(team == 0){
+                            if(team == 3){
                                 if(item == "_RedFlag(Clone)"){
                                     inventory.AddItem(item);
                                     collision.gameObject.SetActive(false);
@@ -210,7 +210,7 @@ namespace Game{
 
             BoutonFin.gameObject.SetActive(true);
             BoutonFin.onClick.AddListener(CoroutineBoutonFin);
-            if(team == 0){
+            if(team == 3){
                 BoutonFin.GetComponentInChildren<Text>().text = "L'équipe bleue a gagné ! \n Bravo !!! Cliquez pour terminer la partie";
             }else if(team == 1){
                 BoutonFin.GetComponentInChildren<Text>().text = "L'équipe rouge a gagné ! \n Bravo !!! Cliquez pour terminer la partie";

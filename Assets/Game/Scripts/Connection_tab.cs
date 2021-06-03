@@ -19,11 +19,12 @@ namespace Game
         public int nB;
         [SyncVar]
         public int start;
-
-        public int maxTeam = 2;
+        [SyncVar]
+        public int maxTeam = 1;
 
     void Start()
     {
+        maxTeam = 1;
         CmdResetStart();
     }
 
@@ -33,7 +34,7 @@ namespace Game
         nB=0;
         foreach(GameObject player in GameObject.FindGameObjectsWithTag("Player"))
         {
-            if ((player.GetComponent(typeof (Player)) as Player).team == 0){
+            if ((player.GetComponent(typeof (Player)) as Player).team == 3){
                 nA +=1;
             } else if ((player.GetComponent(typeof (Player)) as Player).team == 1){
                 nB +=1;
@@ -46,6 +47,26 @@ namespace Game
                 start = 1;
             }
             
+        }
+        
+    }
+
+    void LateUpdate()
+    {
+        if (nB == maxTeam){
+            Debug.Log("nb");
+            GameObject.Find("TeamB").SetActive(false);
+            return;
+        } else {
+            //GameObject.Find("TeamB").SetActive(true);
+        }
+
+        if (nA == maxTeam){
+            Debug.Log("na");
+            GameObject.Find("TeamA").SetActive(false);
+            return;
+        } else {
+            //GameObject.Find("TeamA").SetActive(true);
         }
     }
 
