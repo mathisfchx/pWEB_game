@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror; 
+using Mirror;
 
 public class ProjectileMovement : NetworkBehaviour
 {
     public float speed;
     public float TimeToLive;
     public Vector3 mouse_position;
-    public int team; 
+    [SyncVar]
+    public int team;
 
     void Awake()
     {
-        speed = 15   ;
-        TimeToLive = 2;
+        speed = 15;
+        TimeToLive = 200;
         //cam = new Camera();
         //new WaitForSeconds((float)0.2);
         //print(mouse_position);
@@ -21,13 +22,13 @@ public class ProjectileMovement : NetworkBehaviour
     }
     void Start()
     {
-        Invoke("DestroyProjectile", TimeToLive);
-        print(Camera.main.transform.position);
-        mouse_position = Input.mousePosition;
+        //Invoke("DestroyProjectile", TimeToLive);
+        //print(Camera.main.transform.position);
+        //mouse_position = Input.mousePosition;
         //mouse_position.z = Camera.main.nearClipPlane;
-        mouse_position = Camera.main.ScreenToWorldPoint(mouse_position)-transform.position;
-        print(mouse_position);
-        print(mouse_position.normalized);
+        //mouse_position = Camera.main.ScreenToWorldPoint(mouse_position) - transform.position;
+        //print(mouse_position);
+        //print(mouse_position.normalized);
 
     }
 
@@ -35,11 +36,41 @@ public class ProjectileMovement : NetworkBehaviour
     void Update()
     {
 
-        transform.Translate(new Vector2(mouse_position.x , mouse_position.y).normalized*speed * Time.deltaTime) ;
+        //transform.Translate(new Vector2(mouse_position.x, mouse_position.y).normalized * speed * Time.deltaTime);
     }
 
     void DestroyProjectile()
     {
         Destroy(gameObject);
     }
+
+
+    public void SetTeam(int newTeam)
+    {
+        print("je suis dans setteam");
+
+            print("Je suis Autorité");
+            if (isServer)
+            {
+                team = newTeam;
+            }
+            else
+            {
+                CmdSetTeam(newTeam);
+            }
+
+
+    }
+    [Command]
+    public void CmdSetTeam(int newTeam)
+    {
+        team = newTeam;
+        RpcSetTeam(newTeam);
+    }
+    [ClientRpc]
+    public void RpcSetTeam(int newTeam)
+    {
+        team = newTeam;
+    }
+
 }

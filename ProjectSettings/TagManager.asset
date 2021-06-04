@@ -7,6 +7,7 @@ TagManager:
   - Collider
   - Conn_tag
   - ServerScript
+  - Projectile
   layers:
   - Default
   - TransparentFX

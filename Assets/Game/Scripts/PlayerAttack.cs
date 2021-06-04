@@ -9,8 +9,8 @@ namespace Game
         public float TimeBtwCacAttack;
         public float TimeBtwDistantAttack; 
 
-        public GameObject projectile;
-        public GameObject current_projectile;
+        public GameObject projectile_prefab;
+        GameObject[] projectiles;
         public PlayerMouvement Player_mv;
         public Player player_hit;
         int player_mask;
@@ -24,7 +24,8 @@ namespace Game
         }
         void Update()
         {
-            if (isLocalPlayer)
+            projectiles = GameObject.FindGameObjectsWithTag("Projectile");
+            if (this.isLocalPlayer)
             {
                 if (TimeBtwCacAttack <= 0)
                 {
@@ -61,31 +62,28 @@ namespace Game
                 }
                 if(TimeBtwDistantAttack <= 0)
                 {
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButtonDown(1))
                     {
-                        print(Player_mv.cam.GetComponent<Camera>().transform.position);
-                        if(Player_mv.forward == Vector2.up)
+                        Vector3 vect = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                        float speed = 10;
+                        if (Player_mv.forward == Vector2.up)
                         {
-                            current_projectile = Instantiate(projectile, transform.position + new Vector3(0, (float)0.5, 0), transform.rotation);
-                            current_projectile.GetComponent<ProjectileMovement>().team = transform.parent.gameObject.GetComponent<Player>().team; 
+                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)0.5, 0),vect.x,vect.y,speed, gameObject.GetComponent<Player>().team);
                             TimeBtwDistantAttack = 1;
                         }
                         else if (Player_mv.forward == Vector2.down)
                         {
-                            current_projectile = Instantiate(projectile, transform.position + new Vector3(0,(float)-0.5,0), transform.rotation);
-                            current_projectile.GetComponent<ProjectileMovement>().team = transform.parent.gameObject.GetComponent<Player>().team;
+                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)-0.5, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>().team);
                             TimeBtwDistantAttack = 1;
                         }
                         else if(Player_mv.forward == Vector2.left)
                         {
-                            current_projectile = Instantiate(projectile, transform.position + new Vector3((float)-0.5, 0, 0), transform.rotation);
-                            current_projectile.GetComponent<ProjectileMovement>().team = transform.parent.gameObject.GetComponent<Player>().team;
+                            CmdInstantiateProjectile(transform.position + new Vector3((float)-0.5, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>().team);
                             TimeBtwDistantAttack = 1;
                         }
                         else
                         {
-                            current_projectile = Instantiate(projectile, transform.position + new Vector3((float)0.5, 0, 0), transform.rotation);
-                            current_projectile.GetComponent<ProjectileMovement>().team = transform.parent.gameObject.GetComponent<Player>().team;
+                            CmdInstantiateProjectile(transform.position + new Vector3((float)0.5, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>().team);
                             TimeBtwDistantAttack = 1;
                         }
 
@@ -95,7 +93,17 @@ namespace Game
                 {
                     TimeBtwDistantAttack -= Time.deltaTime; 
                 }
+                print("Avant ");
+
+                if (projectiles.Length != 0)
+                {
+                    foreach (GameObject proj in projectiles)
+                    {
+                        Move(proj);
+                    }
+                }
             }
+   
         }
 
 
@@ -117,5 +125,28 @@ namespace Game
 
             player.HealthPoint -= 2;
         }
+        [Command]
+        public void CmdInstantiateProjectile(Vector3 vect , float x , float y , float speed ,int team)
+        {
+            GameObject current_projectile;
+            current_projectile = Instantiate(projectile_prefab, vect, transform.rotation);
+            current_projectile.GetComponent<ProjectileMovement>().mouse_position.x = x;
+            current_projectile.GetComponent<ProjectileMovement>().mouse_position.y = y ;
+            current_projectile.GetComponent<ProjectileMovement>().speed = speed ;
+            current_projectile.GetComponent<ProjectileMovement>().team = team;
+            //current_projectile.GetComponent<ProjectileMovement>().mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            //mouse_position.z = Camera.main.nearClipPlane;
+            Destroy(current_projectile, 10);
+
+            NetworkServer.Spawn(current_projectile);
+        }
+        public void Move(GameObject proj)
+        {
+            float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;
+            float y = proj.GetComponent<ProjectileMovement>().mouse_position.y;
+            float speed = proj.GetComponent<ProjectileMovement>().speed;
+            proj.transform.Translate(new Vector2(x, y).normalized * speed * Time.deltaTime);
+        }
+
     }
 }

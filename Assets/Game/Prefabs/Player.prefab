@@ -287,7 +287,7 @@ MonoBehaviour:
   syncInterval: 0.1
   TimeBtwCacAttack: 0
   TimeBtwDistantAttack: 0
-  projectile: {fileID: 6438229156507101002, guid: 452fce8b6a2c801478f4ef57be27d2c9,
+  projectile_prefab: {fileID: 6438229156507101002, guid: 452fce8b6a2c801478f4ef57be27d2c9,
     type: 3}
   Player_mv: {fileID: 0}
   player_hit: {fileID: 0}

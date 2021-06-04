@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1567727045920611386}
   - component: {fileID: 1173488518945386335}
   - component: {fileID: 2888716203462560902}
+  - component: {fileID: 5926224417353986357}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,4 +135,22 @@ MonoBehaviour:
   speed: 0
   TimeToLive: 0
   mouse_position: {x: 0, y: 0, z: 0}
-  cam: {fileID: 1016634523077923434, guid: 8e6e337cb2eaccc46947635185e0216e, type: 3}
+  team: 0
+--- !u!114 &5926224417353986357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6438229156507101002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 0
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
