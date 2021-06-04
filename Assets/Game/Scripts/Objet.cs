@@ -6,6 +6,5 @@ class Objet : NetworkBehaviour {
     public int Color;
 
     public override void OnStartClient() {
-        Debug.Log("Les clés ont été spawnées");
     }
 }

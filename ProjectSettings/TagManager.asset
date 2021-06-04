@@ -9,6 +9,7 @@ TagManager:
   - ServerScript
   - NM
   - counter
+  - start
   layers:
   - Default
   - TransparentFX

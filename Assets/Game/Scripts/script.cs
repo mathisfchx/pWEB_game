@@ -40,11 +40,16 @@ namespace Game
         [Command(requiresAuthority = false)]
         public void CmdStartGame()
         {
+            if (GameObject.Find("_BlueFlag(Clone)") == null){
+                var blueFlag = Instantiate(networkManager.spawnPrefabs[1], new Vector2(-43,-46), Quaternion.identity);
+                NetworkServer.Spawn(blueFlag);
+                var redFlag = Instantiate(networkManager.spawnPrefabs[2], new Vector2(54,47), Quaternion.identity);
+                NetworkServer.Spawn(redFlag);
+            }
+            foreach(GameObject start in GameObject.FindGameObjectsWithTag("start")){
+                start.SetActive(false);
+            }
             RpcStartGame();
-            var blueFlag = Instantiate(networkManager.spawnPrefabs[1], new Vector2(-43,-46), Quaternion.identity);
-            NetworkServer.Spawn(blueFlag);
-            var redFlag = Instantiate(networkManager.spawnPrefabs[2], new Vector2(54,47), Quaternion.identity);
-            NetworkServer.Spawn(redFlag);
         }
 
         [ClientRpc]
@@ -52,6 +57,9 @@ namespace Game
         {
             foreach(GameObject counter in GameObject.FindGameObjectsWithTag("counter")){
                 counter.GetComponent<TextMeshProUGUI>().enabled = false;
+            }
+            foreach(GameObject start in GameObject.FindGameObjectsWithTag("start")){
+                start.SetActive(false);
             }
         }
 
