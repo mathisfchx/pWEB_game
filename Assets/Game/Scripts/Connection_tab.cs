@@ -62,6 +62,7 @@ namespace Game
             if (GameObject.Find("TeamA").active){
                 GameObject.Find("TeamA").SetActive(false);
             }
+        }
     }
 
     [Command]
