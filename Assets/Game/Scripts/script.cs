@@ -12,11 +12,13 @@ namespace Game
         [SyncVar]
         public int start;
         [SerializeField] public Connection_tab conn_tab;
+        public BasicNetManager networkManager;
 
         // Start is called before the first frame update
         void Start()
         {
             start = 0;
+            networkManager = GameObject.FindGameObjectsWithTag("NM")[0].GetComponent(typeof(BasicNetManager)) as BasicNetManager;
         }
 
         // Update is called once per frame
@@ -39,6 +41,10 @@ namespace Game
         public void CmdStartGame()
         {
             RpcStartGame();
+            var blueFlag = Instantiate(networkManager.spawnPrefabs[1], new Vector2(-43,-46), Quaternion.identity);
+            NetworkServer.Spawn(blueFlag);
+            var redFlag = Instantiate(networkManager.spawnPrefabs[2], new Vector2(54,47), Quaternion.identity);
+            NetworkServer.Spawn(redFlag);
         }
 
         [ClientRpc]
