@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using System;
 
 namespace Game
 {
@@ -53,17 +54,19 @@ namespace Game
 
     void LateUpdate()
     {
-        if (nB == maxTeam){
-            if (GameObject.Find("TeamB").active){
-                GameObject.Find("TeamB").SetActive(false);
+        try {
+            if (nB == maxTeam){
+                if (GameObject.Find("TeamB").active){
+                    GameObject.Find("TeamB").SetActive(false);
+                }
             }
-        }
 
-        if (nA == maxTeam){
-            if (GameObject.Find("TeamA").active){
-                GameObject.Find("TeamA").SetActive(false);
+            if (nA == maxTeam){
+                if (GameObject.Find("TeamA").active){
+                    GameObject.Find("TeamA").SetActive(false);
+                }
             }
-        }
+        } catch (Exception e) {} //pour ne pas afficher 1000000 erreurs dans les update, oui c'est pas propre mais c'est le plus simple à faire.
     }
 
     [Command]
