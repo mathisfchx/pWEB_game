@@ -61,11 +61,13 @@ namespace Game
 
         public void Update()
         {
+            if (conn_tab.start == 1 && team == 2){
+                    this.gameObject.SetActive(false);
+                }
             if (isLocalPlayer){
                 Username = userselect.UsernameString;
                 CmdChangeName(Username);
                 CmdSetTeam(userselect.team);
-
 
                 CmdTeam();
             }
