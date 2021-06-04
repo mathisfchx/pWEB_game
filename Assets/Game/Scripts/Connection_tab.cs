@@ -57,6 +57,7 @@ namespace Game
             if (GameObject.Find("TeamB").active){
                 GameObject.Find("TeamB").SetActive(false);
             }
+        }
 
         if (nA == maxTeam){
             if (GameObject.Find("TeamA").active){
