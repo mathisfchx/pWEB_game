@@ -130,7 +130,7 @@ namespace Game
         {
             pseudo = GetComponentInChildren<TextMeshPro>();
             pseudo.text = newName;
-            if (team == 0){
+            if (team == 3){
                 pseudo.color = Color.blue;
             } else if (team == 1) {
                 pseudo.color = Color.red;

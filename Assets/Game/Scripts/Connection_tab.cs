@@ -54,20 +54,14 @@ namespace Game
     void LateUpdate()
     {
         if (nB == maxTeam){
-            Debug.Log("nb");
-            GameObject.Find("TeamB").SetActive(false);
-            return;
-        } else {
-            //GameObject.Find("TeamB").SetActive(true);
-        }
+            if (GameObject.Find("TeamB").active){
+                GameObject.Find("TeamB").SetActive(false);
+            }
 
         if (nA == maxTeam){
-            Debug.Log("na");
-            GameObject.Find("TeamA").SetActive(false);
-            return;
-        } else {
-            //GameObject.Find("TeamA").SetActive(true);
-        }
+            if (GameObject.Find("TeamA").active){
+                GameObject.Find("TeamA").SetActive(false);
+            }
     }
 
     [Command]
