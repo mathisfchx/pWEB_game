@@ -196,8 +196,6 @@ MonoBehaviour:
   Username: 
   team: 0
   HealthPoint: 1
-  TeamA: {fileID: 0}
-  TeamB: {fileID: 0}
 --- !u!114 &7294346751271000345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +285,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  TimeBtwCacAttack: 0
+  TimeBtwDistantAttack: 0
+  projectile: {fileID: 6438229156507101002, guid: 452fce8b6a2c801478f4ef57be27d2c9,
+    type: 3}
   Player_mv: {fileID: 0}
   player_hit: {fileID: 0}
 --- !u!1 &8410679325516813398

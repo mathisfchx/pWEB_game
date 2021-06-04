@@ -35,10 +35,22 @@ namespace Game
                     {
                         CmdDead();
                     }
-                    this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = true ;
-                    this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)6.5, (float)12) ;
-                    this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition = new Vector2((float)-12.8,(float)-8.2);
-                    this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().target = this.transform;
+                    if (this.team == 3)
+                    {
+
+
+                        this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = true;
+                        this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)-38, (float)-22.3);
+                        this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition = new Vector2((float)-57.3, (float)-42.5);
+                        this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().target = this.transform;
+                    }
+                    else
+                    {
+                        this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = true;
+                        this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)50.8, (float)46.3);
+                        this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition = new Vector2((float)31.5, (float)26.1);
+                        this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().target = this.transform;
+                    }
                 }
 
             }
@@ -127,7 +139,7 @@ namespace Game
         {
             pseudo = GetComponentInChildren<TextMeshPro>();
             pseudo.text = newName;
-            if (team == 0){
+            if (team == 3){
                 pseudo.color = Color.blue;
             } else if (team == 1) {
                 pseudo.color = Color.red;
@@ -143,7 +155,7 @@ namespace Game
         {
             pseudo = GetComponentInChildren<TextMeshPro>();
             pseudo.text = newName;
-            if (team == 0){
+            if (team == 3){
                 pseudo.color = Color.blue;
             } else if (team == 1) {
                 pseudo.color = Color.red;
@@ -191,14 +203,29 @@ namespace Game
         public void CmdDead()
         {
             this.HealthPoint = 4;
-            this.transform.SetPositionAndRotation(new Vector3(5, -5),new Quaternion(0,0,0,0));
+            if (this.team == 3)
+            {
+                this.transform.SetPositionAndRotation(new Vector3(-38, -43), new Quaternion(0, 0, 0, 0));
+            }
+            else
+            {
+                this.transform.SetPositionAndRotation(new Vector3(55, 45), new Quaternion(0, 0, 0, 0));
+            }
             RpcDead();
         }
         [ClientRpc]
         public void RpcDead()
         {
             this.HealthPoint = 4;
-            this.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
+
+            if (this.team == 3)
+            {
+                this.transform.SetPositionAndRotation(new Vector3(-38, -43), new Quaternion(0, 0, 0, 0));
+            }
+            else
+            {
+                this.transform.SetPositionAndRotation(new Vector3(55, 45), new Quaternion(0, 0, 0, 0));
+            }
         }
 
         [Command(requiresAuthority = false)]

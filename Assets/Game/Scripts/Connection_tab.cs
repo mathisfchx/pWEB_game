@@ -62,7 +62,7 @@ namespace Game
         }
 
         if (nA == maxTeam){
-            Debug.Log("na");
+            //Debug.Log("na");
             GameObject.Find("TeamA").SetActive(false);
             return;
         } else {
