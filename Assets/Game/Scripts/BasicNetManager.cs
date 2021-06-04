@@ -40,6 +40,17 @@ namespace Game
             NetworkServer.Spawn(redQG);
         }
 
+        public void RespawnBlueFlag(float x, float y){
+            var blueFlag = Instantiate(spawnPrefabs[1], new Vector2(x,y), Quaternion.identity);
+            NetworkServer.Spawn(blueFlag);
+        }
+
+        public void RespawnRedFlag(float x, float y){
+            var redFlag = Instantiate(spawnPrefabs[2], new Vector2(x,y), Quaternion.identity);
+            NetworkServer.Spawn(redFlag);
+        }
+
+
         /// <summary>
         /// Called on the server when a client adds a new player with ClientScene.AddPlayer.
         /// <para>The default implementation for this function creates a new player object from the playerPrefab.</para>

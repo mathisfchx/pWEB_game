@@ -196,8 +196,7 @@ MonoBehaviour:
   Username: 
   team: 0
   HealthPoint: 1
-  TeamA: {fileID: 0}
-  TeamB: {fileID: 0}
+  Dead: 0
 --- !u!114 &7294346751271000345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +215,7 @@ MonoBehaviour:
   forward: {x: 0, y: 0}
   inv: {fileID: 8306171046861423881, guid: f43acc18452078b47853396288e783a6, type: 3}
   hud: {fileID: 3078163412791112601, guid: afd52f90458591c4881abe0e0cb24181, type: 3}
+  HUDscript: {fileID: 0}
   inventory: {fileID: 0}
   cam: {fileID: 1016634523077923433, guid: 8e6e337cb2eaccc46947635185e0216e, type: 3}
   BoutonFinJeu: {fileID: 3520545282133728883, guid: 66d319ddd1d8cae678a218cc413e49fa,
@@ -224,6 +224,9 @@ MonoBehaviour:
   player: {fileID: 0}
   team: 2
   HP: 0
+  mort: 0
+  networkManager: {fileID: 7236761388837388215, guid: 2ac59653293780cfdb6990895b39e078,
+    type: 3}
 --- !u!95 &-7026400522208259541
 Animator:
   serializedVersion: 3

@@ -17,6 +17,7 @@ namespace Game
         public int team = 2;
         [SyncVar(hook = nameof(OnCheckIfAlive))]
         public int HealthPoint;
+        public bool Dead = false;
         
 
         void OnCheckIfAlive(int oldHealthPoint , int newHealthPoint)
@@ -28,11 +29,13 @@ namespace Game
                     this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = false; 
                     if (isServer)
                     {
+                        this.Dead = true;
                         this.HealthPoint = 4;
                         this.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
                     }
                     if (isClient)
                     {
+                        this.Dead = true;
                         CmdDead();
                     }
                     this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = true ;

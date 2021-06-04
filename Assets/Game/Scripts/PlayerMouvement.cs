@@ -18,6 +18,7 @@ namespace Game{
 
         public GameObject inv;
         public GameObject hud;
+        public HUD HUDscript;
         public Inventory inventory;
         public GameObject cam;
         public GameObject BoutonFinJeu;
@@ -25,6 +26,8 @@ namespace Game{
         public GameObject player;
         public int team = 0;
         public int HP;
+        public bool mort = false;
+        public BasicNetManager networkManager;
 
         private Rigidbody2D myRigidbody;
         private Vector3 change;
@@ -39,7 +42,7 @@ namespace Game{
             inv = Instantiate(inv);
             inventory = inv.GetComponent<Inventory>();
             hud = Instantiate(hud);
-            HUD HUDscript = hud.GetComponent<HUD>();
+            HUDscript = hud.GetComponent<HUD>();
             HUDscript.inventory = inventory;
             cam=Instantiate(cam);
             //cam=cam.GetComponent<CameraMovement>();
@@ -50,6 +53,7 @@ namespace Game{
             BoutonFinJeu = Instantiate(BoutonFinJeu);
             BoutonFin = BoutonFinJeu.GetComponent<Button>();
             BoutonFin.gameObject.SetActive(false);
+            networkManager = GameObject.FindGameObjectsWithTag("NM")[0].GetComponent(typeof(BasicNetManager)) as BasicNetManager;
         }
 
 
@@ -80,10 +84,35 @@ namespace Game{
             UpdateAnimationAttack();
             this.team = (GetComponent(typeof(Player)) as Player).team;
             if(this.isLocalPlayer){
-                player = gameObject;
-                this.HP = (GetComponent(typeof(Player)) as Player).HealthPoint;
-                if(HP == 0){
+                this.mort = (GetComponent(typeof(Player)) as Player).Dead;
+                if(mort == true){
+                	Debug.Log("HP 0");
+	                	if(inventory.mItems.Contains("_BlueFlag(Clone)")){
+	                		Debug.Log("Contains");
+	                		inventory.mItems.Remove("_BlueFlag(Clone)");
+	                		
+	                		Debug.Log("Remove");
+	                		HUDscript.DelItem("_BlueFlag(Clone)");
+	                		
+	                		RespawnBlueFlagCom(change.x, change.y);
+	                		Debug.Log("Respawn");
+	                		
+	                		(GetComponent(typeof(Player)) as Player).Dead = false;
+	                	}
 
+	                	if(inventory.mItems.Contains("_RedFlag(Clone)")){
+	                		Debug.Log("Contains");
+	                		inventory.mItems.Remove("_RedFlag(Clone)");
+	                		
+	                		Debug.Log("Remove");
+	                		HUDscript.DelItem("_RedFlag(Clone)");
+	                		
+	                		RespawnRedFlagCom(change.x, change.y);
+	                		Debug.Log("Respawn");
+	                		
+	                		(GetComponent(typeof(Player)) as Player).Dead = false;
+	                	}
+	                }
                 }
             }
 
@@ -106,7 +135,22 @@ namespace Game{
                 }
             //}
             */
+        
+
+        [Command]
+        void RespawnBlueFlagCom(float x, float y){
+        	var blueFlag = Instantiate(networkManager.spawnPrefabs[1], new Vector2(x,y), Quaternion.identity);
+            NetworkServer.Spawn(blueFlag);
+        	//RespawnBlueFlagLoc(x, y);
         }
+
+        [Command]
+        void RespawnRedFlagCom(float x, float y){
+			var redFlag = Instantiate(networkManager.spawnPrefabs[2], new Vector2(x,y), Quaternion.identity);
+            NetworkServer.Spawn(redFlag);
+        	//RespawnRedFlagLoc(x, y);
+        }
+
     /*
         void SetFocus(Interactable newFocus){
 
@@ -163,8 +207,12 @@ namespace Game{
                             }*/
                             if(team == 3){
                                 if(item == "_RedFlag(Clone)"){
-                                    inventory.AddItem(item);
-                                    collision.gameObject.SetActive(false);
+                                    if(isServer){
+                                    	addItemClientCom(collision.gameObject, item);
+                                    	
+                                    }else{
+                                    	addItemComClient(collision.gameObject, item);
+                                    }
                                 }
                                 if(item == "_BlueQG(Clone)"){
                                     if(inventory.mItems.Contains("_RedFlag(Clone)") == true){
@@ -173,8 +221,12 @@ namespace Game{
                                 }
                             }else if(team == 1){
                                 if(item == "_BlueFlag(Clone)"){
-                                    inventory.AddItem(item);
-                                    collision.gameObject.SetActive(false);
+                                    if(isServer){
+                                    	addItemClientCom(collision.gameObject, item);
+                                    	
+                                    }else{
+                                    	addItemComClient(collision.gameObject, item);
+                                    }
                                 }
                                 if(item == "_RedQG(Clone)"){
                                     if(inventory.mItems.Contains("_BlueFlag(Clone)") == true){
@@ -182,7 +234,6 @@ namespace Game{
                                     }
                                 
                                 }
-
                             }
                         }
                     }
@@ -190,7 +241,27 @@ namespace Game{
             }
         }
 
+        [Command]
+        void addItemComClient(GameObject collision, string item){
+        	addItemCom(collision, item);
+        }
 
+        [ClientRpc]
+        void addItemCom(GameObject collision, string item){
+        	inventory.AddItem(item);
+            collision.SetActive(false);
+        }
+
+        [ClientRpc]
+        void addItemClientCom(GameObject collision, string item){
+        	addItemClient(collision, item);
+        }
+
+        [Command]
+        void addItemClient(GameObject collision, string item){
+        	inventory.AddItem(item);
+            collision.SetActive(false);
+        }
 
         void CoroutineBoutonFin(){
             Application.Quit();

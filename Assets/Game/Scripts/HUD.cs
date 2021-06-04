@@ -40,8 +40,30 @@ public class HUD : NetworkBehaviour
 
             if (!image.enabled)
             {
+                image.name = e.Item;
                 image.enabled = true;
                 image.sprite = dico[e.Item];
+
+                break;
+            }
+        }
+    }
+
+    public void DelItem(string nameItem){
+        Transform inventoryPanel = transform.Find("InventoryPanel");
+        foreach(Transform slot in inventoryPanel)
+        {
+            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+
+            Debug.Log(image.name);
+            Debug.Log(nameItem);
+
+            if (image.enabled && nameItem == image.name)
+            {
+                Debug.Log("DelItem");
+                slot.GetChild(0).GetChild(0).GetComponent<Image>().enabled = false;
+                //Destroy(slot.GetChild(0).GetChild(0).GetComponent<Image>());
+                //image.sprite = dico["_BlueFlag(Clone)"];
 
                 break;
             }
