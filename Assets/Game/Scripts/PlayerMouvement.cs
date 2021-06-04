@@ -162,7 +162,7 @@ namespace Game{
 
             if(this.isLocalPlayer){
                 if (change != Vector3.zero){
-                    MoveCharacter();
+                    //MoveCharacter();
                     animator.SetFloat("moveX", change.x);
                     animator.SetFloat("moveY", change.y);
                     animator.SetBool("moving", true);
@@ -182,12 +182,18 @@ namespace Game{
                 }
             }
         }
-
+        /*
         void MoveCharacter()
         {
-            myRigidbody.MovePosition(
+            
+        }
+        */
+        void FixedUpdate(){
+            if (isLocalPlayer){
+                myRigidbody.MovePosition(
                 transform.position + change.normalized * speed * Time.deltaTime
             );
+            }
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
