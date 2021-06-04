@@ -67,21 +67,25 @@ namespace Game
                         if(Player_mv.forward == Vector2.up)
                         {
                             current_projectile = Instantiate(projectile, transform.position + new Vector3(0, (float)0.5, 0), transform.rotation);
+                            current_projectile.GetComponent<ProjectileMovement>().team = transform.parent.gameObject.GetComponent<Player>().team; 
                             TimeBtwDistantAttack = 1;
                         }
                         else if (Player_mv.forward == Vector2.down)
                         {
                             current_projectile = Instantiate(projectile, transform.position + new Vector3(0,(float)-0.5,0), transform.rotation);
+                            current_projectile.GetComponent<ProjectileMovement>().team = transform.parent.gameObject.GetComponent<Player>().team;
                             TimeBtwDistantAttack = 1;
                         }
                         else if(Player_mv.forward == Vector2.left)
                         {
                             current_projectile = Instantiate(projectile, transform.position + new Vector3((float)-0.5, 0, 0), transform.rotation);
+                            current_projectile.GetComponent<ProjectileMovement>().team = transform.parent.gameObject.GetComponent<Player>().team;
                             TimeBtwDistantAttack = 1;
                         }
                         else
                         {
                             current_projectile = Instantiate(projectile, transform.position + new Vector3((float)0.5, 0, 0), transform.rotation);
+                            current_projectile.GetComponent<ProjectileMovement>().team = transform.parent.gameObject.GetComponent<Player>().team;
                             TimeBtwDistantAttack = 1;
                         }
 
