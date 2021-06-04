@@ -18,6 +18,7 @@ namespace Game
         [SyncVar(hook = nameof(OnCheckIfAlive))]
         public int HealthPoint;
         public bool Dead = false;
+        Rigidbody m_Rigidbody;
         
 
         void OnCheckIfAlive(int oldHealthPoint , int newHealthPoint)
@@ -57,6 +58,8 @@ namespace Game
             conn_tab = GameObject.FindGameObjectsWithTag("Conn_tag")[0].GetComponent(typeof(Connection_tab)) as Connection_tab;
             userselect= GameObject.FindGameObjectsWithTag("ServerScript")[0].GetComponent(typeof(UserSelect)) as UserSelect;
             HealthPoint = 4; 
+
+            m_Rigidbody = gameObject.GetComponent<Rigidbody>();
         }
 
         public void Update()

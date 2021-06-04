@@ -114,7 +114,7 @@ namespace Game{
 	                	}
 	                }
                 }
-            }
+        }
 
             //gameObject.transform.rotation = new Quaternion(0,0,0,0);
             
@@ -185,8 +185,9 @@ namespace Game{
 
         void MoveCharacter()
         {
+            transform.Translate(change * speed * Time.deltaTime);
             myRigidbody.MovePosition(
-                transform.position + change.normalized * speed * Time.deltaTime
+                transform.position
             );
         }
 
