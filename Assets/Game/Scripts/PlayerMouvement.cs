@@ -94,7 +94,7 @@ namespace Game{
 	                		Debug.Log("Remove");
 	                		HUDscript.DelItem("_BlueFlag(Clone)");
 	                		
-	                		RespawnBlueFlagCom(change.x, change.y);
+	                		RespawnBlueFlagCom(transform.position.x, transform.position.y);
 	                		Debug.Log("Respawn");
 	                		
 	                		(GetComponent(typeof(Player)) as Player).Dead = false;
@@ -107,7 +107,7 @@ namespace Game{
 	                		Debug.Log("Remove");
 	                		HUDscript.DelItem("_RedFlag(Clone)");
 	                		
-	                		RespawnRedFlagCom(change.x, change.y);
+	                		RespawnRedFlagCom(transform.position.x, transform.position.y);
 	                		Debug.Log("Respawn");
 	                		
 	                		(GetComponent(typeof(Player)) as Player).Dead = false;
