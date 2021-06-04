@@ -25,6 +25,7 @@ namespace Game
 
     void Start()
     {
+        start = 5;
         maxTeam = 1;
         CmdResetStart();
     }
@@ -44,10 +45,7 @@ namespace Game
 
         if (nA == maxTeam && nB == maxTeam)
         {
-            if (hasAuthority){
-                start = 1;
-            }
-            
+            start = 1;
         }
         
     }

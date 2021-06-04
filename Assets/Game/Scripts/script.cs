@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using TMPro;
 
 namespace Game
 {
@@ -21,25 +22,34 @@ namespace Game
         // Update is called once per frame
         void Update()
         {
-            if (hasAuthority){
-                CmdSetStart();
-                if (start == 1){
-                    Debug.Log("Commencer la partie");
-                    CmdStartGame();
-                }
+            //CmdSetStart();
+            start = conn_tab.start;
+        }
+
+        void LateUpdate()
+        {
+            if (start == 1){
+                Debug.Log("Commencer la partie");
+                CmdStartGame();
+                this.enabled = false;
             }
         }
 
-        [Command]
+        [Command(requiresAuthority = false)]
         public void CmdStartGame()
         {
-            Debug.Log("cmd start game");
-            //gérer position des perso pour les faire spawn chez eux (délire de positions en x,y)
-            //mais spawner les objets (voir du coté de network manager peut etre je suis aps sur)
-            //lancer les règles ()
+            RpcStartGame();
         }
 
-        [Command]
+        [ClientRpc]
+        public void RpcStartGame()
+        {
+            foreach(GameObject counter in GameObject.FindGameObjectsWithTag("counter")){
+                counter.GetComponent<TextMeshProUGUI>().enabled = false;
+            }
+        }
+
+        [Command(requiresAuthority = false)]
         public void CmdSetStart()
         {
             start = conn_tab.start;
