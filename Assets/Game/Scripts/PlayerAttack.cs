@@ -70,22 +70,22 @@ namespace Game
                         float speed = 10;
                         if (Player_mv.forward == Vector2.up)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)1, 0),vect.x,vect.y,speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)0, 0),vect.x,vect.y,speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else if (Player_mv.forward == Vector2.down)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)-1.5, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)-0.5, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else if(Player_mv.forward == Vector2.left)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3((float)-1, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3((float)-0, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3((float)1, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3((float)0.3, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
 

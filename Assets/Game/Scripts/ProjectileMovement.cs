@@ -51,8 +51,8 @@ namespace Game
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            print(collision.gameObject != this.gameObject);
-            if (collision.gameObject != this.gameObject)
+            print(collision.gameObject != caster.gameObject);
+            if (collision.gameObject != caster.gameObject)
             {
                 print(collision.gameObject.GetComponent<Player>() != null);
                 if (collision.gameObject.GetComponent<Player>() != null)
