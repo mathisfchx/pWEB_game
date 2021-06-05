@@ -11,7 +11,7 @@ Right now, the game is built and playable on Windows and Linux (Web player comin
 - A mouse and a Keyboard  
   
 ### THE CODE
-The main part of the work is in Assets/Scripts,Prefab, And Scene  
+The main part of the work is in Assets/Game/Scripts,Prefab, And Scene  
 But if you just want to play you can just download the executable  
   
 ### THE TEAM  
