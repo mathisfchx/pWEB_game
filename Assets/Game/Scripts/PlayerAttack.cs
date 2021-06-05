@@ -13,6 +13,8 @@ namespace Game
         GameObject[] projectiles;
         public PlayerMouvement Player_mv;
         public Player player_hit;
+        //[SyncVar]
+        //public Player caster;
         int player_mask;
         void Awake()
         {
@@ -68,22 +70,22 @@ namespace Game
                         float speed = 10;
                         if (Player_mv.forward == Vector2.up)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)0.5, 0),vect.x,vect.y,speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)1, 0),vect.x,vect.y,speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else if (Player_mv.forward == Vector2.down)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)-0.5, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)-1.5, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else if(Player_mv.forward == Vector2.left)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3((float)-0.5, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3((float)-1, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3((float)0.5, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3((float)1, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
 
@@ -121,14 +123,20 @@ namespace Game
 
         public void RangedAttack(Player player)
         {
-          if (isLocalPlayer)
-          {
-              if (isClient)
-              {
-                  print("RANGED ATTACK");
-                  CmdRangedAttack(player);
-              }
-          }
+            if (isServer)
+            {
+                player.HealthPoint -= 30;
+            }
+            print("InRangedAttack");
+            if (isLocalPlayer)
+            {
+                print("InIsLocalPlayer");
+                if (isClient)
+                {
+                    print("RANGED ATTACK");
+                    CmdRangedAttack(player);
+                }
+            }
         }
 
         [Command]
@@ -158,9 +166,15 @@ namespace Game
             //current_projectile.GetComponent<ProjectileMovement>().mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             //mouse_position.z = Camera.main.nearClipPlane;
             Destroy(current_projectile, 10);
-
             NetworkServer.Spawn(current_projectile);
         }
+
+        /*[ClientRpc]
+        public void RcpInstantiateProjectile(Player player,GameObject current_projectile)
+        {
+            current_projectile.GetComponent<ProjectileMovement>().caster = player;
+        }
+        */
         public void Move(GameObject proj)
         {
             float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;

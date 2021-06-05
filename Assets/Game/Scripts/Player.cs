@@ -21,7 +21,7 @@ namespace Game
 
         void OnCheckIfAlive(int oldHealthPoint , int newHealthPoint)
         {
-            if (newHealthPoint == 0)
+            if (newHealthPoint <= 0)
             {
                 if (hasAuthority)
                 {
