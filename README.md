@@ -12,7 +12,7 @@ Right now, the game is built and playable on Windows and Linux (Web player comin
   
 ### THE CODE
 The main part of the work is in Assets/Game/Scripts,Prefab, And Scene  
-But if you just want to play you can just download the executable  
+But if you just want to play you can just download the executable (it's coming)
   
 ### THE TEAM  
 Alexandre Rodriguez, Nathan Bottet, Mathis Faucheux, Pakinam Tarek, Gaspard Michel, Dejv Marku, Eigis Misku, Nael Bounia  
