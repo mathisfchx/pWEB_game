@@ -1,46 +1,20 @@
 # pWEB_game
 Unity 2D mutliplayer game made for a Web school project
+First game mode : Capture The Flag (You need to take the flag in the opposite team base and bring it back to your's)
+Controls are : zqsd to move, Space bar to attack with your sword, and Left click to shoot with your gun.
+Right now the game is 2V2 but this is customisable.
+Right now, the game is built and playable on Windows and Linux (Web player coming with V2)
 
-## SPECIFICATIONS REQUISES
-- Ecran 16/9
+## NEEDED SPECS  
+- Screen in 16/9 resolution  
+- Any computer (even a potato one)  
+- A mouse and a Keyboard  
+
+### THE CODE
+The main part of the work is in Assets/Scripts,Prefab, And Scene
+But if you just want to play you can just download the executable
+
+### THE TEAM  
+Alexandre Rodriguez, Nathan Bottet, Mathis Faucheux, Pakinam Tarek, Gaspard Michel, Dejv Marku, Eigis Misku, Nael Bounia
 
 
-## Mise à jour 04/05
-Plusieurs issues A reglées (encore quelques A à régler et le projet serait "rendable")
-ROADMAP A DEFENIR POUR LES PROCHAINES ETAPES :
-1 - Tous les A et B
-2 - Equipes
-3 - 
-
-## Mise à jour 27/04
-
-1_Milestone Multi Final accomplie
-Il est possible de jouer sur le serveur AWS ou en LocalHost (plus de bug de sync)
-Sur le dernier front (il reste plein de bug --> issues à lever)
-
-## Mise à jour au 21/04 audit des avancées
-
-1_ Milestone front_ini accomplie  
-Front en top view avec système de tiles, plusieurs zone (pièces) interconnectées, +perso  
---> front_final nécessite encore des animations et quelques bug de décors sont présents  
-  
-2_ Milestone Multi_ini accomplie  
-Multi joueur fonctionnel  
-Archi client serveur avec serveur distant AWS  
-Connections de joueurs "quasi illimité" et synchro des positions  
---> Multi_final nécessite encore des résolutions de bug liés à la synchro et affichages  
-
-3_ Milestone bd_ini accomplie  
-Base de donnée pour stockage des comptes utilisateurs : possible de s'inscrire et de se connecter  
-La base est sur le serveur distant  
-Il est nécessaire d'avoir un compte pour se connecter au jeu  
-
-=> Suite du projet à la rentrée : partir sur phase 2 du projet après la fin de la milestone Multi_final  
- - Mise en place des règles du jeu, intéractions, et début/fin de partie  
-
-## Données de layer
-
-Joueur : 10  
-Sol : 1  
-Background : 0  
-Objets inamovibles : 2  
