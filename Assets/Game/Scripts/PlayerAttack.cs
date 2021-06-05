@@ -67,25 +67,25 @@ namespace Game
                     if (Input.GetMouseButtonDown(1))
                     {
                         Vector3 vect = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                        float speed = 10;
+                        float speed = (float)10;
                         if (Player_mv.forward == Vector2.up)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)0, 0),vect.x,vect.y,speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)0.5, 0),vect.x,vect.y,speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else if (Player_mv.forward == Vector2.down)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)-0.5, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)-1, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else if(Player_mv.forward == Vector2.left)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3((float)-0, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3((float)-0.5, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3((float)0.3, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
+                            CmdInstantiateProjectile(transform.position + new Vector3((float)0.5, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
 
@@ -125,7 +125,7 @@ namespace Game
         {
             if (isServer)
             {
-                player.HealthPoint -= 30;
+                player.HealthPoint -= 1;
             }
             print("InRangedAttack");
             if (isLocalPlayer)

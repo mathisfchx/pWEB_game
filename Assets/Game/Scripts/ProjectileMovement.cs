@@ -7,18 +7,15 @@ namespace Game
     public class ProjectileMovement : NetworkBehaviour
     {
         public float speed;
-        public float TimeToLive;
         public Vector3 mouse_position;
         public CircleCollider2D thiscollider;
         [SyncVar]
         public int team;
         [SyncVar]
-        public Game.Player caster;
+        public Player caster;
 
         void Awake()
         {
-            speed = 15;
-            TimeToLive = 200;
             thiscollider = gameObject.GetComponent<CircleCollider2D>();
 
             //cam = new Camera();
@@ -28,7 +25,7 @@ namespace Game
         }
         void Start()
         {
-            Physics2D.IgnoreCollision(caster.GetComponent<BoxCollider2D>(), thiscollider);
+            //Physics2D.IgnoreCollision(caster.gameObject.transform.GetChild(1).GetComponent<BoxCollider2D>(), thiscollider ,true);
             //Invoke("DestroyProjectile", TimeToLive);
             //print(Camera.main.transform.position);
             //mouse_position = Input.mousePosition;
@@ -53,14 +50,11 @@ namespace Game
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            print(collision.gameObject != caster.gameObject);
-            if (collision.gameObject != caster.gameObject)
+            if (collision.gameObject != caster.gameObject && collision.gameObject != caster.transform.GetChild(1).gameObject && collision.gameObject != null )
             {
-                print(collision.gameObject.GetComponent<Player>() != null);
-                if (collision.gameObject.GetComponent<Player>() != null)
+                if (collision.gameObject.transform.parent.GetComponent<Player>() != null)
                 {
-                    Game.Player target = collision.gameObject.GetComponent<Game.Player>();
-                    print(target.team);
+                    Player target = collision.gameObject.transform.parent.GetComponent<Player>();
                     if (team != target.team)
                     {
                         //caster.SendMessage("RangedAttack", target);                   //Méthode 1 : crash au niveau des clients non host lors de l'émission du message. Pas fonctionnel non plus pour l'host.
@@ -106,7 +100,7 @@ namespace Game
         [Command]
         public void CmdRangedDamage(Game.Player player)
         {
-            player.HealthPoint -= 30;
+            player.HealthPoint -= 1;
             RpcSetDamage(player);
         }
         [ClientRpc]
