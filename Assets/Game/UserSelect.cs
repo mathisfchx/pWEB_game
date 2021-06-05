@@ -141,7 +141,7 @@ namespace Game
         }
 
 
-        IEnumerator Login()
+IEnumerator Login()
         {
             errorMessages.text = "" ;
             form = new WWWForm();
@@ -149,36 +149,45 @@ namespace Game
             form.AddField("username",username.text);
             form.AddField("password",password.text);
 
-
-
             using(UnityWebRequest users = UnityWebRequest.Post(URL_Login,form))
             {
                 yield return users.SendWebRequest();
                 string usersDataString = users.downloadHandler.text;
-
-                if(usersDataString.Contains("Error")){
-                    errorMessages.text = usersDataString ;
+                /*
+                if (users.error != null)
+                {
+                    errorMessages.text = "404 not found";
+                    print(users.error);
                 }
-                else{
-                    //GameScene.setActive(true);
-                    //LoginScene.setActive(true);
-                    print("Welcome");
-                    print(usersDataString);
-                    string[] values = usersDataString.Split(';');
-                    UsernameString = username.text;
-                    /*inventory.health = int.Parse(values[0]);
-                    inventory.defense = int.Parse(values[1]);
-                    inventory.speed = int.Parse(values[2]);
-                    inventory.username = username.text ;*/
+                else
+                {
+                    
+                    if (usersDataString.Contains("Error") || usersDataString == "")
+                    {
+                        errorMessages.text = usersDataString;
+                    }
+                    else
+                    {*/
+                        //GameScene.setActive(true);
+                        //LoginScene.setActive(true);
+                        print("Welcome");
+                        print(usersDataString);
+                        string[] values = usersDataString.Split(';');
+                        UsernameString = username.text;
+                        /*inventory.health = int.Parse(values[0]);
+                        inventory.defense = int.Parse(values[1]);
+                        inventory.speed = int.Parse(values[2]);
+                        inventory.username = username.text ;*/
 
-                    //Inventory.SetActive(true);
-                    //PF_Player.SetActive(true);
-                    SCENE.SetActive(true);
-                    game.SetActive(true);
-                    Network_manager.SetActive(true);
-                    Authentification_menu.SetActive(false);
-                    Background.SetActive(false);
-                }
+                        //Inventory.SetActive(true);
+                        //PF_Player.SetActive(true);
+                        SCENE.SetActive(true);
+                        game.SetActive(true);
+                        Network_manager.SetActive(true);
+                        Authentification_menu.SetActive(false);
+                        Background.SetActive(false);
+                    //}
+                //}
             }
 
             LoginButton.interactable = true ;
