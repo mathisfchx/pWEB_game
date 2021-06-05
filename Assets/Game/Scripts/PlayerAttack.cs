@@ -7,7 +7,7 @@ namespace Game
     public class PlayerAttack : NetworkBehaviour
     {
         public float TimeBtwCacAttack;
-        public float TimeBtwDistantAttack; 
+        public float TimeBtwDistantAttack;
 
         public GameObject projectile_prefab;
         GameObject[] projectiles;
@@ -18,7 +18,7 @@ namespace Game
         {
             player_mask = LayerMask.GetMask("Characte Collision Blocker");
             Player_mv = GetComponent(typeof(PlayerMouvement)) as PlayerMouvement;
-            //Player_mv = this.GetComponent<PlayerMouvement>(); 
+            //Player_mv = this.GetComponent<PlayerMouvement>();
             TimeBtwDistantAttack = 0 ;
             TimeBtwCacAttack = 0 ;
         }
@@ -53,7 +53,7 @@ namespace Game
                         }
                         this.GetComponent<BoxCollider2D>().enabled = true;
                         this.transform.GetChild(1).GetComponent<BoxCollider2D>().enabled = true;
-                        TimeBtwCacAttack = 1; 
+                        TimeBtwCacAttack = 1;
                     }
                 }
                 else
@@ -68,22 +68,22 @@ namespace Game
                         float speed = 10;
                         if (Player_mv.forward == Vector2.up)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)0.5, 0),vect.x,vect.y,speed, gameObject.GetComponent<Player>().team);
+                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)0.5, 0),vect.x,vect.y,speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else if (Player_mv.forward == Vector2.down)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)-0.5, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>().team);
+                            CmdInstantiateProjectile(transform.position + new Vector3(0, (float)-0.5, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else if(Player_mv.forward == Vector2.left)
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3((float)-0.5, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>().team);
+                            CmdInstantiateProjectile(transform.position + new Vector3((float)-0.5, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
                         else
                         {
-                            CmdInstantiateProjectile(transform.position + new Vector3((float)0.5, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>().team);
+                            CmdInstantiateProjectile(transform.position + new Vector3((float)0.5, 0, 0), vect.x, vect.y, speed, gameObject.GetComponent<Player>());
                             TimeBtwDistantAttack = 1;
                         }
 
@@ -91,9 +91,9 @@ namespace Game
                 }
                 else
                 {
-                    TimeBtwDistantAttack -= Time.deltaTime; 
+                    TimeBtwDistantAttack -= Time.deltaTime;
                 }
-                print("Avant ");
+                //print("Avant ");
 
                 if (projectiles.Length != 0)
                 {
@@ -103,7 +103,7 @@ namespace Game
                     }
                 }
             }
-   
+
         }
 
 
@@ -119,21 +119,42 @@ namespace Game
             //print(player);
         }
 
+        public void RangedAttack(Player player)
+        {
+          if (isLocalPlayer)
+          {
+              if (isClient)
+              {
+                  print("RANGED ATTACK");
+                  CmdRangedAttack(player);
+              }
+          }
+        }
+
         [Command]
         void CmdAttackCac(Player player)
         {
 
             player.HealthPoint -= 2;
         }
+
         [Command]
-        public void CmdInstantiateProjectile(Vector3 vect , float x , float y , float speed ,int team)
+        void CmdRangedAttack(Player player)
+        {
+            player.HealthPoint -= 30;
+        }
+
+
+        [Command]
+        public void CmdInstantiateProjectile(Vector3 vect , float x , float y , float speed ,Player player)
         {
             GameObject current_projectile;
             current_projectile = Instantiate(projectile_prefab, vect, transform.rotation);
             current_projectile.GetComponent<ProjectileMovement>().mouse_position.x = x;
             current_projectile.GetComponent<ProjectileMovement>().mouse_position.y = y ;
             current_projectile.GetComponent<ProjectileMovement>().speed = speed ;
-            current_projectile.GetComponent<ProjectileMovement>().team = team;
+            current_projectile.GetComponent<ProjectileMovement>().team = player.team;
+            current_projectile.GetComponent<ProjectileMovement>().caster = player;
             //current_projectile.GetComponent<ProjectileMovement>().mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             //mouse_position.z = Camera.main.nearClipPlane;
             Destroy(current_projectile, 10);
