@@ -13,12 +13,21 @@ namespace Game
         public int start;
         [SerializeField] public Connection_tab conn_tab;
         public BasicNetManager networkManager;
+        public GameObject start_text;
 
         // Start is called before the first frame update
         void Start()
         {
             start = 0;
             networkManager = GameObject.FindGameObjectsWithTag("NM")[0].GetComponent(typeof(BasicNetManager)) as BasicNetManager;
+            start_text.SetActive(false);
+        }
+
+        private IEnumerator waiter(){
+            start_text.SetActive(true);
+            start_text.GetComponent<TextMeshProUGUI>().text = "CAPTURE THE FLAG !";
+            yield return new WaitForSeconds(3);
+            start_text.SetActive(false);
         }
 
         // Update is called once per frame
@@ -70,6 +79,7 @@ namespace Game
                 }
                 player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().target = player.transform;
             }
+            StartCoroutine(waiter());
             RpcStartGame();
         }
 
@@ -103,6 +113,7 @@ namespace Game
                 }
                 player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().target = player.transform;
             }
+            StartCoroutine(waiter());
         }
 
         [Command(requiresAuthority = false)]
