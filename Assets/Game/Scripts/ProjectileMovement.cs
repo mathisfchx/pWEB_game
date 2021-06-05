@@ -20,6 +20,7 @@ namespace Game
             speed = 15;
             TimeToLive = 200;
             thiscollider = gameObject.GetComponent<CircleCollider2D>();
+
             //cam = new Camera();
             //new WaitForSeconds((float)0.2);
             //print(mouse_position);
@@ -27,6 +28,7 @@ namespace Game
         }
         void Start()
         {
+            Physics2D.IgnoreCollision(caster.GetComponent<BoxCollider2D>(), thiscollider);
             //Invoke("DestroyProjectile", TimeToLive);
             //print(Camera.main.transform.position);
             //mouse_position = Input.mousePosition;

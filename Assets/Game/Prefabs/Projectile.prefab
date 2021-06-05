@@ -135,7 +135,7 @@ MonoBehaviour:
   speed: 0
   TimeToLive: 0
   mouse_position: {x: 0, y: 0, z: 0}
-  collider: {fileID: 1567727045920611386}
+  thiscollider: {fileID: 1567727045920611386}
   team: 0
   caster: {fileID: 0}
 --- !u!114 &5926224417353986357
