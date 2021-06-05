@@ -49,6 +49,27 @@ namespace Game
             foreach(GameObject start in GameObject.FindGameObjectsWithTag("start")){
                 start.SetActive(false);
             }
+            foreach(GameObject player in GameObject.FindGameObjectsWithTag("Player")){
+                if (player.GetComponent<Player>().team == 3) {
+                    player.transform.SetPositionAndRotation(new Vector3(-38, -44),new Quaternion(0,0,0,0));
+                } else if (player.GetComponent<Player>().team == 1){
+                    player.transform.SetPositionAndRotation(new Vector3(55, 46),new Quaternion(0,0,0,0));
+                } else {
+                    player.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
+                }
+                player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = true ;
+                if (player.GetComponent<Player>().team == 3){
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)-38, (float)-22.3) ;
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition = new Vector2((float)-57.3, (float)-42.5) ;
+                } else if (player.GetComponent<Player>().team == 1){
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)50.8, (float)46.3) ;
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition = new Vector2((float)31.5, (float)26.1) ;
+                } else {
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)6.5, (float)12) ;
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition = new Vector2((float)-12.8,(float)-8.2);
+                }
+                player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().target = player.transform;
+            }
             RpcStartGame();
         }
 
@@ -60,6 +81,27 @@ namespace Game
             }
             foreach(GameObject start in GameObject.FindGameObjectsWithTag("start")){
                 start.SetActive(false);
+            }
+            foreach(GameObject player in GameObject.FindGameObjectsWithTag("Player")){
+                if (player.GetComponent<Player>().team == 3) {
+                    player.transform.SetPositionAndRotation(new Vector3(-38, -44),new Quaternion(0,0,0,0));
+                } else if (player.GetComponent<Player>().team == 1){
+                    player.transform.SetPositionAndRotation(new Vector3(55, 46),new Quaternion(0,0,0,0));
+                } else {
+                    player.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
+                }
+                player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = true ;
+                if (player.GetComponent<Player>().team == 3){
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)-38, (float)-22.3) ;
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition = new Vector2((float)-57.3, (float)-42.5) ;
+                } else if (player.GetComponent<Player>().team == 1){
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)50.8, (float)46.3) ;
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition = new Vector2((float)31.5, (float)26.1) ;
+                } else {
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)6.5, (float)12) ;
+                    player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().minPosition = new Vector2((float)-12.8,(float)-8.2);
+                }
+                player.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().target = player.transform;
             }
         }
 
