@@ -51,9 +51,9 @@ namespace Game
             }
             foreach(GameObject player in GameObject.FindGameObjectsWithTag("Player")){
                 if (player.GetComponent<Player>().team == 3) {
-                    player.transform.SetPositionAndRotation(new Vector3(-38, -44),new Quaternion(0,0,0,0));
+                    player.transform.SetPositionAndRotation(new Vector3(-65, (float) -47.5),new Quaternion(0,0,0,0));
                 } else if (player.GetComponent<Player>().team == 1){
-                    player.transform.SetPositionAndRotation(new Vector3(55, 46),new Quaternion(0,0,0,0));
+                    player.transform.SetPositionAndRotation(new Vector3(60, 24),new Quaternion(0,0,0,0));
                 } else {
                     player.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
                 }
@@ -84,9 +84,9 @@ namespace Game
             }
             foreach(GameObject player in GameObject.FindGameObjectsWithTag("Player")){
                 if (player.GetComponent<Player>().team == 3) {
-                    player.transform.SetPositionAndRotation(new Vector3(-38, -44),new Quaternion(0,0,0,0));
+                    player.transform.SetPositionAndRotation(new Vector3(-65, (float) -47.5),new Quaternion(0,0,0,0));
                 } else if (player.GetComponent<Player>().team == 1){
-                    player.transform.SetPositionAndRotation(new Vector3(55, 46),new Quaternion(0,0,0,0));
+                    player.transform.SetPositionAndRotation(new Vector3(60, 24),new Quaternion(0,0,0,0));
                 } else {
                     player.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
                 }

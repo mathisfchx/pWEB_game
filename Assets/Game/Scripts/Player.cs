@@ -211,9 +211,9 @@ namespace Game
         {
             this.HealthPoint = 4;
             if (this.team == 3) {
-                this.transform.SetPositionAndRotation(new Vector3(-38, -44),new Quaternion(0,0,0,0));
+                this.transform.SetPositionAndRotation(new Vector3(-65, (float) -47.5),new Quaternion(0,0,0,0));
             } else if (this.team == 1){
-                this.transform.SetPositionAndRotation(new Vector3(55, 46),new Quaternion(0,0,0,0));
+                this.transform.SetPositionAndRotation(new Vector3(60, 24),new Quaternion(0,0,0,0));
             } else {
                 this.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
             }
@@ -224,9 +224,9 @@ namespace Game
         {
             this.HealthPoint = 4;
             if (this.team == 3) {
-                this.transform.SetPositionAndRotation(new Vector3(-38, -44),new Quaternion(0,0,0,0));
+                this.transform.SetPositionAndRotation(new Vector3(-65, (float) -47.5),new Quaternion(0,0,0,0));
             } else if (this.team == 1){
-                this.transform.SetPositionAndRotation(new Vector3(55, 46),new Quaternion(0,0,0,0));
+                this.transform.SetPositionAndRotation(new Vector3(60, 24),new Quaternion(0,0,0,0));
             } else {
                 this.transform.SetPositionAndRotation(new Vector3(5, -5), new Quaternion(0, 0, 0, 0));
             }
