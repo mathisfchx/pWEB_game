@@ -41,10 +41,10 @@ namespace Game
         int counter = 0 ;
 
         // Start is called before the first frame update
-        string URL_Login = "http://13.36.61.82/userSelect.php";
-        string URL_Register = "http://13.36.61.82/userinsert.php";
-        string URL_Save = "http://13.36.61.82/Save.php";
-        string URL_Disconnect = "http://13.36.61.82/userDisconnect.php";
+        string URL_Login = "http://15.188.17.42/userSelect.php";
+        string URL_Register = "http://15.188.17.42/userinsert.php";
+        string URL_Save = "http://15.188.17.42/Save.php";
+        string URL_Disconnect = "http://15.188.17.42/userDisconnect.php";
         public string[] usersData;
         public string UsernameString ;
 
@@ -153,7 +153,7 @@ IEnumerator Login()
             {
                 yield return users.SendWebRequest();
                 string usersDataString = users.downloadHandler.text;
-                /*
+                
                 if (users.error != null)
                 {
                     errorMessages.text = "404 not found";
@@ -167,7 +167,7 @@ IEnumerator Login()
                         errorMessages.text = usersDataString;
                     }
                     else
-                    {*/
+                    {
                         //GameScene.setActive(true);
                         //LoginScene.setActive(true);
                         print("Welcome");
@@ -186,8 +186,8 @@ IEnumerator Login()
                         Network_manager.SetActive(true);
                         Authentification_menu.SetActive(false);
                         Background.SetActive(false);
-                    //}
-                //}
+                    }
+                }
             }
 
             LoginButton.interactable = true ;
