@@ -39,18 +39,13 @@ namespace Game
 
         void Update()
         {
-
+            caster.GetComponent<PlayerAttack>().MoveProjectile(this.transform.gameObject);
             //transform.Translate(new Vector2(mouse_position.x, mouse_position.y).normalized * speed * Time.deltaTime);
-        }
-
-        void DestroyProjectile()
-        {
-            Destroy(gameObject);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject != caster.gameObject && collision.gameObject != caster.transform.GetChild(1).gameObject && collision.gameObject != null )
+            if (collision.gameObject != caster.transform.gameObject && collision.gameObject != caster.transform.GetChild(1).gameObject && collision.gameObject != null )
             {
                 if (collision.gameObject.transform.parent.GetComponent<Player>() != null)
                 {
@@ -62,7 +57,7 @@ namespace Game
                         caster.GetComponent<PlayerAttack>().RangedAttack(target);  //Méthode 3 : absence d'autorité malgré le passage par le joueur ?
                     }
                 }
-                DestroyProjectile();
+                caster.GetComponent<PlayerAttack>().DestroyProjectile(this.transform.gameObject);
             }
         }
 
@@ -106,7 +101,7 @@ namespace Game
         [ClientRpc]
         public void RpcSetDamage(Game.Player player)
         {
-            player.HealthPoint -= 30;
+            player.HealthPoint -= 1;
         }
     }
 }

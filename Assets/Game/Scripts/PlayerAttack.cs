@@ -101,13 +101,37 @@ namespace Game
                 {
                     foreach (GameObject proj in projectiles)
                     {
-                        Move(proj);
+                        //Move(proj);
                     }
                 }
             }
 
         }
 
+        public void DestroyProjectile(GameObject go){
+            if (hasAuthority){
+                if (isLocalPlayer){
+                    if (isClient){
+                        CmdDestroyProjectile(go);
+                    } else if (isServer){
+                        NetworkServer.Destroy(go);
+                    }
+                }
+            }
+        }
+
+        [Command]
+        public void CmdDestroyProjectile(GameObject go)
+        {
+            RpcDestroyProjectile(go);
+            NetworkServer.Destroy(go);
+        }
+
+        [ClientRpc]
+        public void RpcDestroyProjectile(GameObject go)
+        {
+            Destroy(go);
+        }
 
         void AttackCac(Player player)
         {
@@ -175,8 +199,33 @@ namespace Game
             current_projectile.GetComponent<ProjectileMovement>().caster = player;
         }
         */
+        /*
         public void Move(GameObject proj)
         {
+            float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;
+            float y = proj.GetComponent<ProjectileMovement>().mouse_position.y;
+            float speed = proj.GetComponent<ProjectileMovement>().speed;
+            proj.transform.Translate(new Vector2(x, y).normalized * speed * Time.deltaTime);
+        }
+        */
+        
+        public void MoveProjectile(GameObject proj){
+            if (hasAuthority){
+                if (isLocalPlayer){
+                    if (isClient){
+                        CmdMoveProjectile(proj);
+                    } else if (isServer){
+                        float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;
+                        float y = proj.GetComponent<ProjectileMovement>().mouse_position.y;
+                        float speed = proj.GetComponent<ProjectileMovement>().speed;
+                        proj.transform.Translate(new Vector2(x, y).normalized * speed * Time.deltaTime);
+                    }
+                }
+            }
+        }
+
+        [Command]  
+        public void CmdMoveProjectile(GameObject proj){
             float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;
             float y = proj.GetComponent<ProjectileMovement>().mouse_position.y;
             float speed = proj.GetComponent<ProjectileMovement>().speed;
