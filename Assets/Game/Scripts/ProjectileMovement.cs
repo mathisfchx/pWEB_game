@@ -64,7 +64,7 @@ namespace Game
                         }
                     }
                     caster.GetComponent<PlayerAttack>().DestroyProjectile(this.transform.gameObject);
-                    TimeBtwCollision = (float)1;
+                    TimeBtwCollision = (float)0.5;
                 }
             }
 

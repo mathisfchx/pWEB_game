@@ -141,13 +141,8 @@ namespace Game
 
         public void RangedAttack(Player player)
         {
-            if (isServer)
-            {
-                player.HealthPoint -= 1;
-            }
-            else
-            {
-                print("InRangedAttack");
+            //player.HealthPoint -= 1;
+            print("InRangedAttack");
                 if (hasAuthority)
                 {
 
@@ -160,8 +155,15 @@ namespace Game
                             CmdRangedAttack(player);
                         }
                     }
-                }
+                }/*
+            if (isServer)
+            {
+                
             }
+            else
+            {
+                
+            }*/
         }
 
         [Command]
