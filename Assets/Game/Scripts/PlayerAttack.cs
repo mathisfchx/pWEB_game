@@ -26,7 +26,6 @@ namespace Game
         }
         void Update()
         {
-            projectiles = GameObject.FindGameObjectsWithTag("Projectile");
             if (this.isLocalPlayer)
             {
                 if (TimeBtwCacAttack <= 0)
@@ -97,13 +96,7 @@ namespace Game
                 }
                 //print("Avant ");
 
-                if (projectiles.Length != 0)
-                {
-                    foreach (GameObject proj in projectiles)
-                    {
-                        //Move(proj);
-                    }
-                }
+                
             }
 
         }
@@ -124,13 +117,13 @@ namespace Game
         public void CmdDestroyProjectile(GameObject go)
         {
             RpcDestroyProjectile(go);
-            NetworkServer.Destroy(go);
+            go.SetActive(false);
         }
 
         [ClientRpc]
         public void RpcDestroyProjectile(GameObject go)
         {
-            Destroy(go);
+            go.SetActive(false);
         }
 
         void AttackCac(Player player)
