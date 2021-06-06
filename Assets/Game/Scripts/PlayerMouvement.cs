@@ -85,38 +85,46 @@ namespace Game{
             }
             UpdateAnimationAndMove();
             UpdateAnimationAttack();
+            
+
             this.team = (GetComponent(typeof(Player)) as Player).team;
             if(this.isLocalPlayer){
+                if(inventory.mItems.Contains("_BlueFlag(Clone)")){
+                    speedFlag();
+                }else if(inventory.mItems.Contains("_RedFlag(Clone)")){
+                    speedFlag();
+                }
                 this.mort = (GetComponent(typeof(Player)) as Player).Dead;
                 if(mort == true){
-	                	if(inventory.mItems.Contains("_BlueFlag(Clone)")){
-	                		Debug.Log("Contains");
-	                		inventory.mItems.Remove("_BlueFlag(Clone)");
-	                		
-	                		Debug.Log("Remove");
-	                		HUDscript.DelItem("_BlueFlag(Clone)");
-	                		
-	                		RespawnBlueFlagCom(gameObject.transform.position.x, gameObject.transform.position.y);
-	                		Debug.Log("Respawn en "+gameObject.transform.position.x+","+gameObject.transform.position.y);
-	                		
-	                		(GetComponent(typeof(Player)) as Player).Dead = false;
-	                	}
-
-	                	if(inventory.mItems.Contains("_RedFlag(Clone)")){
-	                		Debug.Log("Contains");
-	                		inventory.mItems.Remove("_RedFlag(Clone)");
-	                		
-	                		Debug.Log("Remove");
-	                		HUDscript.DelItem("_RedFlag(Clone)");
-	                		
-	                		RespawnRedFlagCom(gameObject.transform.position.x, gameObject.transform.position.y);
-	                		Debug.Log("Respawn en "+gameObject.transform.position.x+","+gameObject.transform.position.y);
-	                		
-	                		(GetComponent(typeof(Player)) as Player).Dead = false;
-	                	}
+                    speedWithoutFlag();
+	                if(inventory.mItems.Contains("_BlueFlag(Clone)")){
+	                	Debug.Log("Contains");
+	               		inventory.mItems.Remove("_BlueFlag(Clone)");
+	            		
+	            		Debug.Log("Remove");
+	             		HUDscript.DelItem("_BlueFlag(Clone)");
+	            		
+	               		RespawnBlueFlagCom(gameObject.transform.position.x, gameObject.transform.position.y);
+	             		Debug.Log("Respawn en "+gameObject.transform.position.x+","+gameObject.transform.position.y);
+                		
+	                	(GetComponent(typeof(Player)) as Player).Dead = false;
 	                }
-                }
+
+	               	if(inventory.mItems.Contains("_RedFlag(Clone)")){
+	                	Debug.Log("Contains");
+	               		inventory.mItems.Remove("_RedFlag(Clone)");
+	                		
+	               		Debug.Log("Remove");
+	                	HUDscript.DelItem("_RedFlag(Clone)");
+	                		
+	                	RespawnRedFlagCom(gameObject.transform.position.x, gameObject.transform.position.y);
+	                	Debug.Log("Respawn en "+gameObject.transform.position.x+","+gameObject.transform.position.y);
+	                	
+	                	(GetComponent(typeof(Player)) as Player).Dead = false;
+                	}
+	            }
             }
+        }
 
             //gameObject.transform.rotation = new Quaternion(0,0,0,0);
             
@@ -138,6 +146,15 @@ namespace Game{
             //}
             */
         
+        [Command]
+        void speedFlag(){
+            speed = 6;
+        }
+
+        [Command]
+        void speedWithoutFlag(){
+            speed = 8;
+        }
 
         [Command]
         void RespawnBlueFlagCom(float x, float y){
