@@ -85,7 +85,7 @@ namespace Game
                 }
             if (isLocalPlayer){
                 Username = userselect.UsernameString;
-                CmdChangeName(Username);
+                CmdChangeName(Username, this);
                 CmdSetTeam(userselect.team);
 
                 CmdTeam();
@@ -147,10 +147,10 @@ namespace Game
         }
 
         [Command(requiresAuthority = false)]
-        public void CmdChangeName(string newName)
+        public void CmdChangeName(string newName, Player player)
         {
             pseudo = GetComponentInChildren<TextMeshPro>();
-            pseudo.text = newName;
+            pseudo.text = newName+" Pv : "+player.HealthPoint+"/4";
             if (team == 3){
                 pseudo.color = Color.blue;
             } else if (team == 1) {
@@ -159,14 +159,14 @@ namespace Game
                 pseudo.color = Color.white;
             }
             
-            RpcChangeName(newName);
+            RpcChangeName(newName, player);
         }
 
         [ClientRpc]
-        public void RpcChangeName(string newName)
+        public void RpcChangeName(string newName, Player player)
         {
             pseudo = GetComponentInChildren<TextMeshPro>();
-            pseudo.text = newName;
+            pseudo.text = newName+" Pv : "+player.HealthPoint+"/4";
             if (team == 3){
                 pseudo.color = Color.blue;
             } else if (team == 1) {
