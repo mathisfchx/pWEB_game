@@ -89,7 +89,6 @@ namespace Game{
             if(this.isLocalPlayer){
                 this.mort = (GetComponent(typeof(Player)) as Player).Dead;
                 if(mort == true){
-                	Debug.Log("HP 0");
 	                	if(inventory.mItems.Contains("_BlueFlag(Clone)")){
 	                		Debug.Log("Contains");
 	                		inventory.mItems.Remove("_BlueFlag(Clone)");

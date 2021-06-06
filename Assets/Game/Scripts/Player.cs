@@ -22,7 +22,7 @@ namespace Game
 
         void OnCheckIfAlive(int oldHealthPoint , int newHealthPoint)
         {
-            if (newHealthPoint == 0)
+            if (newHealthPoint <= 0)
             {
                 if (hasAuthority)
                 {
@@ -42,7 +42,7 @@ namespace Game
                     if (isClient)
                     {
                         this.Dead = true;
-                        CmdDead();
+                        CmdDead(this);
                     }
                     this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = true ;
                     if (team == 3){
@@ -71,6 +71,11 @@ namespace Game
             conn_tab = GameObject.FindGameObjectsWithTag("Conn_tag")[0].GetComponent(typeof(Connection_tab)) as Connection_tab;
             userselect= GameObject.FindGameObjectsWithTag("ServerScript")[0].GetComponent(typeof(UserSelect)) as UserSelect;
             HealthPoint = 4; 
+            if (hasAuthority){
+                if (isClient){
+                    CmdSetHp(this);
+                }
+            }
         }
 
         public void Update()
@@ -207,9 +212,9 @@ namespace Game
         }
 
         [Command]
-        public void CmdDead()
+        public void CmdDead(Player player)
         {
-            this.HealthPoint = 4;
+            player.HealthPoint = 4;
             if (this.team == 3) {
                 this.transform.SetPositionAndRotation(new Vector3(-65, (float) -47.5),new Quaternion(0,0,0,0));
             } else if (this.team == 1){
@@ -249,6 +254,17 @@ namespace Game
             GameObject.Find("counterB").GetComponent<nteamB>().nB = conn_tab.nB;
             GameObject.Find("counterA").GetComponent<nteamA>().maxTeam = conn_tab.maxTeam;
             GameObject.Find("counterB").GetComponent<nteamB>().maxTeam = conn_tab.maxTeam;
+        }
+
+        [Command]
+        public void CmdSetHp(Player player){
+            player.HealthPoint = 4;
+            RpcSetHp(player);
+        }
+
+        [Command]
+        public void RpcSetHp(Player player){
+            player.HealthPoint = 4;
         }
     }
 }
