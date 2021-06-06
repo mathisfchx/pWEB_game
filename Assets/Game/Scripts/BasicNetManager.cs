@@ -87,8 +87,9 @@ namespace Game
 
             return " ";
         }
-        public void OnStopServer()
+        public override void OnStopServer()
         {
+            print("onStopServer");
             base.OnStopServer();
             userselect.CoroutineDisconnectAll();
         }
