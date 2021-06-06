@@ -9,6 +9,7 @@ namespace Game
         public float speed;
         public Vector3 mouse_position;
         public CircleCollider2D thiscollider;
+        public float TimeBtwCollision; 
         [SyncVar]
         public int team;
         [SyncVar]
@@ -17,6 +18,7 @@ namespace Game
         void Awake()
         {
             thiscollider = gameObject.GetComponent<CircleCollider2D>();
+            TimeBtwCollision = 0; 
 
             //cam = new Camera();
             //new WaitForSeconds((float)0.2);
@@ -39,31 +41,33 @@ namespace Game
 
         void Update()
         {
-
+            caster.GetComponent<PlayerAttack>().MoveProjectile(this.transform.gameObject);
+            TimeBtwCollision -= Time.deltaTime;
+            print(TimeBtwCollision);
             //transform.Translate(new Vector2(mouse_position.x, mouse_position.y).normalized * speed * Time.deltaTime);
-        }
-
-        void DestroyProjectile()
-        {
-            Destroy(gameObject);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject != caster.gameObject && collision.gameObject != caster.transform.GetChild(1).gameObject && collision.gameObject != null )
+            if (TimeBtwCollision <= 0)
             {
-                if (collision.gameObject.transform.parent.GetComponent<Player>() != null)
+                if (collision.gameObject != caster.transform.gameObject && collision.gameObject != caster.transform.GetChild(1).gameObject && collision.gameObject != null)
                 {
-                    Player target = collision.gameObject.transform.parent.GetComponent<Player>();
-                    if (team != target.team)
+                    if (collision.gameObject.transform.parent.GetComponent<Player>() != null)
                     {
-                        //caster.SendMessage("RangedAttack", target);                   //Méthode 1 : crash au niveau des clients non host lors de l'émission du message. Pas fonctionnel non plus pour l'host.
-                        //CmdRangedDamage(target);                                      //Méthode 2 : absence d'autorité pour activer la commande.
-                        caster.GetComponent<PlayerAttack>().RangedAttack(target);  //Méthode 3 : absence d'autorité malgré le passage par le joueur ?
+                        Player target = collision.gameObject.transform.parent.GetComponent<Player>();
+                        if (team != target.team)
+                        {
+                            //caster.SendMessage("RangedAttack", target);                   //Méthode 1 : crash au niveau des clients non host lors de l'émission du message. Pas fonctionnel non plus pour l'host.
+                            //CmdRangedDamage(target);                                      //Méthode 2 : absence d'autorité pour activer la commande.
+                            caster.GetComponent<PlayerAttack>().RangedAttack(target);  //Méthode 3 : absence d'autorité malgré le passage par le joueur ?
+                        }
                     }
+                    caster.GetComponent<PlayerAttack>().DestroyProjectile(this.transform.gameObject);
+                    TimeBtwCollision = (float)0.5;
                 }
-                DestroyProjectile();
             }
+
         }
 
         public void SetTeam(int newTeam)
@@ -106,7 +110,7 @@ namespace Game
         [ClientRpc]
         public void RpcSetDamage(Game.Player player)
         {
-            player.HealthPoint -= 30;
+            player.HealthPoint -= 1;
         }
     }
 }

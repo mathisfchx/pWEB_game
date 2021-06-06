@@ -21,12 +21,12 @@ namespace Game
             [SyncVar]
             public int start;
             [SyncVar]
-            public int maxTeam = 1;
+            public int maxTeam;
 
         void Start()
         {
             start = 5;
-            maxTeam = 1;
+            maxTeam = 2;
         }
 
         void Update()

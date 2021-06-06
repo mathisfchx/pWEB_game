@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using System;
 namespace Game
 {
     public class PlayerAttack : NetworkBehaviour
@@ -26,7 +27,6 @@ namespace Game
         }
         void Update()
         {
-            projectiles = GameObject.FindGameObjectsWithTag("Projectile");
             if (this.isLocalPlayer)
             {
                 if (TimeBtwCacAttack <= 0)
@@ -97,17 +97,35 @@ namespace Game
                 }
                 //print("Avant ");
 
-                if (projectiles.Length != 0)
-                {
-                    foreach (GameObject proj in projectiles)
-                    {
-                        Move(proj);
-                    }
-                }
+                
             }
 
         }
 
+        public void DestroyProjectile(GameObject go){
+            if (hasAuthority){
+                if (isLocalPlayer){
+                    if (isClient){
+                        CmdDestroyProjectile(go);
+                    } else if (isServer){
+                        NetworkServer.Destroy(go);
+                    }
+                }
+            }
+        }
+
+        [Command]
+        public void CmdDestroyProjectile(GameObject go)
+        {
+            RpcDestroyProjectile(go);
+            Destroy(go);
+        }
+
+        [ClientRpc]
+        public void RpcDestroyProjectile(GameObject go)
+        {
+            Destroy(go);
+        }
 
         void AttackCac(Player player)
         {
@@ -123,20 +141,29 @@ namespace Game
 
         public void RangedAttack(Player player)
         {
+            //player.HealthPoint -= 1;
+            print("InRangedAttack");
+                if (hasAuthority)
+                {
+
+                    if (isLocalPlayer)
+                    {
+                        print("InIsLocalPlayer");
+                        if (isClient)
+                        {
+                            print("RANGED ATTACK");
+                            CmdRangedAttack(player);
+                        }
+                    }
+                }/*
             if (isServer)
             {
-                player.HealthPoint -= 1;
+                
             }
-            print("InRangedAttack");
-            if (isLocalPlayer)
+            else
             {
-                print("InIsLocalPlayer");
-                if (isClient)
-                {
-                    print("RANGED ATTACK");
-                    CmdRangedAttack(player);
-                }
-            }
+                
+            }*/
         }
 
         [Command]
@@ -149,7 +176,7 @@ namespace Game
         [Command]
         void CmdRangedAttack(Player player)
         {
-            player.HealthPoint -= 30;
+            player.HealthPoint -= 1;
         }
 
 
@@ -175,12 +202,42 @@ namespace Game
             current_projectile.GetComponent<ProjectileMovement>().caster = player;
         }
         */
+        /*
         public void Move(GameObject proj)
         {
             float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;
             float y = proj.GetComponent<ProjectileMovement>().mouse_position.y;
             float speed = proj.GetComponent<ProjectileMovement>().speed;
             proj.transform.Translate(new Vector2(x, y).normalized * speed * Time.deltaTime);
+        }
+        */
+        
+        public void MoveProjectile(GameObject proj){
+            if (hasAuthority){
+                if (isLocalPlayer){
+                    if (isClient){
+                        CmdMoveProjectile(proj);
+                    } else if (isServer){
+                        float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;
+                        float y = proj.GetComponent<ProjectileMovement>().mouse_position.y;
+                        float speed = proj.GetComponent<ProjectileMovement>().speed;
+                        proj.transform.Translate(new Vector2(x, y).normalized * speed * Time.deltaTime);
+                    }
+                }
+            }
+        }
+
+        [Command]  
+        public void CmdMoveProjectile(GameObject proj){
+            try{
+                float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;
+                float y = proj.GetComponent<ProjectileMovement>().mouse_position.y;
+                float speed = proj.GetComponent<ProjectileMovement>().speed;
+                proj.transform.Translate(new Vector2(x, y).normalized * speed * Time.deltaTime);
+            }catch(Exception e){
+
+            }
+            
         }
 
     }
