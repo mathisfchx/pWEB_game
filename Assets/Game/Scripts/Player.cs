@@ -150,7 +150,7 @@ namespace Game
         public void CmdChangeName(string newName, Player player)
         {
             pseudo = GetComponentInChildren<TextMeshPro>();
-            pseudo.text = newName+" Pv : "+player.HealthPoint+"/4";
+            pseudo.text = newName+"\nPv : "+player.HealthPoint+"/4";
             if (team == 3){
                 pseudo.color = Color.blue;
             } else if (team == 1) {
@@ -166,7 +166,7 @@ namespace Game
         public void RpcChangeName(string newName, Player player)
         {
             pseudo = GetComponentInChildren<TextMeshPro>();
-            pseudo.text = newName+" Pv : "+player.HealthPoint+"/4";
+            pseudo.text = newName+"\nPv : "+player.HealthPoint+"/4";
             if (team == 3){
                 pseudo.color = Color.blue;
             } else if (team == 1) {
