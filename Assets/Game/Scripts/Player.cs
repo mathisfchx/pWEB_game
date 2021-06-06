@@ -61,11 +61,6 @@ namespace Game
             }
         }
 
-        /// <summary>
-        /// This is invoked for NetworkBehaviour objects when they become active on the server.
-        /// <para>This could be triggered by NetworkServer.Listen() for objects in the scene, or by NetworkServer.Spawn() for objects that are dynamically created.</para>
-        /// <para>This will be called for objects on a "host" as well as for object on a dedicated server.</para>
-        /// </summary>
         public void Awake()
         {
             conn_tab = GameObject.FindGameObjectsWithTag("Conn_tag")[0].GetComponent(typeof(Connection_tab)) as Connection_tab;
@@ -95,55 +90,37 @@ namespace Game
         public override void OnStartServer()
         {
             base.OnStartServer();
-            // Add this to the static Players List
             ((BasicNetManager)NetworkManager.singleton).playersList.Add(this);
         }
 
-        /// <summary>
-        /// Invoked on the server when the object is unspawned
-        /// <para>Useful for saving object data in persistent storage</para>
-        /// </summary>
         public override void OnStopServer()
         {
             CancelInvoke();
             ((BasicNetManager)NetworkManager.singleton).playersList.Remove(this);
         }
 
-        /// <summary>
-        /// Called on every NetworkBehaviour when it is activated on a client.
-        /// <para>Objects on the host have this function called, as there is a local client on the host. The values of SyncVars on object are guaranteed to be initialized correctly with the latest state from the server when this function is called on the client.</para>
-        /// </summary>
         public override void OnStartClient()
         {
 
-            Debug.Log("OnStartClient");
-            // Activate the main panel
+            //Debug.Log("OnStartClient");
             ((BasicNetManager)NetworkManager.singleton).mainPanel.gameObject.SetActive(true);
             if (hasAuthority)
             {
                 if (isServer)
                 {   
                     conn_tab.Username = userselect.UsernameString;
-                    conn_tab.conn_tab[conn_tab.Username] = conn_tab.conn_id;
-                    //CmdSetDico(conn_tab.Username, this.netIdentity.connectionToClient.connectionId);
-                    
+                    conn_tab.conn_tab[conn_tab.Username] = conn_tab.conn_id;    
                 }
                 else
                 {
                     if (isLocalPlayer)
                     {
-                        print("player");
+                        //print("player");
                         CmdSetUsername(userselect.UsernameString);
                         CmdSetDico();
                     }
                 }
             }
-            
-            /* else {
-            pseudo = GetComponentInChildren<TextMeshPro>();
-            pseudo.text = Username;
-            }
-            */
         }
 
         [Command(requiresAuthority = false)]
@@ -175,15 +152,10 @@ namespace Game
 
         }
 
-        /// <summary>
-        /// This is invoked on clients when the server has caused this object to be destroyed.
-        /// <para>This can be used as a hook to invoke effects or do client specific cleanup.</para>
-        /// </summary>
         public override void OnStopClient()
         {
-            Destroy(GetComponent<PlayerMouvement>().cam); // les erreurs dans le serv viennent sans doute d'ici
+            Destroy(GetComponent<PlayerMouvement>().cam); 
 
-            // Disable the main panel for local player
             if (isLocalPlayer)
                 ((BasicNetManager)NetworkManager.singleton).mainPanel.gameObject.SetActive(false);
         }
@@ -191,13 +163,8 @@ namespace Game
         [Command]
         public void CmdSetDico()
         {
-            print(hasAuthority);
-            //if(hasAuthority)
-            //{
-                conn_tab.conn_tab[conn_tab.Username] = conn_tab.conn_id;
-                //RpcModifDico(username, conn_id);
-            //}
-
+            //print(hasAuthority);
+            conn_tab.conn_tab[conn_tab.Username] = conn_tab.conn_id;
         }
         [Command]
         public void CmdSetUsername(string username)

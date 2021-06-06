@@ -13,13 +13,9 @@ public class HUD : NetworkBehaviour
 
     public Dictionary<string, Sprite> dico = new Dictionary<string, Sprite>();
 
-    //public GameObject hud;
-
     void Start()
     {
-        /*if(!isLocalPlayer){
-            hud.SetActive(false);
-        }*/
+
         dico.Add("_Cle(Clone)",cle);
         dico.Add("_BlueFlag(Clone)", blueFlag);
         dico.Add("_RedFlag(Clone)", redFlag);
@@ -31,7 +27,7 @@ public class HUD : NetworkBehaviour
     private void InventoryScript_ItemAdded(object sender, InventoryEventArgs e)
     {
 
-        Debug.Log("Event d'add objet :"+e.Item);
+        //Debug.Log("Event d'add objet :"+e.Item);
 
         Transform inventoryPanel = transform.Find("InventoryPanel");
         foreach(Transform slot in inventoryPanel)
@@ -55,15 +51,13 @@ public class HUD : NetworkBehaviour
         {
             Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
 
-            Debug.Log(image.name);
-            Debug.Log(nameItem);
+            //Debug.Log(image.name);
+            //Debug.Log(nameItem);
 
             if (image.enabled && nameItem == image.name)
             {
-                Debug.Log("DelItem");
+                //Debug.Log("DelItem");
                 slot.GetChild(0).GetChild(0).GetComponent<Image>().enabled = false;
-                //Destroy(slot.GetChild(0).GetChild(0).GetComponent<Image>());
-                //image.sprite = dico["_BlueFlag(Clone)"];
 
                 break;
             }

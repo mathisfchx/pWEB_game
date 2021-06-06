@@ -11,7 +11,6 @@ namespace Game
 
     public class UserSelect : MonoBehaviour
     {
-        //[SerializeField] Inventory inventory ;
         [SerializeField] InputField username ;
         [SerializeField] InputField password ;
         [SerializeField] Button LoginButton ;
@@ -21,8 +20,6 @@ namespace Game
         [SerializeField] Button TeamA ;
         [SerializeField] Button TeamB ;
         [SerializeField] GameObject SCENE ;
-        //[SerializeField] GameObject Inventory ;
-        //[SerializeField] GameObject PF_Player;
         [SerializeField] GameObject Authentification_menu ;
         [SerializeField] GameObject game ;
         [SerializeField] GameObject Network_manager ;
@@ -30,8 +27,6 @@ namespace Game
         [SerializeField] GameObject Background ;
         Mirror.NetworkManager manager;
         [Space]
-        //[SerializeField] GameObject LoginScene ;
-        //[SerializeField] GameObject GameScene ;
 
         [SerializeField] Text errorMessages ;
 
@@ -40,7 +35,6 @@ namespace Game
         WWWForm form ;
         int counter = 0 ;
 
-        // Start is called before the first frame update
         string URL_Login = "http://15.188.17.42/userSelect.php";
         string URL_Register = "http://15.188.17.42/userinsert.php";
         string URL_Save = "http://15.188.17.42/Save.php";
@@ -51,18 +45,13 @@ namespace Game
 
         void Start()
         {
-            //GameScene.setActive(false);
-            //LoginScene.setActive(false);
-
             manager = Network_manager.GetComponent<Mirror.NetworkManager>();
 
             LoginButton.onClick.AddListener(CoroutineButtonLogin);
             RegisterButton.onClick.AddListener(CoroutineButtonRegister);
             SaveButton.onClick.AddListener(CoroutineButtonSave);
             SCENE.SetActive(false);
-            //PF_Player.SetActive(false);
             game.SetActive(false);
-            //Inventory.SetActive(false);
             Network_manager.SetActive(false);
             Authentification_menu.SetActive(true);
 
@@ -81,7 +70,6 @@ namespace Game
         void CoroutineTeamA()
         {
             team = 3;
-            //conn_tab.nA += 1;
             Destroy(GameObject.Find("TeamA"));
             Destroy(GameObject.Find("TeamB"));
             
@@ -90,7 +78,6 @@ namespace Game
         void CoroutineTeamB()
         {
             team = 1;
-            //conn_tab.nB += 1;
             Destroy(GameObject.Find("TeamA"));
             Destroy(GameObject.Find("TeamB"));
             
@@ -99,7 +86,6 @@ namespace Game
         void CoroutineButtonLogin()
         {
             LoginButton.interactable = false ;
-            //progressCircle.setActive(true);
             StartCoroutine(Login());
             password.text = "";
             LogoutButton.interactable = true ;
@@ -169,19 +155,10 @@ IEnumerator Login()
                     }
                     else
                     {
-                        //GameScene.setActive(true);
-                        //LoginScene.setActive(true);
                         print("Welcome");
                         print(usersDataString);
                         string[] values = usersDataString.Split(';');
                         UsernameString = username.text;
-                        /*inventory.health = int.Parse(values[0]);
-                        inventory.defense = int.Parse(values[1]);
-                        inventory.speed = int.Parse(values[2]);
-                        inventory.username = username.text ;*/
-
-                        //Inventory.SetActive(true);
-                        //PF_Player.SetActive(true);
                         SCENE.SetActive(true);
                         game.SetActive(true);
                         Network_manager.SetActive(true);
@@ -203,17 +180,15 @@ IEnumerator Login()
 
             form.AddField("addUsername",username.text);
             form.AddField("addPassword",password.text);
-                    form.AddField("addLevel", 1);
-                    form.AddField("addExperience", 0);
-
-
+            form.AddField("addLevel", 1);
+            form.AddField("addExperience", 0);
 
             using(UnityWebRequest users =UnityWebRequest.Post(URL_Register,form))
             {
                 yield return users.SendWebRequest();
                 if (users.error !=null) {
                     errorMessages.text = "404 not found";
-                                    print(users.error);
+                    print(users.error);
                 }else{
                     string usersDataString = users.downloadHandler.text;
                     print(usersDataString);
@@ -233,10 +208,6 @@ IEnumerator Login()
         {
 
             form = new WWWForm();
-            /*form.AddField("SaveHealth",inventory.health);
-            form.AddField("SaveDefense",inventory.defense);
-            form.AddField("SaveSpeed",inventory.speed);
-            form.AddField("Username",inventory.username);*/
 
             using(UnityWebRequest save = UnityWebRequest.Post(URL_Save,form))
             {
@@ -247,32 +218,13 @@ IEnumerator Login()
                     string SaveString = save.downloadHandler.text;
                     print(SaveString);
                 }
-
-
-
-
-
             }
-
             SaveButton.interactable = true;
-
-
         }
 
-        // Update is called once per frame
         void Update()
-        {   /*
-            if(SCENE.activeSelf)
-            {
-                if (counter < 1000) {
-                    counter++ ;
-                }
-                else{
-                    counter = 0 ;
-                    StartCoroutine(Save());
-                }
-            }
-            */
+        {   
+
         }
 
         public void CoroutineDisconnect(string username){
@@ -295,15 +247,7 @@ IEnumerator Login()
                     string DisconnectString = disconnect.downloadHandler.text;
                     print(DisconnectString);
                 }
-
-
-
-
-
             } 
-
-            //SaveButton.interactable = true;
-
         }
 
         public void CoroutineDisconnectAll()
@@ -328,15 +272,7 @@ IEnumerator Login()
                     string SaveString = save.downloadHandler.text;
                     print(SaveString);
                 }
-
-
-
-
-
             }
-
-            //SaveButton.interactable = true;
-
         }
     }
 }

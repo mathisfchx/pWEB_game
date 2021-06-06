@@ -14,14 +14,12 @@ namespace Game
         GameObject[] projectiles;
         public PlayerMouvement Player_mv;
         public Player player_hit;
-        //[SyncVar]
-        //public Player caster;
         int player_mask;
+
         void Awake()
         {
             player_mask = LayerMask.GetMask("Characte Collision Blocker");
             Player_mv = GetComponent(typeof(PlayerMouvement)) as PlayerMouvement;
-            //Player_mv = this.GetComponent<PlayerMouvement>();
             TimeBtwDistantAttack = 0 ;
             TimeBtwCacAttack = 0 ;
         }
@@ -36,19 +34,15 @@ namespace Game
 
                         this.GetComponent<BoxCollider2D>().enabled = false;
                         this.transform.GetChild(1).GetComponent<BoxCollider2D>().enabled = false;
-                        //print(Player_mv.forward);
-                        //print(this.gameObject);
                         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Player_mv.forward), 1f, player_mask);
-                        //Debug.DrawRay(transform.position, transform.TransformDirection(Player_mv.forward) * 3f, Color.red);
-                        //print(hit.collider.gameObject);
+
                         if (hit && hit.collider != null)
                         {
                             if (hit.transform.parent.gameObject != this.gameObject)
                             {
                                 player_hit = hit.transform.parent.gameObject.GetComponent(typeof(Player)) as Player;
-                                print(player_hit);
-                                //print(hit.collider);
-                                print("Touché");
+                                //print(player_hit);
+                                //print("Touché");
                                 if (player_hit.team != (this.GetComponent(typeof(Player)) as Player).team)
                                     AttackCac(player_hit);
                             }
@@ -95,11 +89,7 @@ namespace Game
                 {
                     TimeBtwDistantAttack -= Time.deltaTime;
                 }
-                //print("Avant ");
-
-                
             }
-
         }
 
         public void DestroyProjectile(GameObject go){
@@ -136,34 +126,23 @@ namespace Game
                     CmdAttackCac(player);
                 }
             }
-            //print(player);
         }
 
         public void RangedAttack(Player player)
         {
-            //player.HealthPoint -= 1;
-            print("InRangedAttack");
-                if (hasAuthority)
+            //print("InRangedAttack");
+            if (hasAuthority)
+            {
+                if (isLocalPlayer)
                 {
-
-                    if (isLocalPlayer)
+                    //print("InIsLocalPlayer");
+                    if (isClient)
                     {
-                        print("InIsLocalPlayer");
-                        if (isClient)
-                        {
-                            print("RANGED ATTACK");
-                            CmdRangedAttack(player);
-                        }
+                        //print("RANGED ATTACK");
+                        CmdRangedAttack(player);
                     }
-                }/*
-            if (isServer)
-            {
-                
+                }
             }
-            else
-            {
-                
-            }*/
         }
 
         [Command]
@@ -190,27 +169,9 @@ namespace Game
             current_projectile.GetComponent<ProjectileMovement>().speed = speed ;
             current_projectile.GetComponent<ProjectileMovement>().team = player.team;
             current_projectile.GetComponent<ProjectileMovement>().caster = player;
-            //current_projectile.GetComponent<ProjectileMovement>().mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            //mouse_position.z = Camera.main.nearClipPlane;
             Destroy(current_projectile, 10);
             NetworkServer.Spawn(current_projectile);
         }
-
-        /*[ClientRpc]
-        public void RcpInstantiateProjectile(Player player,GameObject current_projectile)
-        {
-            current_projectile.GetComponent<ProjectileMovement>().caster = player;
-        }
-        */
-        /*
-        public void Move(GameObject proj)
-        {
-            float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;
-            float y = proj.GetComponent<ProjectileMovement>().mouse_position.y;
-            float speed = proj.GetComponent<ProjectileMovement>().speed;
-            proj.transform.Translate(new Vector2(x, y).normalized * speed * Time.deltaTime);
-        }
-        */
         
         public void MoveProjectile(GameObject proj){
             if (hasAuthority){

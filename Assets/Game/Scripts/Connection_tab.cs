@@ -63,18 +63,14 @@ namespace Game
                         GameObject.Find("TeamA").SetActive(false);
                     }
                 }
-            } catch (Exception e) {} //pour ne pas afficher 1000000 erreurs dans les update, oui c'est pas propre mais c'est le plus simple à faire.
+            } catch (Exception e) {} 
         }
 
         [Command]
         public void CmdSetDico(string username, int conn_id)
         {
-            print(hasAuthority);
-            //if(hasAuthority)
-            //{
+            //print(hasAuthority);
             conn_tab[Username] = conn_id;
-            //RpcModifDico(username, conn_id);
-            //}
 
         }
 

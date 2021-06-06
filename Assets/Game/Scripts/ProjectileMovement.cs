@@ -19,22 +19,10 @@ namespace Game
         {
             thiscollider = gameObject.GetComponent<CircleCollider2D>();
             TimeBtwCollision = 0; 
-
-            //cam = new Camera();
-            //new WaitForSeconds((float)0.2);
-            //print(mouse_position);
-            //print(cam.transform.position);
         }
+        
         void Start()
         {
-            //Physics2D.IgnoreCollision(caster.gameObject.transform.GetChild(1).GetComponent<BoxCollider2D>(), thiscollider ,true);
-            //Invoke("DestroyProjectile", TimeToLive);
-            //print(Camera.main.transform.position);
-            //mouse_position = Input.mousePosition;
-            //mouse_position.z = Camera.main.nearClipPlane;
-            //mouse_position = Camera.main.ScreenToWorldPoint(mouse_position) - transform.position;
-            //print(mouse_position);
-            //print(mouse_position.normalized);
 
         }
 
@@ -43,8 +31,7 @@ namespace Game
         {
             caster.GetComponent<PlayerAttack>().MoveProjectile(this.transform.gameObject);
             TimeBtwCollision -= Time.deltaTime;
-            print(TimeBtwCollision);
-            //transform.Translate(new Vector2(mouse_position.x, mouse_position.y).normalized * speed * Time.deltaTime);
+            //print(TimeBtwCollision);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -58,9 +45,7 @@ namespace Game
                         Player target = collision.gameObject.transform.parent.GetComponent<Player>();
                         if (team != target.team)
                         {
-                            //caster.SendMessage("RangedAttack", target);                   //Méthode 1 : crash au niveau des clients non host lors de l'émission du message. Pas fonctionnel non plus pour l'host.
-                            //CmdRangedDamage(target);                                      //Méthode 2 : absence d'autorité pour activer la commande.
-                            caster.GetComponent<PlayerAttack>().RangedAttack(target);  //Méthode 3 : absence d'autorité malgré le passage par le joueur ?
+                            caster.GetComponent<PlayerAttack>().RangedAttack(target); 
                         }
                     }
                     caster.GetComponent<PlayerAttack>().DestroyProjectile(this.transform.gameObject);
@@ -72,9 +57,9 @@ namespace Game
 
         public void SetTeam(int newTeam)
         {
-            print("je suis dans setteam");
+            //print("je suis dans setteam");
 
-            print("Je suis Autorité");
+            //print("Je suis Autorité");
             if (isServer)
             {
                 team = newTeam;
@@ -83,8 +68,6 @@ namespace Game
             {
                 CmdSetTeam(newTeam);
             }
-
-
         }
 
 
@@ -100,7 +83,6 @@ namespace Game
             team = newTeam;
         }
 
-        //Tentative d'interaction avec le serv, non concluante.
         [Command]
         public void CmdRangedDamage(Game.Player player)
         {
