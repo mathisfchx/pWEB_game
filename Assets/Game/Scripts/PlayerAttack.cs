@@ -145,14 +145,21 @@ namespace Game
             {
                 player.HealthPoint -= 1;
             }
-            print("InRangedAttack");
-            if (isLocalPlayer)
+            else
             {
-                print("InIsLocalPlayer");
-                if (isClient)
+                print("InRangedAttack");
+                if (hasAuthority)
                 {
-                    print("RANGED ATTACK");
-                    CmdRangedAttack(player);
+
+                    if (isLocalPlayer)
+                    {
+                        print("InIsLocalPlayer");
+                        if (isClient)
+                        {
+                            print("RANGED ATTACK");
+                            CmdRangedAttack(player);
+                        }
+                    }
                 }
             }
         }
@@ -167,7 +174,7 @@ namespace Game
         [Command]
         void CmdRangedAttack(Player player)
         {
-            player.HealthPoint -= 30;
+            player.HealthPoint -= 1;
         }
 
 
