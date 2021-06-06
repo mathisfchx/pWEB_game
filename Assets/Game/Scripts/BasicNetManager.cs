@@ -87,5 +87,10 @@ namespace Game
 
             return " ";
         }
+        public void OnStopServer()
+        {
+            base.OnStopServer();
+            userselect.CoroutineDisconnectAll();
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace Game
         string URL_Register = "http://15.188.17.42/userinsert.php";
         string URL_Save = "http://15.188.17.42/Save.php";
         string URL_Disconnect = "http://15.188.17.42/userDisconnect.php";
+        string URL_DisconnectAll = "http://15.188.17.42/userDisconnectAll.php";
         public string[] usersData;
         public string UsernameString ;
 
@@ -275,7 +276,7 @@ IEnumerator Login()
         }
 
         public void CoroutineDisconnect(string username){
-            //StartCoroutine(Disconnect(username));
+            StartCoroutine(Disconnect(username));
         }
 
         public IEnumerator Disconnect(string username)
@@ -284,12 +285,46 @@ IEnumerator Login()
             form = new WWWForm();
             form.AddField("Username",username);
 
-            using(UnityWebRequest save = UnityWebRequest.Post(URL_Disconnect,form))
+            using(UnityWebRequest disconnect = UnityWebRequest.Post(URL_Disconnect,form))
+            {
+                yield return disconnect.SendWebRequest();
+                if(disconnect.error !=null){
+                    print("Nous n'avons pas pu sauvegarder");
+                    print(disconnect.error);
+                }else{
+                    string DisconnectString = disconnect.downloadHandler.text;
+                    print(DisconnectString);
+                }
+
+
+
+
+
+            } 
+
+            //SaveButton.interactable = true;
+
+        }
+
+        public void CoroutineDisconnectAll()
+        {
+            StartCoroutine(DisconnectAll());
+        }
+
+        public IEnumerator DisconnectAll()
+        {
+
+            form = new WWWForm();
+
+            using (UnityWebRequest save = UnityWebRequest.Post(URL_DisconnectAll, form))
             {
                 yield return save.SendWebRequest();
-                if(save.error !=null){
+                if (save.error != null)
+                {
                     print("Nous n'avons pas pu sauvegarder");
-                }else{
+                }
+                else
+                {
                     string SaveString = save.downloadHandler.text;
                     print(SaveString);
                 }
