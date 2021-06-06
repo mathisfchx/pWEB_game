@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using System;
 namespace Game
 {
     public class PlayerAttack : NetworkBehaviour
@@ -117,13 +118,13 @@ namespace Game
         public void CmdDestroyProjectile(GameObject go)
         {
             RpcDestroyProjectile(go);
-            go.SetActive(false);
+            Destroy(go);
         }
 
         [ClientRpc]
         public void RpcDestroyProjectile(GameObject go)
         {
-            go.SetActive(false);
+            Destroy(go);
         }
 
         void AttackCac(Player player)
@@ -219,10 +220,15 @@ namespace Game
 
         [Command]  
         public void CmdMoveProjectile(GameObject proj){
-            float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;
-            float y = proj.GetComponent<ProjectileMovement>().mouse_position.y;
-            float speed = proj.GetComponent<ProjectileMovement>().speed;
-            proj.transform.Translate(new Vector2(x, y).normalized * speed * Time.deltaTime);
+            try{
+                float x = proj.GetComponent<ProjectileMovement>().mouse_position.x;
+                float y = proj.GetComponent<ProjectileMovement>().mouse_position.y;
+                float speed = proj.GetComponent<ProjectileMovement>().speed;
+                proj.transform.Translate(new Vector2(x, y).normalized * speed * Time.deltaTime);
+            }catch(Exception e){
+
+            }
+            
         }
 
     }
