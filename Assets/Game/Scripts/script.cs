@@ -80,9 +80,16 @@ namespace Game
         [Command(requiresAuthority = false)]
         public void CmdStartGame()
         {
-            foreach(GameObject start in GameObject.FindGameObjectsWithTag("start")){
-                start.SetActive(false);
+            if (GameObject.Find("_BlueFlag(Clone)") == null){
+                /*
+                var blueFlag = Instantiate(networkManager.spawnPrefabs[1], new Vector2(-43,-46), Quaternion.identity);
+                NetworkServer.Spawn(blueFlag);
+                var redFlag = Instantiate(networkManager.spawnPrefabs[2], new Vector2(54,47), Quaternion.identity);
+                NetworkServer.Spawn(redFlag);
+                */
             }
+            GameObject.Find("_BlueFlag(Clone)").transform.SetPositionAndRotation(new Vector3(-43, -46),new Quaternion(0,0,0,0));
+            GameObject.Find("_RedFlag(Clone)").transform.SetPositionAndRotation(new Vector3(54, 47),new Quaternion(0,0,0,0));
             StartCoroutine(waiter());
             RpcStartGame();
         }
@@ -90,13 +97,14 @@ namespace Game
         [ClientRpc]
         public void RpcStartGame()
         {
-            if (GameObject.Find("_BlueFlag(Clone)") == null){
-                var blueFlag = Instantiate(networkManager.spawnPrefabs[1], new Vector2(-43,-46), Quaternion.identity);
-                NetworkServer.Spawn(blueFlag);
-                var redFlag = Instantiate(networkManager.spawnPrefabs[2], new Vector2(54,47), Quaternion.identity);
-                NetworkServer.Spawn(redFlag);
-            }
             Debug.Log("on est dans le rpc");
+
+            GameObject.Find("_BlueFlag(Clone)").transform.SetPositionAndRotation(new Vector3(-43, -46),new Quaternion(0,0,0,0));
+            GameObject.Find("_RedFlag(Clone)").transform.SetPositionAndRotation(new Vector3(54, 47),new Quaternion(0,0,0,0));
+            
+            foreach(GameObject start in GameObject.FindGameObjectsWithTag("start")){
+                start.SetActive(false);
+            }
             foreach(GameObject counter in GameObject.FindGameObjectsWithTag("counter")){
                 counter.GetComponent<TextMeshProUGUI>().enabled = false;
             }

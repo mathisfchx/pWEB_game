@@ -54,6 +54,9 @@ namespace Game{
             BoutonFin = BoutonFinJeu.GetComponent<Button>();
             BoutonFin.gameObject.SetActive(false);
             networkManager = GameObject.FindGameObjectsWithTag("NM")[0].GetComponent(typeof(BasicNetManager)) as BasicNetManager;
+
+            //GameObject.Find("_BlueFlag(Clone)").SetActive(false);
+            //GameObject.Find("_RedFlag(Clone)").SetActive(false);
         }
 
 
@@ -94,8 +97,8 @@ namespace Game{
 	                		Debug.Log("Remove");
 	                		HUDscript.DelItem("_BlueFlag(Clone)");
 	                		
-	                		RespawnBlueFlagCom(transform.position.x, transform.position.y);
-	                		Debug.Log("Respawn");
+	                		RespawnBlueFlagCom(gameObject.transform.position.x, gameObject.transform.position.y);
+	                		Debug.Log("Respawn en "+gameObject.transform.position.x+","+gameObject.transform.position.y);
 	                		
 	                		(GetComponent(typeof(Player)) as Player).Dead = false;
 	                	}
@@ -107,8 +110,8 @@ namespace Game{
 	                		Debug.Log("Remove");
 	                		HUDscript.DelItem("_RedFlag(Clone)");
 	                		
-	                		RespawnRedFlagCom(transform.position.x, transform.position.y);
-	                		Debug.Log("Respawn");
+	                		RespawnRedFlagCom(gameObject.transform.position.x, gameObject.transform.position.y);
+	                		Debug.Log("Respawn en "+gameObject.transform.position.x+","+gameObject.transform.position.y);
 	                		
 	                		(GetComponent(typeof(Player)) as Player).Dead = false;
 	                	}
@@ -139,16 +142,44 @@ namespace Game{
 
         [Command]
         void RespawnBlueFlagCom(float x, float y){
+            /*
         	var blueFlag = Instantiate(networkManager.spawnPrefabs[1], new Vector2(x,y), Quaternion.identity);
             NetworkServer.Spawn(blueFlag);
         	//RespawnBlueFlagLoc(x, y);
+            */
+            GameObject.Find("_BlueFlag(Clone)").transform.SetPositionAndRotation(new Vector3(x, y),new Quaternion(0,0,0,0));
+            RpcRespawnBlueFlagCom(x,y);
+        }
+
+        [ClientRpc]
+        void RpcRespawnBlueFlagCom(float x, float y){
+            /*
+        	var blueFlag = Instantiate(networkManager.spawnPrefabs[1], new Vector2(x,y), Quaternion.identity);
+            NetworkServer.Spawn(blueFlag);
+        	//RespawnBlueFlagLoc(x, y);
+            */
+            GameObject.Find("_BlueFlag(Clone)").transform.SetPositionAndRotation(new Vector3(x, y),new Quaternion(0,0,0,0));
         }
 
         [Command]
         void RespawnRedFlagCom(float x, float y){
+            /*
 			var redFlag = Instantiate(networkManager.spawnPrefabs[2], new Vector2(x,y), Quaternion.identity);
             NetworkServer.Spawn(redFlag);
         	//RespawnRedFlagLoc(x, y);
+            */
+            GameObject.Find("_RedFlag(Clone)").transform.SetPositionAndRotation(new Vector3(x, y),new Quaternion(0,0,0,0));
+            RpcRespawnRedFlagCom(x,y);
+        }
+
+        [ClientRpc]
+        void RpcRespawnRedFlagCom(float x, float y){
+            /*
+			var redFlag = Instantiate(networkManager.spawnPrefabs[2], new Vector2(x,y), Quaternion.identity);
+            NetworkServer.Spawn(redFlag);
+        	//RespawnRedFlagLoc(x, y);
+            */
+            GameObject.Find("_RedFlag(Clone)").transform.SetPositionAndRotation(new Vector3(x, y),new Quaternion(0,0,0,0));
         }
 
     /*
@@ -213,12 +244,14 @@ namespace Game{
                             }*/
                             if(team == 3){
                                 if(item == "_RedFlag(Clone)"){
+                                    /*
                                     if(isServer){
                                     	addItemClientCom(collision.gameObject, item);
                                     	
                                     }else{
+                                    */
                                     	addItemComClient(collision.gameObject, item);
-                                    }
+                                    //}
                                 }
                                 if(item == "_BlueQG(Clone)"){
                                     if(inventory.mItems.Contains("_RedFlag(Clone)") == true){
@@ -227,12 +260,14 @@ namespace Game{
                                 }
                             }else if(team == 1){
                                 if(item == "_BlueFlag(Clone)"){
+                                    /*
                                     if(isServer){
                                     	addItemClientCom(collision.gameObject, item);
                                     	
                                     }else{
+                                        */
                                     	addItemComClient(collision.gameObject, item);
-                                    }
+                                    //}
                                 }
                                 if(item == "_RedQG(Clone)"){
                                     if(inventory.mItems.Contains("_BlueFlag(Clone)") == true){
@@ -250,23 +285,29 @@ namespace Game{
         [Command]
         void addItemComClient(GameObject collision, string item){
         	addItemCom(collision, item);
+            collision.transform.SetPositionAndRotation(new Vector3(-500, -500),new Quaternion(0,0,0,0));
         }
 
         [ClientRpc]
         void addItemCom(GameObject collision, string item){
         	inventory.AddItem(item);
-            collision.SetActive(false);
+            //collision.SetActive(false);
+            collision.transform.SetPositionAndRotation(new Vector3(-500, -500),new Quaternion(0,0,0,0));
+            //GameObject.Find("_RedFlag(Clone)").transform.SetPositionAndRotation(new Vector3(300, 300),new Quaternion(0,0,0,0));
         }
 
         [ClientRpc]
         void addItemClientCom(GameObject collision, string item){
         	addItemClient(collision, item);
+            collision.transform.SetPositionAndRotation(new Vector3(-500, -500),new Quaternion(0,0,0,0));
         }
 
         [Command]
         void addItemClient(GameObject collision, string item){
         	inventory.AddItem(item);
-            collision.SetActive(false);
+            //collision.SetActive(false);
+            collision.transform.SetPositionAndRotation(new Vector3(-500, -500),new Quaternion(0,0,0,0));
+            //GameObject.Find("_RedFlag(Clone)").transform.SetPositionAndRotation(new Vector3(300, 300),new Quaternion(0,0,0,0));
         }
 
         void CoroutineBoutonFin(){

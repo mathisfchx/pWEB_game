@@ -14,7 +14,7 @@ namespace Game
         // Players List to manage playerNumber
         internal readonly List<Player> playersList = new List<Player>();
         [SerializeField] Connection_tab conn_tab ;
-        [SerializeField] UserSelect userselect ;
+        [SerializeField] UserSelect userselect ; 
 
         [Header("Canvas UI")]
 
@@ -26,13 +26,22 @@ namespace Game
             SpawnCle();
         }
 
+
         void SpawnCle()
         {
-            var cleGo = Instantiate(spawnPrefabs[0], new Vector2(-11,-13), Quaternion.identity);
+            GameObject blueFlag = (GameObject)Instantiate(spawnPrefabs[1], new Vector2(-43,-46), Quaternion.identity);
+            NetworkServer.Spawn(blueFlag);
+            GameObject redFlag = (GameObject)Instantiate(spawnPrefabs[2], new Vector2(54,47), Quaternion.identity);
+            NetworkServer.Spawn(redFlag);
+
+            blueFlag.transform.SetPositionAndRotation(new Vector3(-300, -300),new Quaternion(0,0,0,0));
+            redFlag.transform.SetPositionAndRotation(new Vector3(300, 300),new Quaternion(0,0,0,0));
+
+            GameObject cleGo = Instantiate(spawnPrefabs[0], new Vector2(-11,-13), Quaternion.identity);
             NetworkServer.Spawn(cleGo);
-            var blueQG = Instantiate(spawnPrefabs[3], new Vector2(-38,-47), Quaternion.identity);
+            GameObject blueQG = Instantiate(spawnPrefabs[3], new Vector2(-38,-47), Quaternion.identity);
             NetworkServer.Spawn(blueQG);
-            var redQG = Instantiate(spawnPrefabs[4], new Vector2(57,47), Quaternion.identity);
+            GameObject redQG = Instantiate(spawnPrefabs[4], new Vector2(57,47), Quaternion.identity);
             NetworkServer.Spawn(redQG);
         }
 
