@@ -101,7 +101,7 @@ namespace Mirror
                 //Voici la nouvelle interface pour se connecter au serveur (je n'ai pas encore réussi à modifier l'emplacement du bouton)
                 if (GUILayout.Button("Jouer sur le serveur AWS"))
                 {
-                    manager.networkAddress = "13.36.61.82";
+                    manager.networkAddress = "15.188.17.42";
                     manager.StartClient();
                     //GameObject teamA = GameObject.Find("TeamA");
                     teamA.SetActive(true);
@@ -109,7 +109,7 @@ namespace Mirror
                     teamB.SetActive(true);
 
                     //GameObject.Find("Player(Clone)").GetComponent<PlayerMouvement>().enabled = false;
-                } 
+                }
 
                 if (GUILayout.Button("Jouer en localhost"))
                 {
@@ -126,7 +126,7 @@ namespace Mirror
                 /*
                 // Client + IP
                 GUILayout.BeginHorizontal();
-                
+
                 GUI.BeginGroup (new Rect (300, 300, 200, 200));
                 if (GUI.Button(new Rect(0,0,100,100),"Jouer en localhost"))
                 {
@@ -135,8 +135,8 @@ namespace Mirror
                 }
                 //GUILayout.TextField("13.36.61.82"); //Test
                 GUI.EndGroup();
-                
-                
+
+
 
                 //GUILayout.EndHorizontal();
 
