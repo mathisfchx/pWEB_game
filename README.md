@@ -16,6 +16,6 @@ But if you just want to play you can just download the executable in the release
 If you want to play on the aws server, call someone from the team.
   
 ### THE TEAM  
-Alexandre Rodriguez, Nathan Bottet, Mathis Faucheux, Pakinam Tarek, Gaspard Michel, Dejv Marku, Eigis Misku, Nael Bounia  
+BOTTET Nathan, BOUNIA Naël, FAUCHEUX Mathis, MARKU Dejv, MICHEL Gaspard, MISKU Eigis, RODRIGUEZ Alexandre, TAREK Pakinam
 
 
