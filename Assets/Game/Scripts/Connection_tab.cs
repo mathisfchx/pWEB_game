@@ -26,7 +26,7 @@ namespace Game
         void Start()
         {
             start = 5;
-            maxTeam = 2;
+            maxTeam = 4;
         }
 
         void Update()
