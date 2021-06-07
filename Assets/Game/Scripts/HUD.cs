@@ -13,6 +13,8 @@ public class HUD : NetworkBehaviour
 
     public Dictionary<string, Sprite> dico = new Dictionary<string, Sprite>();
 
+    //On ajoute au dictionnaire la liste des objets ramassables
+
     void Start()
     {
 
@@ -23,6 +25,8 @@ public class HUD : NetworkBehaviour
         inventory.ItemAdded += InventoryScript_ItemAdded;
 
     }
+
+    //Fonction d'ajout d'item dans l'inventaire
     
     private void InventoryScript_ItemAdded(object sender, InventoryEventArgs e)
     {
@@ -44,6 +48,8 @@ public class HUD : NetworkBehaviour
             }
         }
     }
+
+    //Fonction de suppression d'item dans l'inventaire
 
     public void DelItem(string nameItem){
         Transform inventoryPanel = transform.Find("InventoryPanel");

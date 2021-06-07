@@ -23,7 +23,6 @@ namespace Game{
         public Button BoutonFin;
         public GameObject player;
         public int team = 0;
-        public int HP;
         public bool mort = false;
         public BasicNetManager networkManager;
 
@@ -33,6 +32,8 @@ namespace Game{
 
         void Start()
         {
+            //Instantiation des objets 
+
             animator = GetComponent<Animator>();
             myRigidbody = GetComponent<Rigidbody2D>();
             inv = Instantiate(inv);
@@ -53,6 +54,8 @@ namespace Game{
 
         void Update()
         {
+            //Gestion des mouvements
+
             change = Vector3.zero;
             change.x = Input.GetAxisRaw("Horizontal");
             change.y = Input.GetAxisRaw("Vertical");
@@ -75,17 +78,29 @@ namespace Game{
             UpdateAnimationAndMove();
             UpdateAnimationAttack();
             
+            //Actualisation de la team 
 
             this.team = (GetComponent(typeof(Player)) as Player).team;
+
+
             if(this.isLocalPlayer){
+
+                //Mise à jour de la vitesse si le joueur possède le drapeau
+
                 if(inventory.mItems.Contains("_BlueFlag(Clone)")){
                     speedFlag();
                 }else if(inventory.mItems.Contains("_RedFlag(Clone)")){
                     speedFlag();
                 }
+
+                //Actualisation de l'état "mort"
+
                 this.mort = (GetComponent(typeof(Player)) as Player).Dead;
                 if(mort == true){
                     speedWithoutFlag();
+
+                    //On retire le drapeau de l'inventaire
+
 	                if(inventory.mItems.Contains("_BlueFlag(Clone)")){
 	                	//Debug.Log("Contains");
 	               		inventory.mItems.Remove("_BlueFlag(Clone)");
@@ -115,6 +130,8 @@ namespace Game{
             }
         }
         
+        //Fonctions de mise à jour de la vitesse
+
         [Command]
         void speedFlag(){
             speed = 6;
@@ -124,6 +141,8 @@ namespace Game{
         void speedWithoutFlag(){
             speed = 8;
         }
+
+        //Fonctions de réapparition du drapeau
 
         [Command]
         void RespawnBlueFlagCom(float x, float y){
@@ -151,6 +170,8 @@ namespace Game{
             GameObject.Find("_RedFlag(Clone)").transform.SetPositionAndRotation(new Vector3(x, y),new Quaternion(0,0,0,0));
         }
 
+        //Fonctions d'animation du personnage
+
         void UpdateAnimationAndMove(){
 
             if(this.isLocalPlayer){
@@ -174,6 +195,8 @@ namespace Game{
                 }
             }
         }
+
+        //Fonction de déplacement du personnage
  
         void FixedUpdate(){
             if (isLocalPlayer){
@@ -183,16 +206,23 @@ namespace Game{
             }
         }
 
+        //Fonction appelée lors d'une collision
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
             //Debug.Log("collisionnnnn");
             string item = collision.gameObject.name;
+
+            //Condition sur le caractère ramassable d'un objet
 
             if (item[0] == '_' ){
                 if (collision.collider.enabled){
                     if (item != null){
                         if(this.isLocalPlayer){
                             //Debug.Log("item ajoutééés");
+
+                            //Ajout des drapeaux dans l'inventaire
+
                             if(team == 3){
                                 if(item == "_RedFlag(Clone)"){
                                     addItemComClient(collision.gameObject, item);
@@ -219,6 +249,8 @@ namespace Game{
             }
         }
 
+        //Fonctions ajoutant les objets à l'inventaire
+
         [Command]
         void addItemComClient(GameObject collision, string item){
         	addItemCom(collision, item);
@@ -231,17 +263,7 @@ namespace Game{
             collision.transform.SetPositionAndRotation(new Vector3(-500, -500),new Quaternion(0,0,0,0));
         }
 
-        [ClientRpc]
-        void addItemClientCom(GameObject collision, string item){
-        	addItemClient(collision, item);
-            collision.transform.SetPositionAndRotation(new Vector3(-500, -500),new Quaternion(0,0,0,0));
-        }
-
-        [Command]
-        void addItemClient(GameObject collision, string item){
-        	inventory.AddItem(item);
-            collision.transform.SetPositionAndRotation(new Vector3(-500, -500),new Quaternion(0,0,0,0));
-        }
+        //Fonctions appelées lors de la fin de la partie
 
         void CoroutineBoutonFin(){
             Application.Quit();

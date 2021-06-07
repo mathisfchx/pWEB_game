@@ -22,10 +22,14 @@ namespace Game
 
         void OnCheckIfAlive(int oldHealthPoint , int newHealthPoint)
         {
+            //S'active quand le joueur meurt
+
             if (newHealthPoint <= 0)
             {
                 if (hasAuthority)
                 {
+                    //Déplacement du joueur et mise à jour de ses attributs
+
                     this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = false; 
                     if (isServer)
                     {
@@ -44,6 +48,9 @@ namespace Game
                         this.Dead = true;
                         CmdDead(this);
                     }
+
+                    //Déplacement de la caméra 
+
                     this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().enabled = true ;
                     if (team == 3){
                         this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().maxPosition = new Vector2((float)-38, (float)-22.3) ;
@@ -57,7 +64,6 @@ namespace Game
                     }
                     this.GetComponent<PlayerMouvement>().cam.GetComponent<CameraMovement>().target = this.transform;
                 }
-
             }
         }
 
@@ -222,6 +228,8 @@ namespace Game
             GameObject.Find("counterA").GetComponent<nteamA>().maxTeam = conn_tab.maxTeam;
             GameObject.Find("counterB").GetComponent<nteamB>().maxTeam = conn_tab.maxTeam;
         }
+
+        //Fonctions de mise à jour des HP
 
         [Command]
         public void CmdSetHp(Player player){
