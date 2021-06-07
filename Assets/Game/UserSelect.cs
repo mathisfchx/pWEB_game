@@ -241,7 +241,7 @@ IEnumerator Login()
             {
                 yield return disconnect.SendWebRequest();
                 if(disconnect.error !=null){
-                    print("Nous n'avons pas pu sauvegarder");
+                    print("Nous n'avons pas pu mettre à jour l'état de la connexion du joueur");
                     print(disconnect.error);
                 }else{
                     string DisconnectString = disconnect.downloadHandler.text;
@@ -260,17 +260,17 @@ IEnumerator Login()
 
             form = new WWWForm();
 
-            using (UnityWebRequest save = UnityWebRequest.Post(URL_DisconnectAll, form))
+            using (UnityWebRequest disconnect = UnityWebRequest.Post(URL_DisconnectAll, form))
             {
-                yield return save.SendWebRequest();
-                if (save.error != null)
+                yield return disconnect.SendWebRequest();
+                if (disconnect.error != null)
                 {
-                    print("Nous n'avons pas pu sauvegarder");
+                    print("Nous n'avons pas pu mettre à jour l'état de la connexion du joueur");
                 }
                 else
                 {
-                    string SaveString = save.downloadHandler.text;
-                    print(SaveString);
+                    string DisconnectString = disconnect.downloadHandler.text;
+                    print(DisconnectString);
                 }
             }
         }
