@@ -1,9 +1,9 @@
 # pWEB_game
 Unity 2D mutliplayer game made for a Web school project  
 First game mode : Capture The Flag (You need to take the flag in the opposite team base and bring it back to your's)  
-Controls are : zqsd to move, Space bar to attack with your sword, and Left click to shoot with your gun.  
+Controls are : zqsd to move, Space bar to attack with your sword, and Right click to shoot with your gun.  
 Right now the game is 2V2 but this is customisable.  
-Right now, the game is built and playable on Windows and Linux (Web player coming with V2)  
+Right now, the game is built and playable on Windows and Linux
   
 ## NEEDED SPECS  
 - Screen in 16/9 resolution  
@@ -12,7 +12,8 @@ Right now, the game is built and playable on Windows and Linux (Web player comin
   
 ### THE CODE
 The main part of the work is in Assets/Game/Scripts,Prefab, And Scene  
-But if you just want to play you can just download the executable (it's coming)
+But if you just want to play you can just download the executable in the release section.
+If you want to play on the aws server, call someone from the team.
   
 ### THE TEAM  
 Alexandre Rodriguez, Nathan Bottet, Mathis Faucheux, Pakinam Tarek, Gaspard Michel, Dejv Marku, Eigis Misku, Nael Bounia  
